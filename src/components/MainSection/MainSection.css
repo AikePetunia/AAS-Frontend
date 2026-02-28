@@ -1,0 +1,175 @@
+.ms {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 64px 48px 20px;
+  margin: 0 auto;
+}
+
+.ms__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ms__title {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.8vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.ms__extra-features > p {
+  color: gray;
+  font-size: 12px;
+}
+.ms__posta {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px dashed rgba(163, 230, 53, 0.3);
+  border-radius: 10px;
+  background: rgba(24, 24, 27, 0.5);
+  align-self: flex-end;
+}
+
+.ms__posta-text {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.ms__posta-text strong {
+  align-items: flex-start;
+  color: var(--color-gray-100);
+}
+
+.ms__posta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ms__posta-wachina {
+  margin: 0;
+  font-size: 0.84rem;
+  font-style: italic;
+  color: var(--color-gray-500);
+}
+
+/*
+.ms__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ms__stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(163, 230, 53, 0.25);
+  background: rgba(24, 24, 27, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ms__stat-card:hover {
+  border-color: var(--color-lime-400);
+  background: rgba(24, 24, 27, 0.7);
+  box-shadow:
+    0 0 12px rgba(163, 230, 53, 0.3),
+    inset 0 0 8px rgba(163, 230, 53, 0.1);
+  transform: translateY(-2px);
+}
+
+.ms__stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1;
+  transition: text-shadow 0.3s ease;
+}
+
+.ms__stat-card:hover .ms__stat-value {
+  text-shadow: 0 0 12px rgba(163, 230, 53, 0.5);
+}
+
+.ms__stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  font-family: "JetBrains Mono", monospace;
+  transition: color 0.3s ease;
+}
+
+.ms__stat-card:hover .ms__stat-label {
+  color: var(--color-lime-400);
+}
+
+.ms__scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.ms__sparkle {
+  position: absolute;
+  left: calc(50% - 40px);
+  bottom: -18px;
+  font-size: 14px;
+  color: var(--color-lime-400);
+  animation: sparkle-pulse 2s ease-in-out infinite;
+}
+
+*/
+@keyframes sparkle-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .ms {
+    padding: 20px 14px 16px;
+    gap: 12px;
+  }
+
+  .ms__title {
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+  }
+
+  .ms__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .ms__stat-value {
+    font-size: 1.2rem;
+  }
+
+  .ms__stat-label {
+    font-size: 0.65rem;
+  }
+
+  .ms__posta {
+    padding: 16px 14px;
+  }
+}
