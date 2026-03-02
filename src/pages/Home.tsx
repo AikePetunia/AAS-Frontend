@@ -8,6 +8,7 @@ export function Home() {
     <>
       <Navbar />
       <MainSection />
+
       <FeaturedProducts />
       <Footer />
     </>

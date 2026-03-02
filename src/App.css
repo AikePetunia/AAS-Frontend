@@ -43,7 +43,6 @@ body {
   padding: 0;
   background-color: var(--color-zinc-950);
   position: relative;
-  overflow: hidden;
 }
 
 body::before {
