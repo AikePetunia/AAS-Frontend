@@ -1,4 +1,3 @@
-/* Product Cards Grid */
 .pm__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -6,13 +5,17 @@
   padding: 16px;
 }
 
-/* Card Container */
 .pm__card {
   background: var(--color-zinc-900);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible; /* antes hidden */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.pm__store-wrap {
+  position: relative;
 }
 
 .pm__card:hover {
@@ -20,7 +23,14 @@
   box-shadow: 0 8px 24px rgba(163, 230, 53, 0.2);
 }
 
-/* Image Wrapper */
+.pm__product-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .pm__image-wrapper {
   position: relative;
   width: 100%;
@@ -35,7 +45,6 @@
   object-fit: cover;
 }
 
-/* Discount Badge */
 .pm__discount-badge {
   position: absolute;
   top: 12px;
@@ -47,10 +56,39 @@
   font-size: 0.8rem;
   font-weight: 700;
   font-family: "JetBrains Mono", monospace;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(163, 230, 53, 0.6);
+  transition: all 0.3s ease;
 }
 
-/* Card Body */
+.pm__card:hover .pm__discount-badge {
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(163, 230, 53, 0.8);
+}
+
+.green-discount-badge {
+  background: var(--color-lime-400);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(163, 230, 53, 0.6);
+}
+
+.red-discount-badge {
+  background: #ef4444;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+.yellow-discount-badge {
+  background: #fbbf24;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(251, 191, 36, 0.6);
+}
+
 .pm__body {
   padding: 16px;
   display: flex;
@@ -58,7 +96,6 @@
   gap: 8px;
 }
 
-/* Title */
 .pm__title {
   margin: 0;
   font-size: 0.95rem;
@@ -74,7 +111,6 @@
   min-height: 2.6em;
 }
 
-/* Original Price (tachado) */
 .pm__original-price {
   margin: 0;
   font-size: 0.85rem;
@@ -83,7 +119,6 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-/* Current Price (verde grande) */
 .pm__current-price {
   margin: 0;
   font-size: 1.4rem;
@@ -91,22 +126,55 @@
   color: var(--color-lime-400);
   font-family: "JetBrains Mono", monospace;
   line-height: 1;
+  text-shadow: 0 0 12px rgba(163, 230, 53, 0.5);
+  transition: text-shadow 0.3s ease;
 }
 
-/* Store Info */
+.pm__card:hover .pm__current-price {
+  text-shadow: 0 0 20px rgba(163, 230, 53, 0.7);
+}
+
 .pm__store-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   margin-top: 4px;
-  padding-top: 12px;
+  padding: 12px 16px 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pm__store-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.pm__store-left:hover {
+  opacity: 0.8;
+}
+
+.pm__store-left:hover .pm__store-name {
+  color: var(--color-lime-400);
+}
+
+.pm__store-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 6px;
 }
 
 .pm__store-name {
   font-size: 0.85rem;
   color: var(--color-gray-400);
   font-family: "JetBrains Mono", monospace;
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
 .pm__trust-badge {
@@ -120,9 +188,19 @@
   font-weight: 600;
   color: var(--color-lime-400);
   font-family: "JetBrains Mono", monospace;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(163, 230, 53, 0.3);
+  transition: all 0.3s ease;
+  cursor: help;
+  position: relative;
 }
 
-/* Responsive */
+.pm__trust-badge:hover {
+  background: rgba(163, 230, 53, 0.25);
+  border-color: rgba(163, 230, 53, 0.5);
+  box-shadow: 0 0 16px rgba(163, 230, 53, 0.5);
+}
+
 @media (max-width: 768px) {
   .pm__grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

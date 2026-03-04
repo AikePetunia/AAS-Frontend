@@ -11,6 +11,7 @@ export function FeaturedProducts() {
         <ProductModal
           products={products}
           storeName={armyTechData.store_name}
+          storeId={armyTechData.store_id}
           trustFactor={armyTechData.trust_factor_manual}
         />
       </div>

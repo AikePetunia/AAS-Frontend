@@ -21,9 +21,9 @@
   --color-gray-500: #6b7280;
   --color-gray-600: #4b5563;
   
-  --color-orange-400: #fb923c;
-  --color-orange-500: #f97316;
-  --color-yellow-400: #facc15;
+  --color-orange: #fb923c;
+  --color-red: #f91616;
+  --color-yellow: #facc15;
   
   --shadow-lime-sm: 0 0 4px rgba(163, 230, 53, 0.8);
   --shadow-lime-md: 0 0 6px rgba(163, 230, 53, 0.4);

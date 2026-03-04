@@ -33,7 +33,8 @@
     "@utils/*": ["src/utils/*"],
     "@types/*": ["src/types/*"],
     "@assets/*": ["src/assets/*"],
-    "@icons/*": ["src/assets/icons/*"]
+    "@icons/*": ["src/assets/icons/*"],
+    "@stores/*": ["src/stores/*"]
   },
   "include": ["src"]
 }

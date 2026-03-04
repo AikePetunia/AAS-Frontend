@@ -14,9 +14,8 @@ export function MainSection() {
       </div>
       <div className="ms__extra-features">
         <p>
-          y que te pongan un banner en esta seccion ...
-          <br />y la compu no es lo único importante, por que el donde jugas,
-          también importa
+          <br />y que la compu no es lo único que importa, por que el donde
+          jugas, también importa
         </p>
       </div>
 
