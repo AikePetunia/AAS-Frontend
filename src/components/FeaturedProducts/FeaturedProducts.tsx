@@ -1,4 +1,4 @@
-import { ProductModal } from "../ProductModal/ProductModal";
+import { ProductModal } from "../common/ProductModal/ProductModal";
 import armyTechData from "../../products/armyTech.json";
 
 import "./FeaturedProducts.css";

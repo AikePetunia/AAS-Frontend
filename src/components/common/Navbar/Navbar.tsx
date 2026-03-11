@@ -26,7 +26,8 @@ export function Navbar() {
         <div className="search-wrapper">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Ryzen 7 7600x..."
+            aria-label="Search"
             className="search-input"
           ></input>
           <img

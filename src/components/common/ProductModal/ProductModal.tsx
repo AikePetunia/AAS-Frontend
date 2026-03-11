@@ -2,6 +2,7 @@ import "./ProductModal.css";
 import { useState } from "react";
 import { HoverStoreInfo } from "./HoverStoreInfo/HoverStoreInfo";
 
+// todo: hoverStoreInfo
 interface Product {
   listing_id: string;
   title_raw: string;
