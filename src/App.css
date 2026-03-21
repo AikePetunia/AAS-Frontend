@@ -63,9 +63,14 @@ h4,
 h5,
 h6,
 a,
+span,
 p {
   font-family: 'JetBrains Mono', monospace;
   color: var(--color-gray-200);
+}
+
+i {
+  padding-right: 4px;
 }
 
 .svg-icon {
@@ -83,6 +88,7 @@ p {
 .highlight-gray {
   color: var(--color-gray-500);
 }
+
 
 /* ==========================================
    EFECTS

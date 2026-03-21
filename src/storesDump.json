@@ -1,862 +1,864 @@
 {
-  "armyTech": {
-    "store_name": "ArmyTech",
-    "store_id": "armytech",
-    "store_url": "https://www.armytech.com.ar",
-    "store_image": "/src/assets/stores/armytech.png",
-    "trust_factor_manual": 90,
-    "seller_type": [
-      "setup",
-      "componentes"
-    ],
-    "tags": [
-      "gaming",
-      "buenos aires",
-      "buena_reputacion",
-      "componentes",
-      "calidad"
-    ]
-  },
-  "venex": {
-    "store_name": "Venex",
-    "store_id": "venex",
-    "store_url": "https://www.venex.com.ar",
-    "store_image": "/images/stores/venex.png",
-    "trust_factor_manual": 85,
-    "seller_type": [
-      "setup",
-      "componentes"
-    ],
-    "tags": [
-      "gaming",
-      "armados",
-      "cordoba",
-      "buena_reputacion",
-      "componentes"
-    ]
-  },
-  "maximus": {
-    "store_name": "Maximus",
-    "store_id": "maximus",
-    "store_url": "https://www.maximus.com.ar",
-    "store_image": "/images/stores/maximus.png",
-    "trust_factor_manual": 100,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "stock",
-      "componentes"
-    ]
-  },
-  "compraGamer": {
-    "store_name": "CompraGamer",
-    "store_id": "compragamer",
-    "store_url": "https://compragamer.com/productos?",
-    "store_image": "/images/stores/compragamer.png",
-    "trust_factor_manual": 100,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "calidad",
-      "buena reputacion",
-      "componentes",
-      "precio",
-      "mayorista"
-    ]
-  },
-  "ngTech": {
-    "store_name": "NGTech",
-    "store_id": "ngtech",
-    "store_url": "https://www.ngtechnologies.com.ar",
-    "store_image": "/images/stores/ngtech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "mgmGamers": {
-    "store_name": "MGM Gamers",
-    "store_id": "mgmgamers",
-    "store_url": "https://mgmgamers.store",
-    "store_image": "/images/stores/mgmgamers.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "setup",
-      "decoracion"
-    ],
-    "tags": [
-      "setup",
-      "mousepads",
-      "precio"
-    ]
-  },
-  "slotOne": {
-    "store_name": "Slot-One",
-    "store_id": "slotone",
-    "store_url": "https://www.slot-one.com.ar",
-    "store_image": "/images/stores/slotone.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes",
-      "buenos aires",
-      "stock"
-    ]
-  },
-  "puertoMinero": {
-    "store_name": "Puerto Minero",
-    "store_id": "puertominero",
-    "store_url": "https://www.puertominero.com.ar",
-    "store_image": "/images/stores/puertominero.png",
-    "trust_factor_manual": 90,
-    "seller_type": [
-      "componentes",
-      "usado"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "tech710": {
-    "store_name": "710Tech",
-    "store_id": "710tech",
-    "store_url": "https://www.710tech.com.ar/",
-    "store_image": "/images/stores/710tech.png",
-    "trust_factor_manual": 60,
-    "seller_type": [
-      "componentes",
-      "usado",
-      "garantia"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "bytes37": {
-    "store_name": "37 Bytes",
-    "store_id": "bytes37",
-    "store_url": "https://www.37bytes.com.ar/",
-    "store_image": "/images/stores/37bytes.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "dinobyte": {
-    "store_name": "Dinobyte",
-    "store_id": "dinobyte",
-    "store_url": "https://dinobyte.ar/categoria-producto/",
-    "store_image": "/images/stores/dinobyte.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "fullH4rd": {
-    "store_name": "Full H4rd",
-    "store_id": "fullh4rd",
-    "store_url": "https://fullh4rd.com.ar/",
-    "store_image": "/images/stores/fullh4rd.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes",
-      "buenos aires",
-      "stock"
-    ]
-  },
-  "gamingPoint": {
-    "store_name": "Gaming Point",
-    "store_id": "gamingpoint",
-    "store_url": "https://gamingpoint.com.ar/",
-    "store_image": "/images/stores/gamingpoint.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "gamersPoint": {
-    "store_name": "Gamers Point",
-    "store_id": "gamerspoint",
-    "store_url": "https://www.gamerspoint.com.ar/",
-    "store_image": "/images/stores/gamerspoint.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "GamingCity": {
-    "store_name": "Gaming City",
-    "store_id": "gamingcity",
-    "store_url": "https://www.gamingcity.com.ar/",
-    "store_image": "/images/stores/gamingcity.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "gezatek": {
-    "store_name": "Gezatek",
-    "store_id": "gezatek",
-    "store_url": "https://www.gezatek.com.ar/tienda/",
-    "store_image": "/images/stores/gezatek.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "goldenTech": {
-    "store_name": "GoldenTech Store",
-    "store_id": "goldentech",
-    "store_url": "https://goldentechstore.com.ar/",
-    "store_image": "/images/stores/goldentech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "hfTecnologia": {
-    "store_name": "HF Tecnologia",
-    "store_id": "hftecnologia",
-    "store_url": "https://hftecnologia.com.ar/",
-    "store_image": "/images/stores/hftecnologia.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "arShop": {
-    "store_name": "AR Shop",
-    "store_id": "arshop",
-    "store_url": "https://ar-shop.com.ar/",
-    "store_image": "/images/stores/arshop.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "setup",
-      "componentes"
-    ],
-    "tags": [
-      "setup"
-    ]
-  },
-  "acuarioInsumos": {
-    "store_name": "Acuario Insumos",
-    "store_id": "acuarioinsumos",
-    "store_url": "https://www.insumosacuario.com.ar/",
-    "store_image": "/images/stores/acuarioinsumos.png",
-    "trust_factor_manual": 10,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "wizTech": {
-    "store_name": "WIZ TECH",
-    "store_id": "wiztech",
-    "store_url": "https://wiztech.com.ar/",
-    "store_image": "/images/stores/wiztech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "xtPc": {
-    "store_name": "Xt-PC",
-    "store_id": "xtpc",
-    "store_url": "https://www.xt-pc.com.ar/",
-    "store_image": "/images/stores/xtpc.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "empenioGamer": {
-    "store_name": "Empeño Gamer",
-    "store_id": "empeniogamer",
-    "store_url": "https://empeniogamer.com.ar/",
-    "store_image": "/images/stores/empeniogamer.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "setup",
-      "componentes"
-    ],
-    "tags": [
-      "setup"
-    ]
-  },
-  "hardCore": {
-    "store_name": "HardCore",
-    "store_id": "hardcore",
-    "store_url": "https://hardcorecomputacion.com.ar/categoria-producto/",
-    "store_image": "/images/stores/hardcore.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "hyperGaming": {
-    "store_name": "Hyper Gaming",
-    "store_id": "hypergaming",
-    "store_url": "https://www.hypergaming.com.ar/",
-    "store_image": "/images/stores/hypergaming.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "ignaTech": {
-    "store_name": "IgnaTech",
-    "store_id": "ignatech",
-    "store_url": "https://www.ignatech.com.ar/",
-    "store_image": "/images/stores/ignatech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "integradosArgentinos": {
-    "store_name": "Integrados Argentinos",
-    "store_id": "integradosargentinos",
-    "store_url": "https://www.integradosargentinos.com/",
-    "store_image": "/images/stores/integradosargentinos.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "katech": {
-    "store_name": "Katech",
-    "store_id": "katech",
-    "store_url": "https://katech.com.ar/",
-    "store_image": "/images/stores/katech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "liontech": {
-    "store_name": "Liontech Gaming",
-    "store_id": "liontech",
-    "store_url": "https://www.liontech-gaming.com/",
-    "store_image": "/images/stores/liontech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "malditoHard": {
-    "store_name": "Maldito Hard",
-    "store_id": "malditohard",
-    "store_url": "https://www.malditohard.com.ar/",
-    "store_image": "/images/stores/malditohard.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "maxTecno": {
-    "store_name": "Max Tecno",
-    "store_id": "maxtecno",
-    "store_url": "https://maxtecno.com.ar/",
-    "store_image": "/images/stores/maxtecno.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "megasoft": {
-    "store_name": "Megasoft",
-    "store_id": "megasoft",
-    "store_url": "https://www.megasoftargentina.com.ar/",
-    "store_image": "/images/stores/megasoft.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "mexx": {
-    "store_name": "Mexx",
-    "store_id": "mexx",
-    "store_url": "https://www.mexx.com.ar/productos-rubro/",
-    "store_image": "/images/stores/mexx.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "noxieStore": {
-    "store_name": "Noxie Store",
-    "store_id": "noxiestore",
-    "store_url": "https://www.noxiestore.com/",
-    "store_image": "/images/stores/noxiestore.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "peakComputacion": {
-    "store_name": "Peak Computacion",
-    "store_id": "peakcomputacion",
-    "store_url": "https://www.peakcomputacion.com",
-    "store_image": "/images/stores/peakcomputacion.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "rocketHard": {
-    "store_name": "Rocket Hard",
-    "store_id": "rockethard",
-    "store_url": "https://www.rockethard.com.ar",
-    "store_image": "/images/stores/rockethard.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "scpHardstore": {
-    "store_name": "SCP Hardstore",
-    "store_id": "scphardstore",
-    "store_url": "https://www.scphardstore.com",
-    "store_image": "/images/stores/scphardstore.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "shopGamer": {
-    "store_name": "ShopGamer",
-    "store_id": "shopgamer",
-    "store_url": "https://www.shopgamer.com.ar",
-    "store_image": "/images/stores/shopgamer.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "theGamerShop": {
-    "store_name": "The Gamer Shop",
-    "store_id": "thegamershop",
-    "store_url": "https://www.thegamershop.com.ar",
-    "store_image": "/images/stores/thegamershop.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "tiendaTrade": {
-    "store_name": "Tiendatrade",
-    "store_id": "tiendatrade",
-    "store_url": "https://www.tiendatrade.com.ar",
-    "store_image": "/images/stores/tiendatrade.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "turtech": {
-    "store_name": "Turtech",
-    "store_id": "turtech",
-    "store_url": "https://www.turtech.com.ar",
-    "store_image": "/images/stores/turtech.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "universoGamer": {
-    "store_name": "Urano Stream",
-    "store_id": "universoGamer",
-    "store_url": "https://www.universoGamer.com.ar",
-    "store_image": "/images/stores/universoGamer.png",
-    "trust_factor_manual": 20,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "gorilaGames": {
-    "store_name": "gorilaGames",
-    "store_id": "gorilagames",
-    "store_url": "https://www.gorilagames.com.ar",
-    "store_image": "/images/stores/gorilaGames.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "nextgames": {
-    "store_name": "Next Games",
-    "store_id": "nextgames",
-    "store_url": "https://www.nextgames.com.ar",
-    "store_image": "/images/stores/nextgames.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "alltek": {
-    "store_name": "Alltek",
-    "store_id": "alltek",
-    "store_url": "https://www.alltek.ar",
-    "store_image": "/images/stores/alltek.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "insumaxinformatica": {
-    "store_name": "Insumax Informatica",
-    "store_id": "insumaxinformatica",
-    "store_url": "https://www.insumaxinformatica.com.ar",
-    "store_image": "/images/stores/insumaxinformatica.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "compucordoba": {
-    "store_name": "CompuCordoba",
-    "store_id": "compucordoba",
-    "store_url": "https://www.compucordoba.com.ar",
-    "store_image": "/images/stores/compucordoba.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "macroinsumos": {
-    "store_name": "Macroinsumos",
-    "store_id": "macroinsumos",
-    "store_url": "https://www.macroinsumos.com.ar",
-    "store_image": "/images/stores/macroinsumos.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "storelaplata": {
-    "store_name": "Store La Plata",
-    "store_id": "storelaplata",
-    "store_url": "https://www.storelaplata.com.ar",
-    "store_image": "/images/stores/storelaplata.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes",
-      "consolas"
-    ]
-  },
-  "cellplay": {
-    "store_name": "CellPlay",
-    "store_id": "cellplay",
-    "store_url": "https://www.cellplay.com.ar",
-    "store_image": "/images/stores/cellplay.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "hydraxtreme": {
-    "store_name": "Hydra Xtreme",
-    "store_id": "hydraxtreme",
-    "store_url": "https://www.hydraxtreme.com",
-    "store_image": "/images/stores/hydraxtreme.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "casatecno": {
-    "store_name": "Casa Tecno",
-    "store_id": "casatecno",
-    "store_url": "https://www.casatecno.com.ar",
-    "store_image": "/images/stores/casatecno.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "epocasvideogames": {
-    "store_name": "Epocas Videogames",
-    "store_id": "epocasvideogames",
-    "store_url": "https://www.epocasvideogames.com.ar",
-    "store_image": "/images/stores/epocasvideogames.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "gztienda": {
-    "store_name": "GZ Tienda",
-    "store_id": "gztienda",
-    "store_url": "https://www.gztienda.com.ar",
-    "store_image": "/images/stores/gztienda.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "gamesargentina": {
-    "store_name": "Games Argentina",
-    "store_id": "gamesargentina",
-    "store_url": "https://www.gamesargentina.com",
-    "store_image": "/images/stores/gamesargentina.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "elevengamesar": {
-    "store_name": "Eleven Games AR",
-    "store_id": "elevengamesar",
-    "store_url": "https://www.elevengamesar.com",
-    "store_image": "/images/stores/elevengamesar.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "intecnova": {
-    "store_name": "IntecNova",
-    "store_id": "intecnova",
-    "store_url": "https://www.intecnova.com.ar",
-    "store_image": "/images/stores/intecnova.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "kenshinanimestore": {
-    "store_name": "Kenshin Anime Store",
-    "store_id": "kenshinanimestore",
-    "store_url": "https://www.kenshinanimestore.com",
-    "store_image": "/images/stores/kenshinanimestore.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "smarttucuman": {
-    "store_name": "Smart Tucuman",
-    "store_id": "smarttucuman",
-    "store_url": "https://www.smarttucuman.com.ar",
-    "store_image": "/images/stores/smarttucuman.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "goldGaming": {
-    "store_name": "Gold Gaming",
-    "store_id": "goldgaming",
-    "store_url": "https://www.goldgaming.com.ar/",
-    "store_image": "/images/stores/goldgaming.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "herrerogamer2": {
-    "store_name": "Herrero Gamer 2",
-    "store_id": "herrerogamer2",
-    "store_url": "https://herrerogamer2.mitiendanube.com/",
-    "store_image": "/images/stores/herrerogamer2.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "onicaps": {
-    "store_name": "Onicaps",
-    "store_id": "onicaps",
-    "store_url": "https://www.onicaps.online/",
-    "store_image": "/images/stores/onicaps.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "cuadrosmodernos": {
-    "store_name": "Cuadros Modernos",
-    "store_id": "cuadrosmodernos",
-    "store_url": "https://www.cuadrosmodernos.com.ar/",
-    "store_image": "/images/stores/cuadrosmodernos.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
-  },
-  "shibuyacomicstore": {
-    "store_name": "Shibuya Comic Store",
-    "store_id": "shibuyacomicstore",
-    "store_url": "https://www.shibuyacomicstore.com.ar/",
-    "store_image": "/images/stores/shibuyacomicstore.png",
-    "trust_factor_manual": 70,
-    "seller_type": [
-      "componentes"
-    ],
-    "tags": [
-      "componentes"
-    ]
+  "stores": {
+    "armyTech": {
+      "store_name": "ArmyTech",
+      "store_id": "armytech",
+      "store_url": "https://www.armytech.com.ar",
+      "store_image": "/src/assets/stores/armytech.png",
+      "trust_factor_manual": 90,
+      "seller_type": [
+        "setup",
+        "componentes"
+      ],
+      "tags": [
+        "gaming",
+        "buenos aires",
+        "buena_reputacion",
+        "componentes",
+        "calidad"
+      ]
+    },
+    "venex": {
+      "store_name": "Venex",
+      "store_id": "venex",
+      "store_url": "https://www.venex.com.ar",
+      "store_image": "/images/stores/venex.png",
+      "trust_factor_manual": 85,
+      "seller_type": [
+        "setup",
+        "componentes"
+      ],
+      "tags": [
+        "gaming",
+        "armados",
+        "cordoba",
+        "buena_reputacion",
+        "componentes"
+      ]
+    },
+    "maximus": {
+      "store_name": "Maximus",
+      "store_id": "maximus",
+      "store_url": "https://www.maximus.com.ar",
+      "store_image": "/images/stores/maximus.png",
+      "trust_factor_manual": 100,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "stock",
+        "componentes"
+      ]
+    },
+    "compraGamer": {
+      "store_name": "CompraGamer",
+      "store_id": "compragamer",
+      "store_url": "https://compragamer.com/productos?",
+      "store_image": "/images/stores/compragamer.png",
+      "trust_factor_manual": 100,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "calidad",
+        "buena reputacion",
+        "componentes",
+        "precio",
+        "mayorista"
+      ]
+    },
+    "ngTech": {
+      "store_name": "NGTech",
+      "store_id": "ngtech",
+      "store_url": "https://www.ngtechnologies.com.ar",
+      "store_image": "/images/stores/ngtech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "mgmGamers": {
+      "store_name": "MGM Gamers",
+      "store_id": "mgmgamers",
+      "store_url": "https://mgmgamers.store",
+      "store_image": "/images/stores/mgmgamers.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "setup",
+        "decoracion"
+      ],
+      "tags": [
+        "setup",
+        "mousepads",
+        "precio"
+      ]
+    },
+    "slotOne": {
+      "store_name": "Slot-One",
+      "store_id": "slotone",
+      "store_url": "https://www.slot-one.com.ar",
+      "store_image": "/images/stores/slotone.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes",
+        "buenos aires",
+        "stock"
+      ]
+    },
+    "puertoMinero": {
+      "store_name": "Puerto Minero",
+      "store_id": "puertominero",
+      "store_url": "https://www.puertominero.com.ar",
+      "store_image": "/images/stores/puertominero.png",
+      "trust_factor_manual": 90,
+      "seller_type": [
+        "componentes",
+        "usado"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "tech710": {
+      "store_name": "710Tech",
+      "store_id": "710tech",
+      "store_url": "https://www.710tech.com.ar/",
+      "store_image": "/images/stores/710tech.png",
+      "trust_factor_manual": 60,
+      "seller_type": [
+        "componentes",
+        "usado",
+        "garantia"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "bytes37": {
+      "store_name": "37 Bytes",
+      "store_id": "bytes37",
+      "store_url": "https://www.37bytes.com.ar/",
+      "store_image": "/images/stores/37bytes.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "dinobyte": {
+      "store_name": "Dinobyte",
+      "store_id": "dinobyte",
+      "store_url": "https://dinobyte.ar/categoria-producto/",
+      "store_image": "/images/stores/dinobyte.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "fullH4rd": {
+      "store_name": "Full H4rd",
+      "store_id": "fullh4rd",
+      "store_url": "https://fullh4rd.com.ar/",
+      "store_image": "/images/stores/fullh4rd.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes",
+        "buenos aires",
+        "stock"
+      ]
+    },
+    "gamingPoint": {
+      "store_name": "Gaming Point",
+      "store_id": "gamingpoint",
+      "store_url": "https://gamingpoint.com.ar/",
+      "store_image": "/images/stores/gamingpoint.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "gamersPoint": {
+      "store_name": "Gamers Point",
+      "store_id": "gamerspoint",
+      "store_url": "https://www.gamerspoint.com.ar/",
+      "store_image": "/images/stores/gamerspoint.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "GamingCity": {
+      "store_name": "Gaming City",
+      "store_id": "gamingcity",
+      "store_url": "https://www.gamingcity.com.ar/",
+      "store_image": "/images/stores/gamingcity.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "gezatek": {
+      "store_name": "Gezatek",
+      "store_id": "gezatek",
+      "store_url": "https://www.gezatek.com.ar/tienda/",
+      "store_image": "/images/stores/gezatek.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "goldenTech": {
+      "store_name": "GoldenTech Store",
+      "store_id": "goldentech",
+      "store_url": "https://goldentechstore.com.ar/",
+      "store_image": "/images/stores/goldentech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "hfTecnologia": {
+      "store_name": "HF Tecnologia",
+      "store_id": "hftecnologia",
+      "store_url": "https://hftecnologia.com.ar/",
+      "store_image": "/images/stores/hftecnologia.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "arShop": {
+      "store_name": "AR Shop",
+      "store_id": "arshop",
+      "store_url": "https://ar-shop.com.ar/",
+      "store_image": "/images/stores/arshop.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "setup",
+        "componentes"
+      ],
+      "tags": [
+        "setup"
+      ]
+    },
+    "acuarioInsumos": {
+      "store_name": "Acuario Insumos",
+      "store_id": "acuarioinsumos",
+      "store_url": "https://www.insumosacuario.com.ar/",
+      "store_image": "/images/stores/acuarioinsumos.png",
+      "trust_factor_manual": 10,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "wizTech": {
+      "store_name": "WIZ TECH",
+      "store_id": "wiztech",
+      "store_url": "https://wiztech.com.ar/",
+      "store_image": "/images/stores/wiztech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "xtPc": {
+      "store_name": "Xt-PC",
+      "store_id": "xtpc",
+      "store_url": "https://www.xt-pc.com.ar/",
+      "store_image": "/images/stores/xtpc.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "empenioGamer": {
+      "store_name": "Empeño Gamer",
+      "store_id": "empeniogamer",
+      "store_url": "https://empeniogamer.com.ar/",
+      "store_image": "/images/stores/empeniogamer.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "setup",
+        "componentes"
+      ],
+      "tags": [
+        "setup"
+      ]
+    },
+    "hardCore": {
+      "store_name": "HardCore",
+      "store_id": "hardcore",
+      "store_url": "https://hardcorecomputacion.com.ar/categoria-producto/",
+      "store_image": "/images/stores/hardcore.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "hyperGaming": {
+      "store_name": "Hyper Gaming",
+      "store_id": "hypergaming",
+      "store_url": "https://www.hypergaming.com.ar/",
+      "store_image": "/images/stores/hypergaming.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "ignaTech": {
+      "store_name": "IgnaTech",
+      "store_id": "ignatech",
+      "store_url": "https://www.ignatech.com.ar/",
+      "store_image": "/images/stores/ignatech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "integradosArgentinos": {
+      "store_name": "Integrados Argentinos",
+      "store_id": "integradosargentinos",
+      "store_url": "https://www.integradosargentinos.com/",
+      "store_image": "/images/stores/integradosargentinos.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "katech": {
+      "store_name": "Katech",
+      "store_id": "katech",
+      "store_url": "https://katech.com.ar/",
+      "store_image": "/images/stores/katech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "liontech": {
+      "store_name": "Liontech Gaming",
+      "store_id": "liontech",
+      "store_url": "https://www.liontech-gaming.com/",
+      "store_image": "/images/stores/liontech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "malditoHard": {
+      "store_name": "Maldito Hard",
+      "store_id": "malditohard",
+      "store_url": "https://www.malditohard.com.ar/",
+      "store_image": "/images/stores/malditohard.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "maxTecno": {
+      "store_name": "Max Tecno",
+      "store_id": "maxtecno",
+      "store_url": "https://maxtecno.com.ar/",
+      "store_image": "/images/stores/maxtecno.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "megasoft": {
+      "store_name": "Megasoft",
+      "store_id": "megasoft",
+      "store_url": "https://www.megasoftargentina.com.ar/",
+      "store_image": "/images/stores/megasoft.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "mexx": {
+      "store_name": "Mexx",
+      "store_id": "mexx",
+      "store_url": "https://www.mexx.com.ar/productos-rubro/",
+      "store_image": "/images/stores/mexx.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "noxieStore": {
+      "store_name": "Noxie Store",
+      "store_id": "noxiestore",
+      "store_url": "https://www.noxiestore.com/",
+      "store_image": "/images/stores/noxiestore.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "peakComputacion": {
+      "store_name": "Peak Computacion",
+      "store_id": "peakcomputacion",
+      "store_url": "https://www.peakcomputacion.com",
+      "store_image": "/images/stores/peakcomputacion.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "rocketHard": {
+      "store_name": "Rocket Hard",
+      "store_id": "rockethard",
+      "store_url": "https://www.rockethard.com.ar",
+      "store_image": "/images/stores/rockethard.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "scpHardstore": {
+      "store_name": "SCP Hardstore",
+      "store_id": "scphardstore",
+      "store_url": "https://www.scphardstore.com",
+      "store_image": "/images/stores/scphardstore.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "shopGamer": {
+      "store_name": "ShopGamer",
+      "store_id": "shopgamer",
+      "store_url": "https://www.shopgamer.com.ar",
+      "store_image": "/images/stores/shopgamer.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "theGamerShop": {
+      "store_name": "The Gamer Shop",
+      "store_id": "thegamershop",
+      "store_url": "https://www.thegamershop.com.ar",
+      "store_image": "/images/stores/thegamershop.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "tiendaTrade": {
+      "store_name": "Tiendatrade",
+      "store_id": "tiendatrade",
+      "store_url": "https://www.tiendatrade.com.ar",
+      "store_image": "/images/stores/tiendatrade.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "turtech": {
+      "store_name": "Turtech",
+      "store_id": "turtech",
+      "store_url": "https://www.turtech.com.ar",
+      "store_image": "/images/stores/turtech.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "universoGamer": {
+      "store_name": "Urano Stream",
+      "store_id": "universoGamer",
+      "store_url": "https://www.universoGamer.com.ar",
+      "store_image": "/images/stores/universoGamer.png",
+      "trust_factor_manual": 20,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "gorilaGames": {
+      "store_name": "gorilaGames",
+      "store_id": "gorilagames",
+      "store_url": "https://www.gorilagames.com.ar",
+      "store_image": "/images/stores/gorilaGames.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "nextgames": {
+      "store_name": "Next Games",
+      "store_id": "nextgames",
+      "store_url": "https://www.nextgames.com.ar",
+      "store_image": "/images/stores/nextgames.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "alltek": {
+      "store_name": "Alltek",
+      "store_id": "alltek",
+      "store_url": "https://www.alltek.ar",
+      "store_image": "/images/stores/alltek.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "insumaxinformatica": {
+      "store_name": "Insumax Informatica",
+      "store_id": "insumaxinformatica",
+      "store_url": "https://www.insumaxinformatica.com.ar",
+      "store_image": "/images/stores/insumaxinformatica.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "compucordoba": {
+      "store_name": "CompuCordoba",
+      "store_id": "compucordoba",
+      "store_url": "https://www.compucordoba.com.ar",
+      "store_image": "/images/stores/compucordoba.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "macroinsumos": {
+      "store_name": "Macroinsumos",
+      "store_id": "macroinsumos",
+      "store_url": "https://www.macroinsumos.com.ar",
+      "store_image": "/images/stores/macroinsumos.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "storelaplata": {
+      "store_name": "Store La Plata",
+      "store_id": "storelaplata",
+      "store_url": "https://www.storelaplata.com.ar",
+      "store_image": "/images/stores/storelaplata.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes",
+        "consolas"
+      ]
+    },
+    "cellplay": {
+      "store_name": "CellPlay",
+      "store_id": "cellplay",
+      "store_url": "https://www.cellplay.com.ar",
+      "store_image": "/images/stores/cellplay.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "hydraxtreme": {
+      "store_name": "Hydra Xtreme",
+      "store_id": "hydraxtreme",
+      "store_url": "https://www.hydraxtreme.com",
+      "store_image": "/images/stores/hydraxtreme.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "casatecno": {
+      "store_name": "Casa Tecno",
+      "store_id": "casatecno",
+      "store_url": "https://www.casatecno.com.ar",
+      "store_image": "/images/stores/casatecno.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "epocasvideogames": {
+      "store_name": "Epocas Videogames",
+      "store_id": "epocasvideogames",
+      "store_url": "https://www.epocasvideogames.com.ar",
+      "store_image": "/images/stores/epocasvideogames.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "gztienda": {
+      "store_name": "GZ Tienda",
+      "store_id": "gztienda",
+      "store_url": "https://www.gztienda.com.ar",
+      "store_image": "/images/stores/gztienda.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "gamesargentina": {
+      "store_name": "Games Argentina",
+      "store_id": "gamesargentina",
+      "store_url": "https://www.gamesargentina.com",
+      "store_image": "/images/stores/gamesargentina.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "elevengamesar": {
+      "store_name": "Eleven Games AR",
+      "store_id": "elevengamesar",
+      "store_url": "https://www.elevengamesar.com",
+      "store_image": "/images/stores/elevengamesar.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "intecnova": {
+      "store_name": "IntecNova",
+      "store_id": "intecnova",
+      "store_url": "https://www.intecnova.com.ar",
+      "store_image": "/images/stores/intecnova.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "kenshinanimestore": {
+      "store_name": "Kenshin Anime Store",
+      "store_id": "kenshinanimestore",
+      "store_url": "https://www.kenshinanimestore.com",
+      "store_image": "/images/stores/kenshinanimestore.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "smarttucuman": {
+      "store_name": "Smart Tucuman",
+      "store_id": "smarttucuman",
+      "store_url": "https://www.smarttucuman.com.ar",
+      "store_image": "/images/stores/smarttucuman.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "goldGaming": {
+      "store_name": "Gold Gaming",
+      "store_id": "goldgaming",
+      "store_url": "https://www.goldgaming.com.ar/",
+      "store_image": "/images/stores/goldgaming.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "herrerogamer2": {
+      "store_name": "Herrero Gamer 2",
+      "store_id": "herrerogamer2",
+      "store_url": "https://herrerogamer2.mitiendanube.com/",
+      "store_image": "/images/stores/herrerogamer2.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "onicaps": {
+      "store_name": "Onicaps",
+      "store_id": "onicaps",
+      "store_url": "https://www.onicaps.online/",
+      "store_image": "/images/stores/onicaps.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "cuadrosmodernos": {
+      "store_name": "Cuadros Modernos",
+      "store_id": "cuadrosmodernos",
+      "store_url": "https://www.cuadrosmodernos.com.ar/",
+      "store_image": "/images/stores/cuadrosmodernos.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    },
+    "shibuyacomicstore": {
+      "store_name": "Shibuya Comic Store",
+      "store_id": "shibuyacomicstore",
+      "store_url": "https://www.shibuyacomicstore.com.ar/",
+      "store_image": "/images/stores/shibuyacomicstore.png",
+      "trust_factor_manual": 70,
+      "seller_type": [
+        "componentes"
+      ],
+      "tags": [
+        "componentes"
+      ]
+    }
   }
 }

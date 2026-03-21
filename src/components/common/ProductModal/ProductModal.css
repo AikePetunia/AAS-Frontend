@@ -8,7 +8,7 @@
 .pm__card {
   background: var(--color-zinc-900);
   border-radius: 12px;
-  overflow: visible; /* antes hidden */
+  overflow: visible; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;

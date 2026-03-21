@@ -4,7 +4,7 @@ import armyTechData from "../../products/armyTech.json";
 import "./FeaturedProducts.css";
 
 export function FeaturedProducts() {
-  const products = armyTechData.products.slice(0, 1230);
+  const products = armyTechData.products.slice(0, 30);
   return (
     <>
       <div className="fp__container">

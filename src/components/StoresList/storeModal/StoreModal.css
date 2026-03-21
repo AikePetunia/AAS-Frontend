@@ -1,0 +1,32 @@
+.sm__container {
+    background-color: var(--color-zinc-900);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+    padding: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+    border-color: var(--color-gray-500) ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.sm__store-logo {
+    width: 150px;
+    border-radius: 16px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 16px;
+    border-color: var(--color-lime-400);
+}
+
+.sm__name-container > span {
+    display: block;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

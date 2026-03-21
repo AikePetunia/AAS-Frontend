@@ -1,0 +1,19 @@
+.sl__container {
+    margin: 0 5%
+}
+
+.sl_hl-text {
+    color: var(--color-lime-400);
+}
+
+.sl__stats-texts {
+    opacity: 0.35;
+    font-size: 0.8rem;
+}
+.sl__container-listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 5%;
+  gap: 16px;
+}
