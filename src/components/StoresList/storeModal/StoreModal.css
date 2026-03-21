@@ -12,15 +12,38 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    position: relative;
+}
+
+.sm__store {
+    position: relative;
+}
+
+.sm__trust-fact {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+
+    background: var(--color-lime-400);
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.sm__trust-fact > span {
+  color: #000;
 }
 
 .sm__store-logo {
-    width: 150px;
-    border-radius: 16px;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 16px;
-    border-color: var(--color-lime-400);
+  width: 150px;
+  border: 3px solid var(--color-lime-400);
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
 }
 
 .sm__name-container > span {

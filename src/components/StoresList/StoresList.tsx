@@ -40,6 +40,7 @@ export function StoresList() {
                             key={store.store_id}
                             name={store.store_name}
                             image={store.store_image}
+                            trustFact={store.trust_factor_manual}
                         />
                     ))}
                    
