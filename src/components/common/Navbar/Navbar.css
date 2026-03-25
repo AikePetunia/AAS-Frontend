@@ -8,6 +8,43 @@
   z-index: 1000;
 }
 
+.main-navbar:after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  bottom: -32px;
+  width: 20%;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(183, 255, 60, 0.95) 20%,
+    rgba(163, 230, 53, 0.95) 10%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(163, 230, 53, 0.7);
+}
+
+
+.main-navbar::before {
+  content: "";
+  position: absolute;
+  right: 0%;
+  bottom: -128px;
+  width: 35%;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(183, 255, 60, 0.95) 100%,
+    rgba(163, 230, 53, 0.95) 50%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(163, 230, 53, 0.7);
+}
+
 .page-slogan {
   display: flex;
   gap: 8px;

@@ -31,6 +31,9 @@
   --shadow-lime-xl: 0 0 12px rgba(163, 230, 53, 0.5);
   --shadow-lime-glow: 0 4px 24px rgba(163, 230, 53, 0.4);
   --shadow-lime-card: 0 10px 40px rgba(163, 230, 53, 0.3);
+
+    --font-heading: "Poppins", sans-serif;
+  --font-body: "JetBrains Mono", monospace;
 }
 
 /* ==========================================
@@ -56,16 +59,41 @@ body::before {
   background-size: 50px 50px;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-80%);
+  width: min(1200px, 230vw);
+  height: 420px;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(163, 230, 53, 0.20) 0%,
+    rgba(132, 204, 22, 0.10) 32%,
+    rgba(16, 185, 129, 0.06) 48%,
+    rgba(0, 0, 0, 0) 74%
+  );
+  filter: blur(10px);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-a,
+a {
+  font-family: var(--font-heading);
+  font-weight: 600;      
+  color: var(--color-gray-100);
+}
+
 span,
 p {
-  font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-body);
   color: var(--color-gray-200);
 }
 
@@ -78,7 +106,32 @@ i {
 }
 
 .highlight-green {
-  color: var(--color-lime-400);
+  position: relative;
+  display: inline-block;
+  color: #b7ff3c;
+  font-weight: 700;
+  text-shadow:
+    0 0 6px rgba(183, 255, 60, 0.1),
+    0 0 14px rgba(163, 230, 53, 0.25),
+    0 0 28px rgba(132, 204, 22, 0.45);
+}
+
+.highlight-green::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  bottom: -3px;
+  width: 84%;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(183, 255, 60, 0.95) 20%,
+    rgba(163, 230, 53, 0.95) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(163, 230, 53, 0.7);
 }
 
 .highlight-orange {

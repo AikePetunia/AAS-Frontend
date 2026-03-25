@@ -15,14 +15,14 @@ type Store = {
 
 export function StoresList() {
     const { stores } = storesInfo;
-    const storeArray: Store[] = Object.values(stores).slice(0, 5)
+    const storeArray: Store[] = Object.values(stores).slice(0, 10)
     
     return (
         <>
             <div className="sl__container">
-                <h2>
+                <h2 className="sm__title-w-line">
                     Tiendas que se
-                    <span className="sl_hl-text"> paginan </span>
+                    <span className="highlight-green"> paginan </span>
                     en AAS
                 </h2>
                 <div className="sl__stats-texts">
@@ -43,11 +43,13 @@ export function StoresList() {
                             trustFact={store.trust_factor_manual}
                         />
                     ))}
-                   
                 </div>
+                <br />
+                <br />
             </div> 
         </>
     )
 }
+
 // store url debería de ser un href hacai la info interna de coso
 export default StoresList;

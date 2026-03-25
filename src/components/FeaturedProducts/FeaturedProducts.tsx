@@ -8,6 +8,11 @@ export function FeaturedProducts() {
   return (
     <>
       <div className="fp__container">
+        <h2 className="sm__title-w-line">
+            Productos destacados
+        </h2>
+        <br />
+        <br />
         <ProductModal
           products={products}
           storeName={armyTechData.store_name}

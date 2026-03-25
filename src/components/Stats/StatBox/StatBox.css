@@ -1,0 +1,19 @@
+.sb__container {
+    border: 1px solid white;
+    width: 250px;
+    padding: 16px;
+    text-align: left;
+    border-left: 3px solid var(--color-lime-400);
+    background-color: black;
+}
+
+
+.sb__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 6px;
+}
+
+.sb__number-container {
+    border: 1px solid var(--color-emerald-400);
+}

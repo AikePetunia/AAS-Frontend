@@ -16,7 +16,6 @@
 .ms__title {
   margin: 0;
   font-size: clamp(1.6rem, 3.8vw, 2.8rem);
-  font-weight: 700;
   line-height: 1.18;
   text-wrap: balance;
 }
