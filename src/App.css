@@ -142,6 +142,9 @@ i {
   color: var(--color-gray-500);
 }
 
+.hidden {
+  display: none;
+}
 
 /* ==========================================
    EFECTS
