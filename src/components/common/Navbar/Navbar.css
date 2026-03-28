@@ -220,18 +220,13 @@ position: absolute;
   align-items: center;
 }
 
-.main-navbar.floating .hamburger-btn {
-  position: relative; 
-  z-index: 1300;
-}
-
-.ham-categories.floating {
-  position: absolute;
+.ham-categories.drawer {
+  position: fixed;
     top: 0;
-    right: -330px;
+    right: 0;
     opacity: 0;
     height: 100vh;
-    width: 280px;
+    width: fit-content;
     flex-direction: column;
     align-items: flex-start;
     background: rgba(24, 24, 27, 0.95);
@@ -240,14 +235,43 @@ position: absolute;
     border-left: 1px solid rgba(163, 230, 53, 0.2);
     padding: 80px 24px 24px 24px;
     gap: 8px;
-    transition: right 0.3s ease;
-    z-index: 1250;
+    transform: translateX(112%);
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    z-index: 1400;
     box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
 }
 
-.ham-categories.floating.active {
-  right: 0;
+@media (max-width:768px) {
+
+}
+
+.ham-categories.drawer.active {
   opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.drawer-close-btn {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(163, 230, 53, 0.35);
+  background: rgba(10, 10, 12, 0.65);
+  color: var(--color-gray-100);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drawer-close-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(163, 230, 53, 0.45);
 }
 
 .ham-categories a {
@@ -281,21 +305,41 @@ position: absolute;
 }
 
 .menu-overlay {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 1350;
   backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media (max-width: 768px) {
   .main-navbar {
     flex-wrap: wrap;
   }
+
+    .ham-categories.drawer {
+    width: 95%;
+    right: none;
+    text-align: center;
+  }
+
+    .drawer-close-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
 
   .page-slogan {
     order: 1;
@@ -323,32 +367,14 @@ position: absolute;
   }
 
   .ham-categories {
-    position: fixed;
-    top: 0;
-    right: -330px;
-    height: 100vh;
-    width: 280px;
-    flex-direction: column;
-    align-items: flex-start;
-    background: rgba(24, 24, 27, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-left: 1px solid rgba(163, 230, 53, 0.2);
-    padding: 80px 24px 24px 24px;
-    gap: 8px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
-  }
-
-  .ham-categories.active {
-    right: 0;
+    gap: 12px;
   }
 
   .ham-categories a {
     width: 100%;
     padding: 16px;
     font-size: 16px;
+    justify-content: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
