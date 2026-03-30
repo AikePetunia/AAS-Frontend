@@ -105,15 +105,18 @@ export function Navbar() {
     };
   }, [isMenuOpen, isDrawerMode]);
 
+  const isPhone = window.innerWidth <= 768;
 
   return (
     <>
-      <nav className={`main-navbar glass-effect ${isFloating ? "floating" : ""}`}>
-        <div className="page-slogan">
-          <img src={eye} alt="Eye" loading="lazy" className={`${isFloating ? "floating" : ""}`}></img>
-          <h1 className={`${isFloating ? "hidden" : ""}`}> | </h1>
-          <h1 className={`${isFloating ? "hidden" : ""}`}>AAS</h1>
-        </div>
+      <nav className={`main-navbar ${isFloating ? "floating glass-effect" : ""}`}>
+        <div className={`page-slogan ${isFloating ? "floating" : ""}`}>
+          <img src={eye} alt="Eye" loading="lazy" style={{ opacity: isFloating ? 0.5 : 1 }} ></img>
+          {isPhone ? '' : `
+          <h1 style={{ opacity: isFloating ? 0.5 : 1 }}> | </h1>
+          <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>AAS</h1>
+          `}
+          </div>
         <div className={`search-wrapper ${isFloating ? "floating" : ""} `}>
           <input
             type="text"
@@ -180,16 +183,14 @@ export function Navbar() {
             ref={menuRef}
             className={`ham-categories drawer ${isMenuOpen ? "active" : ""}`}
           >
-            {isMobile && (
               <button
                 type="button"
                 className="drawer-close-btn"
                 aria-label="Cerrar menu"
                 onClick={closeMenu}
               >
-                x
+                <i className="fa-solid fa-x"></i>
               </button>
-            )}
             <a >
               <img src={energy} alt="Lo mas buscado" loading="lazy"></img>
               Lo mas buscado

@@ -36,10 +36,6 @@
   --font-body: "JetBrains Mono", monospace;
 }
 
-/* ==========================================
-   BACKGROUND
-   ========================================== */
-
 body {
   min-height: 100vh;
   margin: 0;
@@ -146,10 +142,6 @@ i {
   display: none;
 }
 
-/* ==========================================
-   EFECTS
-   ========================================== */
-
 .glass-effect {
   background: rgba(24, 24, 27, 0.78);
   backdrop-filter: blur(12px);
@@ -170,10 +162,6 @@ i {
     0 0 42px rgba(163, 230, 53, 0.2);
   animation: glow-pulse 2s ease-in-out infinite;
 }
-
-/* ==========================================
-   ANIMACIONES
-   ========================================== */
 
 @keyframes glow-pulse {
   0%, 100% {
