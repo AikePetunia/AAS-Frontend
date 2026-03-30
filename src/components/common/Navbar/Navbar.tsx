@@ -112,10 +112,12 @@ export function Navbar() {
       <nav className={`main-navbar ${isFloating ? "floating glass-effect" : ""}`}>
         <div className={`page-slogan ${isFloating ? "floating" : ""}`}>
           <img src={eye} alt="Eye" loading="lazy" style={{ opacity: isFloating ? 0.5 : 1 }} ></img>
-          {isPhone ? '' : `
+          {!isPhone && (
+            <>
           <h1 style={{ opacity: isFloating ? 0.5 : 1 }}> | </h1>
-          <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>AAS</h1>
-          `}
+              <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>AAS</h1>
+              </>
+          )}
           </div>
         <div className={`search-wrapper ${isFloating ? "floating" : ""} `}>
           <input
