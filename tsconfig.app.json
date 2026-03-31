@@ -34,7 +34,7 @@
     "@types/*": ["src/types/*"],
     "@assets/*": ["src/assets/*"],
     "@icons/*": ["src/assets/icons/*"],
-    "@stores/*": ["src/stores/*"]
+    "@stores/*": ["src/assets/stores/*"]
   },
   "include": ["src"]
 }
