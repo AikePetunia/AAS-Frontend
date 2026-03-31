@@ -22,19 +22,20 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  },
-  "baseUrl": ".",
-  "paths": {
-    "@/*": ["src/*"],
-    "@components/*": ["src/components/*"],
-    "@pages/*": ["src/pages/*"],
-    "@hooks/*": ["src/hooks/*"],
-    "@utils/*": ["src/utils/*"],
-    "@types/*": ["src/types/*"],
-    "@assets/*": ["src/assets/*"],
-    "@icons/*": ["src/assets/icons/*"],
-    "@stores/*": ["src/assets/stores/*"]
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"],
+      "@icons/*": ["src/assets/icons/*"],
+      "@stores/*": ["src/assets/stores/*"]
+    }
   },
   "include": ["src"]
 }
