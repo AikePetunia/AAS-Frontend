@@ -13,6 +13,13 @@
   gap: 16px;
 }
 
+@media (max-width: 768px) {
+  .ms__hero {
+      align-items: flex-end;
+        text-align: left;
+  }
+}
+
 .ms__title {
   margin: 0;
   font-size: clamp(1.6rem, 3.8vw, 2.8rem);
@@ -23,6 +30,12 @@
 .ms__extra-features > p {
   color: gray;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .ms__extra-features > p {
+    text-align: center;
+  }
 }
 .ms__posta {
   display: flex;
@@ -152,7 +165,7 @@
   }
 
   .ms__title {
-    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+    font-size: clamp(2.3rem, 5.5vw, 1.8rem);
   }
 
   .ms__stats {
@@ -170,5 +183,7 @@
 
   .ms__posta {
     padding: 16px 14px;
+            margin-top: 24px;
+        margin-bottom: 24px;
   }
 }

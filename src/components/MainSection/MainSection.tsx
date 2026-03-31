@@ -1,6 +1,9 @@
 import "./MainSection.css";
 
 export function MainSection() {
+
+  const isPhone = window.innerWidth <= 768;
+
   return (
     <section className="ms">
       <div className="ms__hero">
@@ -20,13 +23,26 @@ export function MainSection() {
       </div>
 
       <div className="ms__posta">
+        {isPhone ? (
+          <>
         <p className="ms__posta-text">
+          En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
+          por el <span className="highlight-green">precio</span> y la{" "}
+          <span className="highlight-green">buena tienda</span>.
+        </p>
+            </>
+        ) : (
+        <>
+         <p className="ms__posta-text">
           En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
         </p>
         <p className="ms__posta-text">
           por el <span className="highlight-green">precio</span> y la{" "}
           <span className="highlight-green">buena tienda</span>.
         </p>
+        </>
+        )}
+       
       </div>
       {/* some stass?? 
       <div className="ms__stats">

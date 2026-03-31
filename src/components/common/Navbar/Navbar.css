@@ -8,6 +8,12 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .main-navbar {
+      padding: 8px 6px;
+  } 
+}
+
 .main-navbar.floating {
   position: fixed;
   top: 8px;
@@ -129,6 +135,15 @@
   margin: 0px 16px;
 }
 
+@media (max-width: 768px) {
+  .search-wrapper {
+    margin: 0px 4px;
+  }
+
+  .hamburger-btn {
+    padding: 0px;
+  }
+}
 .search-wrapper:focus-within {
   border-color: var(--color-lime-400);
   box-shadow: var(--shadow-lime-md);
@@ -371,6 +386,7 @@
   .hamburger-btn {
     display: block;
     order: 3;
+    padding: 0 4px  0 0;
   }
 
   .ham-categories {

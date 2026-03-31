@@ -22,8 +22,8 @@ export function StoresList() {
             <div className="sl__container">
                 <h2 className="sm__title-w-line">
                     Tiendas que se
-                    <span className="highlight-green"> paginan </span>
-                    en AAS
+                    <span className="highlight-green" style={{margin: "0px 8px"}}> paginan </span>
+                     en AAS
                 </h2>
                 <div className="sl__stats-texts">
                     <span>

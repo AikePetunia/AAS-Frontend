@@ -12,6 +12,12 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .sm__title-w-line {
+    display: block;
+    font-size: 26px;
+  }
+}
 .sm__title-w-line::before {
   content: "";
   flex: 0.1;
