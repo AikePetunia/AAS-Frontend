@@ -8,6 +8,12 @@
 
 A web scraping project focused on finding the best prices related to a setup enviroment across Argentinian stores, intended on argentinians citizens for saving money and time.
 
+## ToDo
+
+- [ ] Stores full information and dump (Need react router)
+- [ ] Fetch backend
+- [ ] good practices xd
+  
 ## Links utils
 
 - https://www.figma.com/make/aImGfPjsMQ987v2dFUtdGo/AAS?p=f&t=6UAo3sfHFHKxR8Av-0
