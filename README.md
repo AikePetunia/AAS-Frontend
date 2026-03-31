@@ -14,20 +14,20 @@ I'll try my best to not put ads on the page, or sponsored brands and be transpar
 
 ## General Roadmap (2026, backend)
 
-- [ ] do something idk
+- [ ] Stores deep information
+- [ ] Categories ?
 
-## Used / learnt
+## Links
 
-- vite
-
-### utils
-- ` npm init playwright@latest `
-
-https://designengineer.io/
-https://www.figma.com/make/aImGfPjsMQ987v2dFUtdGo/AAS?p=f&t=6UAo3sfHFHKxR8Av-0
+- https://designengineer.io/
+- https://www.figma.com/make/aImGfPjsMQ987v2dFUtdGo/AAS?p=f&t=6UAo3sfHFHKxR8Av-0
 
 ## ✨ Creator
 
 Made by [Venuss](https://venuss.me) 🇦🇷
 
-see Licenses (idk MIT ??)
+## License
+
+Copyright (c) 2026 AikePetunia
+
+Licensed under the GNU GPL v3.0. See `LICENSE`.
