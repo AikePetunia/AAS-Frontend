@@ -6,20 +6,10 @@
 
 > ⚠️ This page parts from the idea of [HardGamers](https://www.hardgamers.com.ar/), but with QOL stuff. It's not my intention to compete.
 
-A web scraping project focused on finding the best prices related to a setup enviroment across Argentinian stores.
+A web scraping project focused on finding the best prices related to a setup enviroment across Argentinian stores, intended on argentinians citizens for saving money and time.
 
-Intended on argentinians citizens for saving money and time.
+## Links utils
 
-I'll try my best to not put ads on the page, or sponsored brands and be transparent with the costs. ><
-
-## General Roadmap (2026, backend)
-
-- [ ] Stores deep information
-- [ ] Categories ?
-
-## Links
-
-- https://designengineer.io/
 - https://www.figma.com/make/aImGfPjsMQ987v2dFUtdGo/AAS?p=f&t=6UAo3sfHFHKxR8Av-0
 
 ## ✨ Creator
