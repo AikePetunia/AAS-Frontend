@@ -130,8 +130,8 @@ i {
   box-shadow: 0 0 10px rgba(163, 230, 53, 0.7);
 }
 
-.highlight-orange {
-  color: var(--color-orange-400);
+.highlight-red {
+  color: var(--color-red) !important;
 }
 
 .highlight-gray {

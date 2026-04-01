@@ -1,7 +1,4 @@
 .sm__container {
-    background-color: var(--color-zinc-900);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 8px;
     padding: 16px;
     
@@ -69,6 +66,12 @@
   background: linear-gradient(145deg, #232836, #181d29);
 }
 
+
+@media (max-width: 768px) {
+    .sm__store-logo {
+        width: 120px;
+    }
+}
 .sm__name-container > span {
     display: block;
     max-width: 150px;

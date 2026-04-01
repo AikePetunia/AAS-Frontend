@@ -9,10 +9,23 @@
     color: #e5e7eb;
 }
 
+@media (max-width: 768px) {
+    .s__container h3 {
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+    }
+}
 .s__stats-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: space-between;
     padding: 32px;
+}
+
+@media (max-width: 768px) {
+    .s__stats-grid {
+        justify-content: center;
+    }
 }

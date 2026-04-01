@@ -12,7 +12,7 @@ export function MainSection() {
           buscar componentes,{" "}
           <span className="highlight-gray">página por página,</span>
           <br />
-          deje de ser <span className="highlight-orange">agotador</span>
+          deje de ser <span className="highlight-red">agotador</span>
         </h1>
       </div>
       <div className="ms__extra-features">

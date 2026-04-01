@@ -4,11 +4,11 @@ import armyTechData from "../../products/armyTech.json";
 import "./FeaturedProducts.css";
 
 export function FeaturedProducts() {
-  const products = armyTechData.products.slice(0, 30);
+  const products = armyTechData.products.slice(0, 3);
   return (
     <>
       <div className="fp__container">
-        <h2 className="sm__title-w-line">
+        <h2 className="sm__title-w-line highlight-green">
             Productos destacados
         </h2>
         <br />

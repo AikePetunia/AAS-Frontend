@@ -16,6 +16,7 @@
   .sm__title-w-line {
     display: block;
     font-size: 26px;
+    text-align: center;
   }
 }
 .sm__title-w-line::before {
@@ -65,4 +66,5 @@
   flex-wrap: wrap;
   margin: 0 3%;
   gap: 16px;
+  justify-content: center;
 }

@@ -53,6 +53,11 @@
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .ms__posta-text {
+    text-align: center;
+  }
+}
 .ms__posta-text strong {
   align-items: flex-start;
   color: var(--color-gray-100);
