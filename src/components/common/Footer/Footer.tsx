@@ -39,7 +39,7 @@ export function Footer() {
         </div>
       </footer>
       <div className="warnings">
-        <a href="">Apoya el proyecto desde aca</a>
+        <a href="">Apoya el proyecto desde aca 🧉</a>
       </div>
       
       <br />

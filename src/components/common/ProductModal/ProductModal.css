@@ -7,6 +7,7 @@
 }
 
 .pm__card {
+  position: relative;
   background: var(--color-zinc-900);
   border-radius: 12px;
   overflow: visible; 
@@ -21,6 +22,7 @@
 
 .pm__card:hover {
   transform: translateY(-4px);
+  z-index: 10;
   box-shadow: 0 8px 24px rgba(163, 230, 53, 0.2);
 }
 

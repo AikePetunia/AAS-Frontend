@@ -2,7 +2,6 @@ import "./ProductModal.css";
 import { useState } from "react";
 import { HoverStoreInfo } from "./HoverStoreInfo/HoverStoreInfo";
 
-// todo: hoverStoreInfo
 interface Product {
   listing_id: string;
   title_raw: string;
@@ -47,6 +46,7 @@ export function ProductModal({
   const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
 
   return (
+  <>
     <div className="pm__grid">
       {products.map((product) => {
         const originalPrice = calculateDiscount(product.price.value);
@@ -115,7 +115,9 @@ export function ProductModal({
         );
       })}
     </div>
-  );
+<br/>
+<br/>
+  </>);
 }
 
 export default ProductModal;

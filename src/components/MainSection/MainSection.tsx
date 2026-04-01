@@ -1,7 +1,7 @@
 import "./MainSection.css";
 
 export function MainSection() {
-
+  
   const isPhone = window.innerWidth <= 768;
 
   return (

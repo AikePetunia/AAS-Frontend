@@ -8,6 +8,7 @@ import { animate } from "animejs";
 
 import "./Navbar.css";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -110,6 +111,7 @@ export function Navbar() {
   return (
     <>
       <nav className={`main-navbar ${isFloating ? "floating glass-effect" : ""}`}>
+        <Link to="/" style={{ textDecoration: "none"}} >
         <div className={`page-slogan ${isFloating ? "floating" : ""}`}>
           <img src={eye} alt="Eye" loading="lazy" style={{ opacity: isFloating ? 0.5 : 1 }} ></img>
           {!isPhone && (
@@ -119,6 +121,7 @@ export function Navbar() {
               </>
           )}
           </div>
+          </Link>  
         <div className={`search-wrapper ${isFloating ? "floating" : ""} `}>
           <input
             type="text"
@@ -152,10 +155,10 @@ export function Navbar() {
 
         {!isDrawerMode && (
           <div className="ham-categories">
-            <a onClick={closeMenu}>
+            <Link to="/lomasbuscado" onClick={closeMenu}>
               <img src={energy} alt="Lo mas buscado" loading="lazy"></img>
               Lo mas buscado
-            </a>
+            </Link>
             <a onClick={closeMenu}>
               <img src={pc} alt="Armado de pc" loading="lazy"></img>
               Cosas de pc
