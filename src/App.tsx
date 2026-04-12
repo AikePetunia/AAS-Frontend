@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-import LoMasBuscado from "./pages/LoMasBuscado";
+import Stores from "./pages/Stores";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/lomasbuscado" element={<LoMasBuscado />} />
+          <Route path="/tiendas" element={<Stores />} />
         </Routes>
       </BrowserRouter>
     </>

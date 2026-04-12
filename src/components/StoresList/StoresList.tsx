@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { StoreModal } from "./storeModal/StoreModal.tsx"
 import storesInfo  from "../../storesDump.json"
 
@@ -15,11 +16,11 @@ type Store = {
 
 export function StoresList() {
     const { stores } = storesInfo;
-    const storeArray: Store[] = Object.values(stores).slice(0, 10)
+    const storeArray: Store[] = Object.values(stores).slice(0, 20)
     
     return (
         <>
-            <div className="sl__container">
+            <div className="sl__container sl__container-limit">
                 <h2 className="sm__title-w-line">
                     Tiendas que se
                     <span className="highlight-green" style={{margin: "0px 8px"}}> paginan </span>
@@ -44,6 +45,12 @@ export function StoresList() {
                         />
                     ))}
                 </div>
+                <Link to="/tiendas" className="sl__fade-cta">
+                    <button className="sl__see-more-btn">
+                    <i className="fa-solid fa-store"></i>
+                        Ver todas las tiendas
+                    </button>
+                </Link>
                 <br />
                 <br />
             </div> 

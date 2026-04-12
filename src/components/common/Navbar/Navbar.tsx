@@ -155,10 +155,11 @@ export function Navbar() {
 
         {!isDrawerMode && (
           <div className="ham-categories">
-            <Link to="/lomasbuscado" onClick={closeMenu}>
+            {/* 
+            <a onClick={closeMenu}>
               <img src={energy} alt="Lo mas buscado" loading="lazy"></img>
               Lo mas buscado
-            </Link>
+            </a>
             <a onClick={closeMenu}>
               <img src={pc} alt="Armado de pc" loading="lazy"></img>
               Cosas de pc
@@ -167,10 +168,11 @@ export function Navbar() {
               <img src={hot} alt="Setup" loading="lazy"></img>
               Setup
             </a>
-            <a onClick={closeMenu}>
+            */}
+            <Link to='/tiendas' onClick={closeMenu}>
               <img src={shop} alt="Tiendas" loading="lazy"></img>
               Tiendas
-            </a>
+            </Link>
           </div>
         )}
       </nav>
@@ -195,7 +197,9 @@ export function Navbar() {
                 onClick={closeMenu}
               >
                 <i className="fa-solid fa-x"></i>
-              </button>
+            </button>
+            {/* 
+            
             <a >
               <img src={energy} alt="Lo mas buscado" loading="lazy"></img>
               Lo mas buscado
@@ -208,10 +212,11 @@ export function Navbar() {
               <img src={hot} alt="Setup" loading="lazy"></img>
               Setup
             </a>
-            <a >
+            */}
+            <Link to="/tiendas" >
               <img src={shop} alt="Tiendas" loading="lazy"></img>
               Tiendas
-            </a>
+            </Link>
           </div>
         </>
       )}
