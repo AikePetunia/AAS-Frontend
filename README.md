@@ -24,5 +24,4 @@ Made by [Venuss](https://venuss.me) 🇦🇷
 ## License
 
 Copyright (c) 2026 AikePetunia
-
 Licensed under the GNU GPL v3.0. See `LICENSE`.
