@@ -12,7 +12,6 @@ A web scraping project focused on finding the best prices related to a setup env
 
 - [ ] Stores full information and dump (Need react router)
 - [ ] Fetch backend
-- [ ] good practices xd
   
 ## Links utils
 
@@ -25,5 +24,4 @@ Made by [Venuss](https://venuss.me) 🇦🇷
 ## License
 
 Copyright (c) 2026 AikePetunia
-
 Licensed under the GNU GPL v3.0. See `LICENSE`.
