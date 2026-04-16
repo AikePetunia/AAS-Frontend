@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { StoreModal } from "./storeModal/StoreModal.tsx"
-import storesInfo  from "../../storesDump.json"
+import storesDump  from "../../storesDump.json"
+import allProducts from "../../allProducts.json"
 
 import "./StoresList.css";
 
@@ -15,9 +16,11 @@ type Store = {
 }
 
 export function StoresList() {
-    const { stores } = storesInfo;
-    const storeArray: Store[] = Object.values(stores).slice(0, 20)
-    
+    const { stores } = storesDump;
+    const storeToShow: Store[] = Object.values(stores).slice(0, 20)
+    const scrapedStoresLength = Object.keys(allProducts).length
+    const storesLength = Object.entries(stores).length;
+
     return (
         <>
             <div className="sl__container sl__container-limit">
@@ -29,14 +32,14 @@ export function StoresList() {
                 <div className="sl__stats-texts">
                     <span>
                         <i className="fa-solid fa-database"></i>
-                         X tiendas activas
+                         {scrapedStoresLength} tiendas activas
                     </span> 
-                    <span> • Y proximamente </span>
+                    <span> • {storesLength - scrapedStoresLength} proximamente </span>
                 </div>
                 <br />
                 <br />
                 <div className="sl__container-listing">
-                    {storeArray.map((store) => (
+                    {storeToShow.map((store) => (
                         <StoreModal
                             key={store.store_id}
                             name={store.store_name}
