@@ -124,3 +124,24 @@
 .sl__see-more-btn:active {
   transform: translateY(0) scale(0.99);
 }
+
+.sl__limited-height {
+  max-height: 20rem; 
+  overflow: hidden;
+  position: relative;
+}
+
+.sl__see-all {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.sl__see-all-btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid #84cc16;
+  color: #d9f99d;
+  background: rgba(132, 204, 22, 0.08);
+}

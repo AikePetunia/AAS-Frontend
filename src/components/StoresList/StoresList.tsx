@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { StoreModal } from "./storeModal/StoreModal.tsx"
 import storesDump  from "../../storesDump.json"
 import allProducts from "../../allProducts.json"
+import storesInfo  from "../../storesDump.json"
+import { useRef, useState } from "react";
 
 import "./StoresList.css";
 
@@ -16,16 +18,19 @@ type Store = {
 }
 
 export function StoresList() {
-    const { stores } = storesDump;
-    const storeToShow: Store[] = Object.values(stores).slice(0, 20)
+    const { stores } = storesInfo;
+    const storeArray: Store[] = Object.values(stores).slice(0, 20)
     const scrapedStoresLength = Object.keys(allProducts).length
-    const storesLength = Object.entries(stores).length;
+        const storesLength = Object.entries(stores).length;
+    const listingStoresRef = useRef<HTMLDivElement>(null);
+    const [showSeeAll, setShowSeeAll] = useState(false);
 
     return (
         <>
             <div className="sl__container sl__container-limit">
+            <div className="sl__container sl__limited-height">
                 <h2 className="sm__title-w-line">
-                    Tiendas que se
+                    Tiendas que
                     <span className="highlight-green" style={{margin: "0px 8px"}}> paginan </span>
                      en AAS
                 </h2>
@@ -39,7 +44,7 @@ export function StoresList() {
                 <br />
                 <br />
                 <div className="sl__container-listing">
-                    {storeToShow.map((store) => (
+                    {storeArray.map((store) => (
                         <StoreModal
                             key={store.store_id}
                             name={store.store_name}
@@ -56,6 +61,7 @@ export function StoresList() {
                 </Link>
                 <br />
                 <br />
+            </div> 
             </div> 
         </>
     )

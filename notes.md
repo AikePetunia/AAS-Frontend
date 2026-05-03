@@ -10,9 +10,10 @@ RUTAS / SECCIONES:
         > Detalle del producto, historicos, productos similares abajo
 - Buscador 
     > Preciso, funcional, rápido y que no aburra.
-    
-- recomendaciones 
+- recomendaciones/utilidad/tips
     > Pagina estatica con recomendaciones de videos, guias para leer antes de comprar una psu o similar.
+    > https://pcbuilds.gg/us
+    > www.newegg.com/?srsltid=AfmBOooJx70jUgWbwDEzxPHmkFyXUV-Z41CcCEKFzr1ezi4tgMlp0gKR&source=f
 - servicios 
     > fps, input lag, etc. Gente que se dedique a eso.
 
@@ -33,4 +34,4 @@ RUTAS / SECCIONES:
 
 (v1.0.0)
 - Login, user, favoritos, etc. 
--  usuarios que punteen y den reputacion por su cuenta a una tienda o un producto
+- usuarios que punteen y den reputacion por su cuenta a una tienda o un producto
