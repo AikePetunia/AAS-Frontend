@@ -1,0 +1,124 @@
+.nf__page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+  background: radial-gradient(
+    circle at top,
+    rgba(163, 230, 53, 0.12),
+    transparent 45%
+  );
+}
+
+.nf__container {
+  width: min(620px, 100%);
+  padding: 36px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid rgba(163, 230, 53, 0.16);
+  border-radius: 28px;
+  box-shadow: 0 24px 68px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.nf__container h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: #f8fafc;
+}
+
+.nf__container img {
+  width: 120px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.28));
+}
+
+.nf__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.nf__button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.nf__button--primary {
+  background: linear-gradient(135deg, #95f65e 0%, #70d638 100%);
+  color: #0d140a;
+  box-shadow: 0 12px 28px rgba(112, 214, 56, 0.24);
+}
+
+.nf__button--secondary {
+  background: rgba(132, 204, 22, 0.1);
+  color: #d9f99d;
+  border: 1px solid rgba(132, 204, 22, 0.32);
+}
+
+.nf__button:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.05);
+}
+
+.nf__button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.nf__link-button {
+  text-decoration: none;
+}
+
+.nf__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  opacity: 0.78;
+  font-size: 0.95rem;
+}
+
+.nf__footer h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+.nf__footer a {
+  color: #a3e635;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 180ms ease;
+}
+
+.nf__footer a:hover {
+  border-color: #a3e635;
+}
+
+@media (max-width: 520px) {
+  .nf__actions {
+    flex-direction: column;
+  }
+
+  .nf__button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -24,10 +24,7 @@
       "store_url": "https://www.venex.com.ar",
       "store_image": "/images/stores/venex.png",
       "trust_factor_manual": 85,
-      "seller_type": [
-        "setup",
-        "componentes"
-      ],
+      "seller_type": ["setup", "componentes"],
       "tags": [
         "gaming",
         "armados",

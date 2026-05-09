@@ -97,6 +97,14 @@ i {
   padding-right: 4px;
 }
 
+button {
+  background-color:#84cc16;
+  border-radius: 16px;
+  border: none;
+  padding: 6px 8px;
+  color: white;
+  cursor: pointer;
+}
 .svg-icon {
   filter: brightness(0) saturate(100%) invert(100%);
 }

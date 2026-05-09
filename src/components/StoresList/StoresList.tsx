@@ -19,7 +19,7 @@ type Store = {
 
 export function StoresList() {
     const { stores } = storesInfo;
-    const storeArray: Store[] = Object.values(stores).slice(0, 20)
+    const storeArray: Store[] = Object.values(stores).slice(0, 15);
     const scrapedStoresLength = Object.keys(allProducts).length
         const storesLength = Object.entries(stores).length;
     const listingStoresRef = useRef<HTMLDivElement>(null);
