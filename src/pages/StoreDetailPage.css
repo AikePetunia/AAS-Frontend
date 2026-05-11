@@ -1,0 +1,17 @@
+.sdp__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin: 5% 10%;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  border: 1px solid green;
+  padding: 32px;
+}
+
+.sdp__store_image > img {
+  border-radius: 16px;
+  width: 250px;
+}

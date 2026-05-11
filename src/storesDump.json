@@ -6,14 +6,11 @@
       "store_url": "https://www.armytech.com.ar",
       "store_image": "/src/assets/stores/armytech.png",
       "trust_factor_manual": 90,
-      "seller_type": [
-        "setup",
-        "componentes"
-      ],
+      "seller_type": ["setup", "componentes"],
       "tags": [
         "gaming",
         "buenos aires",
-        "buena_reputacion",
+        "buena reputacion",
         "componentes",
         "calidad"
       ]

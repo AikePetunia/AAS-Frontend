@@ -13,12 +13,10 @@ type Store = {
     tags: string[]
 }
 
-
 export function Stores() {
-
   const { stores } = storesInfo;
-  const storeArray: Store[] = Object.values(stores).slice(0, 10)
-    
+  const storeArray: Store[] = Object.values(stores).slice(0, 10);
+
   return (
     <>
       <Navbar />

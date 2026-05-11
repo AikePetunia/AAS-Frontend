@@ -3,6 +3,8 @@ import eye from "@assets/icons/eye.gif";
 import { Footer } from "@components/common/Footer/Footer";
 import "./NotFound404.css";
 
+// como se detecta de donde es el error? hice un 404.. pero debería de ser generico.
+
 export function NotFound404() {
   const navigate = useNavigate();
 
@@ -13,7 +15,7 @@ export function NotFound404() {
           <h1>Algo no salió bien ):</h1>
           <img src={eye} alt="eye-aas" />
           <div className="nf__actions">
-            <Link to="/" className="nf__link-button">
+            <Link to="/" className="nf__link-button btn">
               <button className="nf__button nf__button--primary">
                 Volver al home
               </button>
@@ -22,7 +24,7 @@ export function NotFound404() {
               className="nf__button nf__button--secondary"
               onClick={() => navigate(-1)}
             >
-              Go back
+              Ir hacia atrás
             </button>
           </div>
           <footer className="nf__footer">

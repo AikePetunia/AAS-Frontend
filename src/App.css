@@ -104,7 +104,41 @@ button {
   padding: 6px 8px;
   color: white;
   cursor: pointer;
+    border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
 }
+
+
+.btn-primary {
+  background: linear-gradient(135deg, #95f65e 0%, #70d638 100%);
+  color: #0d140a;
+  box-shadow: 0 12px 28px rgba(112, 214, 56, 0.24);
+}
+
+.btn-secondary {
+  background: rgba(132, 204, 22, 0.1);
+  color: #d9f99d;
+  border: 1px solid rgba(132, 204, 22, 0.32);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.05);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+
 .svg-icon {
   filter: brightness(0) saturate(100%) invert(100%);
 }

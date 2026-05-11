@@ -87,6 +87,7 @@
 
 .nf__footer {
   display: flex;
+  padding-top: 8px;
   flex-direction: column;
   align-items: center;
   gap: 8px;
