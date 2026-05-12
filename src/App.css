@@ -138,7 +138,6 @@ button:active {
   transform: translateY(0) scale(0.98);
 }
 
-
 .svg-icon {
   filter: brightness(0) saturate(100%) invert(100%);
 }
@@ -180,6 +179,36 @@ button:active {
   color: var(--color-gray-500);
 }
 
+.trust-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: black;
+  font-family: "JetBrains Mono", monospace;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.green-trust-badge {
+  background: rgba(163, 230, 53, 1);
+  border: 1px solid rgba(163, 230, 53, 0.3);
+  box-shadow: 0 0 8px rgba(163, 230, 53, 0.3);
+}
+
+.yellow-trust-badge {
+  background: #fbbf24;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(251, 191, 36, 0.6);
+}
+
+.red-trust-badge {
+    background: #ef4444;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(239, 68, 68, 0.6);
+}
 .hidden {
   display: none;
 }

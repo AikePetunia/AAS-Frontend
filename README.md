@@ -12,6 +12,7 @@ A web scraping project focused on finding the best prices related to a setup env
 
 - [ ] Stores full information and dump (Need react router)
 - [ ] Fetch backend
+- [ ] Badge and logic explication of web
   
 ## Links utils
 

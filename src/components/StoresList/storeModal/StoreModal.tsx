@@ -10,25 +10,36 @@ interface StoreModalProps {
 }
 
 export function StoreModal({ name, id, image, trustFact }: StoreModalProps) {
-  return (
-    <>
-      <Link to={`/tiendas/${id}`}>
-        <div className="sm__container">
-          <div className="sm__store">
-            <span className="sm__trust-fact">{trustFact}</span>
-            <img
-              src={armytech || image}
-              alt={`${name}-logo`}
-              className="sm__store-logo"
-            />
+
+    const getTrustBadgeClass = (trust: number) => {
+      if (trust > 85) return "green-trust-badge";
+      if (trust > 50) return "yellow-trust-badge";
+      return "red-trust-badge";
+    };
+
+    return (
+      <>
+        <Link to={`/tiendas/${id}`}>
+          <div className="sm__container">
+            <div className="sm__store">
+              <span
+                className={`sm__trust-fact trust-badge ${getTrustBadgeClass(trustFact)}`}
+              >
+                {trustFact}%
+              </span>
+              <img
+                src={armytech || image}
+                alt={`${name}-logo`}
+                className="sm__store-logo"
+              />
+            </div>
+            <div className="sm__name-container">
+              <span>{name}</span>
+            </div>
           </div>
-          <div className="sm__name-container">
-            <span>{name}</span>
-          </div>
-        </div>
-      </Link>
-    </>
-  );
+        </Link>
+      </>
+    );
 }
 
 export default StoreModal;

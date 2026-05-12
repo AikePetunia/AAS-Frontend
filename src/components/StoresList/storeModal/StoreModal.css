@@ -43,14 +43,6 @@
     top: 8px;
     right: 8px;
     z-index: 2;
-
-    background: var(--color-lime-400);
-    color: #000;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 999px;
 }
 
 .sm__trust-fact > span {
