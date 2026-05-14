@@ -58,18 +58,22 @@ export function StoreDetailPage() {
             </span>
           </p>
           <div className="sdp__store-tagging">
-            {store.seller_type.map((item, index) => (
-              <span className="sdp__store-type" key={index}>
-                {item} {index < store.seller_type.length - 1 && ""}
-              </span>
-            ))}
+            <div className="sdp__store-types-container">
+              {store.seller_type.map((item, index) => (
+                <span className="sdp__store-type" key={index}>
+                  {item} {index < store.seller_type.length - 1 && ""}
+                </span>
+              ))}
+            </div>
             <br />
             <br />
-            {store.tags.map((item, index) => (
-              <span className="sdp__store-tags" key={index}>
-                {item} {index < store.tags.length - 1 && " "}
-              </span>
-            ))}
+            <div className="sdp__store-tags-container">
+              {store.tags.map((item, index) => (
+                <span className="sdp__store-tags" key={index}>
+                  {item} {index < store.tags.length - 1 && " "}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
         <div className="sdp__store_image-container">

@@ -2,20 +2,23 @@ import Navbar from "@/components/common/Navbar/Navbar";
 import { Footer } from "../components/common/Footer/Footer";
 import  storesInfo from "../storesDump.json";
 import { StoreModal } from "../components/StoresList/storeModal/StoreModal";
+import allProducts from "../allProducts.json";
 
 type Store = {
-    store_name: string, 
-    store_id: string,
-    store_url: string,
-    store_image: string,
-    trust_factor_manual: number,
-    seller_type: string[],
-    tags: string[]
-}
+  store_name: string;
+  store_id: string;
+  store_url: string;
+  store_image: string;
+  trust_factor_manual: number;
+  seller_type: string[];
+  tags: string[];
+};
 
 export function Stores() {
   const { stores } = storesInfo;
   const storeArray: Store[] = Object.values(stores).slice(0, 10);
+  const scrapedStoresLength = Object.keys(allProducts).length;
+  const storesLength = Object.entries(stores).length;
 
   return (
     <>
@@ -30,9 +33,10 @@ export function Stores() {
       </h2>
       <div className="sl__stats-texts">
         <span>
-          <i className="fa-solid fa-database"></i>X tiendas activas
+          <i className="fa-solid fa-database"></i>
+          {scrapedStoresLength} tiendas activas
         </span>
-        <span> • Y proximamente </span>
+        <span> • {storesLength - scrapedStoresLength} proximamente </span>
       </div>
       <br />
       <br />
