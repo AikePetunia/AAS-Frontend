@@ -2,7 +2,7 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
-import storesDump from "../storesDump.json";
+import storesDump from "../../storesDump.json";
 import armytech from "@stores/armytech.webp";
 
 import "./StoreDetailPage.css";
@@ -65,8 +65,6 @@ export function StoreDetailPage() {
                 </span>
               ))}
             </div>
-            <br />
-            <br />
             <div className="sdp__store-tags-container">
               {store.tags.map((item, index) => (
                 <span className="sdp__store-tags" key={index}>

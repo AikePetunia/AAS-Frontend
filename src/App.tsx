@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Stores from "./pages/Stores";
-import StoreDetailPage from "./pages/StoreDetailPage";
-import NotFound404 from "./pages/NotFound404";
+import StoreDetailPage from "./pages/StoreDetailPage/StoreDetailPage";
+import NotFound404 from "./pages/NotFound/NotFound404";
 
 import "./App.css";
 

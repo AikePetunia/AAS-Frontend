@@ -1,14 +1,13 @@
-import eye from "@icons/eye.gif";
-import energy from "@icons/energy.svg";
-import hot from "@icons/hot.svg";
-import pc from "@icons/pc.svg";
-import shop from "@icons/shop.svg";
-import search from "@icons/search.svg";
 import { animate } from "animejs";
-
-import "./Navbar.css";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+
+import eye from "@icons/eye.gif";
+import hot from "@icons/hot.svg";
+import shop from "@icons/shop.svg";
+
+import { SearchBar } from "../SearchBar/SearchBar";
+import "./Navbar.css";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +16,7 @@ export function Navbar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const isDrawerMode = isFloating || isMobile;
+  const isPhone = window.innerWidth <= 768;
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -106,35 +106,29 @@ export function Navbar() {
     };
   }, [isMenuOpen, isDrawerMode]);
 
-  const isPhone = window.innerWidth <= 768;
-
   return (
     <>
-      <nav className={`main-navbar ${isFloating ? "floating glass-effect" : ""}`}>
-        <Link to="/" style={{ textDecoration: "none"}} >
-        <div className={`page-slogan ${isFloating ? "floating" : ""}`}>
-          <img src={eye} alt="Eye" loading="lazy" style={{ opacity: isFloating ? 0.5 : 1 }} ></img>
-          {!isPhone && (
-            <>
-          <h1 style={{ opacity: isFloating ? 0.5 : 1 }}> | </h1>
-              <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>AAS</h1>
+      <nav
+        className={`main-navbar ${isFloating ? "floating glass-effect" : ""}`}
+      >
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <div className={`page-slogan ${isFloating ? "floating" : ""}`}>
+            <img
+              src={eye}
+              alt="Eye"
+              loading="lazy"
+              style={{ opacity: isFloating ? 0.5 : 1 }}
+            ></img>
+            {!isPhone && (
+              <>
+                <h1 style={{ opacity: isFloating ? 0.5 : 1 }}> | </h1>
+                <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>AAS</h1>
               </>
-          )}
+            )}
           </div>
-          </Link>  
+        </Link>
         <div className={`search-wrapper ${isFloating ? "floating" : ""} `}>
-          <input
-            type="text"
-            placeholder="Ryzen 7 7600x..."
-            aria-label="Search"
-            className="search-input"
-          ></input>
-          <img
-            src={search}
-            alt="Search"
-            className="search-icon"
-            loading="lazy"
-          ></img>
+          <SearchBar />
         </div>
 
         {/* HAM */}
@@ -145,12 +139,7 @@ export function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="nav-drawer"
         >
-          <img
-            src={hot}
-            alt="Menu"
-            loading="lazy"
-            className="hamburger-icon"
-          />
+          <img src={hot} alt="Menu" loading="lazy" className="hamburger-icon" />
         </button>
 
         {!isDrawerMode && (
@@ -169,7 +158,7 @@ export function Navbar() {
               Setup
             </a>
             */}
-            <Link to='/tiendas' onClick={closeMenu}>
+            <Link to="/tiendas" onClick={closeMenu}>
               <img src={shop} alt="Tiendas" loading="lazy"></img>
               Tiendas
             </Link>
@@ -190,13 +179,13 @@ export function Navbar() {
             ref={menuRef}
             className={`ham-categories drawer ${isMenuOpen ? "active" : ""}`}
           >
-              <button
-                type="button"
-                className="drawer-close-btn"
-                aria-label="Cerrar menu"
-                onClick={closeMenu}
-              >
-                <i className="fa-solid fa-x"></i>
+            <button
+              type="button"
+              className="drawer-close-btn"
+              aria-label="Cerrar menu"
+              onClick={closeMenu}
+            >
+              <i className="fa-solid fa-x"></i>
             </button>
             {/* 
             
@@ -213,7 +202,7 @@ export function Navbar() {
               Setup
             </a>
             */}
-            <Link to="/tiendas" >
+            <Link to="/tiendas">
               <img src={shop} alt="Tiendas" loading="lazy"></img>
               Tiendas
             </Link>

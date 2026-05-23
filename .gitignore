@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 products
+allProducts.json 
+armytech.json 
 
 # Editor directories and files
 .vscode/*
