@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SearchBar.css";
 
 export function SearchBar() {
@@ -10,6 +11,7 @@ export function SearchBar() {
     "DDR5...",
   ];
 
+  const navigate = useNavigate();
   const [isMenuOpen] = useState(false);
   const [isFloating] = useState(false);
   const [index, setIndex] = useState(0);
@@ -17,7 +19,7 @@ export function SearchBar() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isMobile] = useState(() => window.innerWidth <= 768);
-
+  const [text, setText] = useState("");
   const isDrawerMode = isFloating || isMobile;
 
   useEffect(() => {
@@ -49,14 +51,23 @@ export function SearchBar() {
     return () => clearTimeout(timeout);
   }, [subIndex, isDeleting, index, messages]);
 
-  // resta y suma partes del string (substring -1, +1)
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
+
+  const searchProdcut = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      // querys
+      navigate("/search?" + text);
+    }
+  };
 
   return (
     <>
       <div
-        className={`search-wrapper
+        className={`sb__search-wrapper
            ${isFloating ? "floating" : ""} 
-           ${isSearching ? "is-searching" : ""}
+           ${isSearching ? "sb__is-searching" : ""}
             `}
         onMouseLeave={() => {
           setTimeout(() => {
@@ -64,20 +75,23 @@ export function SearchBar() {
           }, 750);
         }}
       >
-        <div className="search-input-container ">
+        <div className="sb__input-container">
           <input
             type="text"
             placeholder={messages[index].substring(0, subIndex)}
             aria-label="Search"
-            className="search-input"
+            className="sb__search-input"
+            value={text}
+            onChange={handleChange}
             onClick={() => setIsSearching(true)}
+            onKeyDown={searchProdcut}
           />
           <i className="fa-solid fa-magnifying-glass search-icon"></i>
         </div>
         {isSearching ? (
           <>
-            <div className="separator"></div>
-            <div className="search-input-suggestions">
+            <div className="separator-red"></div>
+            <div className="sb__input-suggestions">
               {messages.map((item, key) => (
                 <span key={key}>{item}</span>
               ))}

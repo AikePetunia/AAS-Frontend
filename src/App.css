@@ -138,6 +138,15 @@ button:active {
   transform: translateY(0) scale(0.98);
 }
 
+.separator-red {
+  border-top: 1px solid var(--color-red);
+  box-shadow: none;
+  align-items: center;
+  color: white;
+  margin: 0 16px;
+  width: 100%;
+}
+
 .svg-icon {
   filter: brightness(0) saturate(100%) invert(100%);
 }

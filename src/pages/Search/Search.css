@@ -1,0 +1,5 @@
+.sr__container {
+    display: flex;
+    justify-content: column;
+    margin: 5% 5%;
+}

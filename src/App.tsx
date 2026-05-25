@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Stores from "./pages/Stores";
 import StoreDetailPage from "./pages/StoreDetailPage/StoreDetailPage";
 import NotFound404 from "./pages/NotFound/NotFound404";
+import Search from "./pages/Search/Search";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/tiendas" element={<Stores />} />
           <Route path="/tiendas/:store_id" element={<StoreDetailPage />} />
+          <Route path="/search" element={<Search />} />
           <Route path={"/404"} element={<NotFound404 />} />
           <Route path={"/*"} element={<NotFound404 />} />
         </Routes>
