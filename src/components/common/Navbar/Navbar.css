@@ -6,6 +6,7 @@
   padding: 4px 8px;
   position: relative;
   z-index: 1000;
+  height: 56px;
 }
 
 @media (max-width: 768px) {
@@ -122,37 +123,13 @@
   height: 50px;
 }
 
-.search-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(24, 24, 27, 0.6);
-  transition: all 0.3s ease;
-  width: 50%;
-  margin: 0px 16px;
-}
-
 @media (max-width: 768px) {
-  .search-wrapper {
-    margin: 0px 4px;
-  }
-
   .hamburger-btn {
     padding: 0px;
   }
 }
 
-.search-wrapper:focus-within {
-  border-color: var(--color-lime-400);
-  box-shadow: var(--shadow-lime-md);
-}
 
-.search-wrapper.floating {
-  width: 70%;
-}
 
 .hamburger-btn {
   display: none;

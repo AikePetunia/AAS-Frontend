@@ -1,16 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./SearchBar.css";
-import { splitText, animate, stagger } from "animejs";
-
-/*
-tienen que apsar 3 cosas:
-- animar el ojo para que mire el search bar (y irse)
-- desaparezca el ojo del menu (aas)
-- aparezca un dropdown con opciones
-*/
 
 export function SearchBar() {
-  const [index, setIndex] = useState(0);
   const messages = [
     "Ryzen 5 7600x...",
     "Quest 2 VR...",
@@ -19,37 +10,81 @@ export function SearchBar() {
     "DDR5...",
   ];
 
-  const containerRef = useRef(null);
+  const [isMenuOpen] = useState(false);
+  const [isFloating] = useState(false);
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
+  const [isMobile] = useState(() => window.innerWidth <= 768);
+
+  const isDrawerMode = isFloating || isMobile;
 
   useEffect(() => {
-    if (containerRef.current) {
-      const { chars } = splitText(containerRef.current, { chars: true });
-      animate(chars, {
-        y: [{ to: ["100%", "0%"] }, { to: "-100%", delay: 750, ease: "in(3)" }],
-        duration: 750,
-        ease: "out(3)",
-        delay: stagger(50),
-        loop: true,
-      });
+    document.body.style.overflow = isMenuOpen && isDrawerMode ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen, isDrawerMode]);
+
+  useEffect(() => {
+    if (isDeleting && subIndex === 0) {
+      setIsDeleting(false);
+      setIndex((prev) => (prev + 1) % messages.length);
+      return;
     }
-  }, [index]);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % messages.length);
-    }, 3000);
+    if (!isDeleting && subIndex === messages[index].length) {
+      const timeout = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timeout);
+    }
 
-    return () => clearInterval(intervalId);
-  });
+    const timeout = setTimeout(
+      () => {
+        setSubIndex((prev) => prev + (isDeleting ? -1 : 1));
+      },
+      isDeleting ? 30 : 100,
+    );
+    return () => clearTimeout(timeout);
+  }, [subIndex, isDeleting, index, messages]);
+
+  // resta y suma partes del string (substring -1, +1)
 
   return (
     <>
-      <input type="text" aria-label="Search" className="search-input"></input>
-
-      <span ref={containerRef} className="search-suggestions">
-        {messages[index]}
-      </span>
-      <i className="fa-solid fa-magnifying-glass search-icon "></i>
+      <div
+        className={`search-wrapper
+           ${isFloating ? "floating" : ""} 
+           ${isSearching ? "is-searching" : ""}
+            `}
+        onMouseLeave={() => {
+          setTimeout(() => {
+            setIsSearching(false);
+          }, 750);
+        }}
+      >
+        <div className="search-input-container ">
+          <input
+            type="text"
+            placeholder={messages[index].substring(0, subIndex)}
+            aria-label="Search"
+            className="search-input"
+            onClick={() => setIsSearching(true)}
+          />
+          <i className="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        {isSearching ? (
+          <>
+            <div className="separator"></div>
+            <div className="search-input-suggestions">
+              {messages.map((item, key) => (
+                <span key={key}>{item}</span>
+              ))}
+            </div>
+          </>
+        ) : null}
+      </div>
     </>
   );
 }

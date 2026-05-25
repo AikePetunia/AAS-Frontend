@@ -46,6 +46,7 @@ export function StoresList() {
             {storeArray.map((store) => (
               <StoreModal
                 key={store.store_id}
+                id={store.store_id}
                 name={store.store_name}
                 image={store.store_image}
                 trustFact={store.trust_factor_manual}

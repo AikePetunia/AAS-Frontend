@@ -1,4 +1,3 @@
-import { animate } from "animejs";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,12 +10,14 @@ import "./Navbar.css";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isFloating, setIsFloating] = useState(false);
+
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
-  const isDrawerMode = isFloating || isMobile;
   const isPhone = window.innerWidth <= 768;
+  const [isFloating, setIsFloating] = useState(false);
+  const isDrawerMode = isFloating || isMobile;
+  // todo: repito states aca y en searchBar tsx, pasarlos
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -49,63 +50,6 @@ export function Navbar() {
     return () => mediaQuery.removeEventListener("change", onViewportChange);
   }, []);
 
-  useEffect(() => {
-    if (!isDrawerMode && isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-  }, [isDrawerMode, isMenuOpen]);
-
-  useEffect(() => {
-    if (!isDrawerMode) {
-      return;
-    }
-
-    const menuElement = menuRef.current;
-    const overlayElement = overlayRef.current;
-
-    if (!menuElement || !overlayElement) {
-      return;
-    }
-
-    if (isMenuOpen) {
-      animate(menuElement, {
-        opacity: [0, 1],
-        translateX: [42, 0],
-        duration: 260,
-        easing: "easeOutCubic",
-      });
-
-      animate(overlayElement, {
-        opacity: [0, 1],
-        duration: 220,
-        easing: "linear",
-      });
-
-      return;
-    }
-
-    animate(menuElement, {
-      opacity: [1, 0],
-      translateX: [0, 42],
-      duration: 190,
-      easing: "easeInCubic",
-    });
-
-    animate(overlayElement, {
-      opacity: [1, 0],
-      duration: 170,
-      easing: "linear",
-    });
-  }, [isDrawerMode, isMenuOpen]);
-
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen && isDrawerMode ? "hidden" : "";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMenuOpen, isDrawerMode]);
-
   return (
     <>
       <nav
@@ -127,9 +71,8 @@ export function Navbar() {
             )}
           </div>
         </Link>
-        <div className={`search-wrapper ${isFloating ? "floating" : ""} `}>
-          <SearchBar />
-        </div>
+
+        <SearchBar />
 
         {/* HAM */}
         <button
