@@ -51,7 +51,7 @@ export function SearchBar() {
     return () => clearTimeout(timeout);
   }, [subIndex, isDeleting, index, messages]);
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setText(event.target.value);
   };
 

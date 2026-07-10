@@ -6,7 +6,7 @@ import armyTechData from "../../products/armyTech.json";
 
 import "./Search.css";
 export function Search() {
-  const products = armyTechData.products.slice(0, 3);
+  const products = armyTechData.products;
   return (
     <>
       <Navbar />
