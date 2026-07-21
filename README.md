@@ -1,28 +1,38 @@
-# Aike armar un setup (AAS)
+# AAS
 
-> This project is part of my personal learning journey. I'm not an expert developer, sorry for bad code or others, I'm a human learning.
+> **Motor de extracción y comparación de datos enfocado en el ecosistema de hardware en Argentina.**
 
-> ⚠️ This tool scrapes public product listings. It does not access private data or databases.
+AAS es un proyecto open-source diseñado para trackear, comparar y encontrar los mejores precios de componentes, periféricos y mobiliario de setup en tiendas argentinas. El objetivo principal es aportar valor a la comunidad priorizando la transparencia, la confianza y la accesibilidad de la información.
 
-> ⚠️ This page parts from the idea of [HardGamers](https://www.hardgamers.com.ar/), but with QOL stuff. It's not my intention to compete.
+*⚠️ Aviso Legal: El motor extrae exclusivamente información de dominio público. No accede a bases de datos privadas ni compromete información sensible.*
 
-A web scraping project focused on finding the best prices related to a setup enviroment across Argentinian stores, intended on argentinians citizens for saving money and time.
+## Estado del Proyecto: Alpha
 
-## ToDo
+El front end está en version practicamente MVP. Queda consumir los endpoints.
 
-- [ ] Stores full information and dump (Need react router)
-- [ ] Fetch backend
-- [ ] Badge and logic explication of web
+- **Arquitectura:** Frontend y Backend completamente desacoplados. 
+  - 🔗 [Repositorio del Backend](https://github.com/AikePetunia/AAS-Backend)
   
-## Links utils
+## Criterios y Filosofía Core
 
-- https://www.figma.com/make/aImGfPjsMQ987v2dFUtdGo/AAS?p=f&t=6UAo3sfHFHKxR8Av-0
+* **Transparencia Absoluta:** El mejor precio y la confianza real tienen prioridad. Cero anuncios, cero posts patrocinados. 
+* **Open Source & Comunidad:** El código es abierto. Cualquier Pull Request, mejora de rendimiento o crítica constructiva es bienvenida para mejorar la herramienta.
 
-## ✨ Creator
+## Próximos Pasos
 
-Made by [Venuss](https://venuss.me) 🇦🇷
+- [ ] Consumir endpoints del backend.
+- [ ] Usar Motion para animaciones.
 
-## License
+## Contribuciones y Apoyo
 
-Copyright (c) 2026 AikePetunia
-Licensed under the GNU GPL v3.0. See `LICENSE`.
+El objetivo de AAS es puramente comunitario. Si querés apoyar los costos de mantenimiento de la infraestructura, podés hacerlo aquí:
+
+☕ [Apoyar el proyecto en Ko-fi](https://ko-fi.com/aikemilanesa)
+🧉 Apoyar en pesos *(Próximamente)*
+💬 Discord: *(Próximamente)*
+
+Cuando estén costos de mantenimiento se harán transparentes para evitar 
+
+---
+✨ **Creado con amor por [https://aike.tech/](Aike)**
+Revisar el archivo `LICENSE` para más detalles.

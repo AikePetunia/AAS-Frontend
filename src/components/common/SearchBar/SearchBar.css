@@ -29,18 +29,19 @@
 
 /* todo: cambiar los nombres de css a lo correspondiente sb__stuff-name*/
 .sb__input-container {
-   display: flex;
-  width: 100%; justify-content: left;
+  display: flex;
+  width: 100%;
+  justify-content: left;
   justify-items: center;
   flex-direction: row;
 }
 
 .sb__input-suggestions {
-     display: flex;
+  display: flex;
   flex-direction: column;
-  
+
   justify-content: left;
-  width: 100%; 
+  width: 100%;
   justify-items: center;
   flex-direction: left;
 }
@@ -48,8 +49,8 @@
 .sb__input-suggestions > span {
   cursor: pointer;
   margin: 12px 0;
-      color: var(--color-gray-500);
-font-size: 14px;
+  color: var(--color-gray-500);
+  font-size: 14px;
 }
 
 .sb__search-input {
@@ -87,7 +88,7 @@ font-size: 14px;
     margin: 0px 4px;
   }
 
-    .sb__search-wrapper {
+  .sb__search-wrapper {
     order: 2;
     width: auto;
     flex: 1;
