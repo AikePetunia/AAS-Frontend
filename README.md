@@ -4,7 +4,7 @@
 
 AAS es un proyecto open-source diseñado para trackear, comparar y encontrar los mejores precios de componentes, periféricos y mobiliario de setup en tiendas argentinas. El objetivo principal es aportar valor a la comunidad priorizando la transparencia, la confianza y la accesibilidad de la información.
 
-*⚠️ Aviso Legal: El motor extrae exclusivamente información de dominio público. No accede a bases de datos privadas ni compromete información sensible.*
+> *⚠️ Aviso Legal: El motor extrae exclusivamente información de dominio público. No accede a bases de datos privadas ni compromete información sensible.*
 
 ## Estado del Proyecto: Alpha
 
@@ -27,9 +27,9 @@ El front end está en version practicamente MVP. Queda consumir los endpoints.
 
 El objetivo de AAS es puramente comunitario. Si querés apoyar los costos de mantenimiento de la infraestructura, podés hacerlo aquí:
 
-☕ [Apoyar el proyecto en Ko-fi](https://ko-fi.com/aikemilanesa)
-🧉 Apoyar en pesos *(Próximamente)*
-💬 Discord: *(Próximamente)*
+- ☕ [Apoyar el proyecto en Ko-fi](https://ko-fi.com/aikemilanesa)
+- 🧉 Apoyar en pesos *(Próximamente)*
+- 💬 Discord: *(Próximamente)*
 
 Cuando estén costos de mantenimiento se harán transparentes para evitar 
 
