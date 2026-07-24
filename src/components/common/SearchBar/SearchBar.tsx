@@ -58,7 +58,7 @@ export function SearchBar() {
   const searchProdcut = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       // querys
-      navigate("/search?" + text);
+      navigate(`/search?q=${text}`);
     }
   };
 

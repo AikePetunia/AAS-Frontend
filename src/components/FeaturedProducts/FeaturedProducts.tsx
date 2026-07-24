@@ -1,10 +1,33 @@
 import { ProductModal } from "../common/ProductModal/ProductModal";
-import armyTechData from "../../products/armyTech.json";
-
+import { getProducts } from "@/hooks/getProducts";
 import "./FeaturedProducts.css";
+import { useEffect, useState } from "react";
 
 export function FeaturedProducts() {
-  const products = armyTechData.products.slice(0, 99);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        setLoading(true);
+        const data = await getProducts("");
+        setProducts(data.hits);
+      } catch (err) {
+        setError(err.messages);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadData();
+  }, []);
+
+  if (loading) return <p>Cargando productos xasd ...</p>;
+  if (error) return <p>Error al cargar: {error}</p>;
+
+  console.log("products", products);
   const isPhone = window.innerWidth <= 768;
   return (
     <>
@@ -17,12 +40,20 @@ export function FeaturedProducts() {
         </h2>
         <br />
         <br />
-        <ProductModal
-          products={products}
-          storeName={armyTechData.store_name}
-          storeId={armyTechData.store_id}
-          trustFactor={armyTechData.trust_factor_manual}
-        />
+        <div className="pm__grid">
+          {products.map((product) => (
+            <ProductModal
+              key={product.listing_id}
+              store_id={product.store_id}
+              trust_factor={product.trust_factor}
+              store_url={product.store_url}
+              product_url={product.product_url}
+              image_url={product.image_url}
+              title_raw={product.title_raw}
+              last_price={product.last_price}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

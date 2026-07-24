@@ -1,23 +1,49 @@
-import { useParams, Navigate, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
+import eye from "@assets/icons/eye.gif";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
-import storesDump from "../../storesDump.json";
-import armytech from "@stores/armytech.webp";
+
+import { ProductModal } from "../../components/common/ProductModal/ProductModal";
+import { getStoresDetail } from "@/hooks/getStores";
 
 import "./StoreDetailPage.css";
 export function StoreDetailPage() {
   // obtiene el store_id de los parametros d la ruta
   // si o si tiene que conicidir store_id de useParams con store_id de Routes
-  const { store_id } = useParams();
-  const store = Object.values(storesDump.stores).find(
-    (item) => item.store_id === store_id,
-  );
-
   const navigate = useNavigate();
-  if (!store) {
+  const { store_id } = useParams();
+
+  const [store, setStore] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        setLoading(true);
+        const data = await getStoresDetail(store_id);
+        console.log(data);
+        setStore(data);
+      } catch (err) {
+        setError(err.messages);
+        console.log("failed to fetch", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadData();
+  }, []);
+
+  // crear componente de carga.
+  if (loading) return <p>Cargando tiendas...</p>;
+  if (error) {
     return <Navigate to="/404" replace />;
   }
+
+  const products = store.products;
+  console.log("productos de tienda sdkljnerwg", products);
 
   const getTrustBadgeClass = (trust: number) => {
     if (trust > 85) return "green-trust-badge";
@@ -51,17 +77,17 @@ export function StoreDetailPage() {
           <p className="sdp__store-trust">
             Confianza de pagina:{" "}
             <span
-              className={`trust-badge ${getTrustBadgeClass(store.trust_factor_manual)}`}
+              className={`trust-badge ${getTrustBadgeClass(store.trust_factor)}`}
             >
               {" "}
-              {store.trust_factor_manual}%
+              {store.trust_factor}%
             </span>
           </p>
           <div className="sdp__store-tagging">
             <div className="sdp__store-types-container">
-              {store.seller_type.map((item, index) => (
+              {store.store_role.map((item, index) => (
                 <span className="sdp__store-type" key={index}>
-                  {item} {index < store.seller_type.length - 1 && ""}
+                  {item} {index < store.store_role.length - 1 && ""}
                 </span>
               ))}
             </div>
@@ -77,15 +103,27 @@ export function StoreDetailPage() {
         <div className="sdp__store_image-container">
           <a href={store.store_url}>
             <img
-              src={armytech}
+              src={eye}
               alt={{ store_id } + "image"}
               className="sdp__store-image"
             />
           </a>
         </div>
-        {/* productos */}
       </div>
-
+      <div className="pm__grid">
+        {products.map((product) => (
+          <ProductModal
+            key={product.listing_id}
+            store_id={product.store_id}
+            trust_factor={product.trust_factor}
+            store_url={product.store_url}
+            product_url={product.product_url}
+            image_url={product.image_url}
+            title_raw={product.title_raw}
+            last_price={product.last_price}
+          />
+        ))}
+      </div>
       <Footer />
     </>
   );

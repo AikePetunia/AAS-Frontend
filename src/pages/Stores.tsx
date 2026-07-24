@@ -1,25 +1,56 @@
 import Navbar from "@/components/common/Navbar/Navbar";
 import { Footer } from "../components/common/Footer/Footer";
-import  storesInfo from "../storesDump.json";
 import { StoreModal } from "../components/StoresList/storeModal/StoreModal";
-import allProducts from "../allProducts.json";
-
+import { getStores } from "../hooks/getStores";
+import { useEffect, useState } from "react";
 type Store = {
   store_name: string;
   store_id: string;
   store_url: string;
   store_image: string;
-  trust_factor_manual: number;
+  trust_factor: number;
   seller_type: string[];
   tags: string[];
 };
 
-export function Stores() {
-  const { stores } = storesInfo;
-  const storeArray: Store[] = Object.values(stores).slice(0, 10);
-  const scrapedStoresLength = Object.keys(allProducts).length;
+export default function Stores() {
+  const [stores, setStores] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    async function loadData() {
+      try {
+        setLoading(true);
+        const data = await getStores("");
+        setStores(data.hits);
+      } catch (err) {
+        setError(err.messages);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadData();
+  }, []);
+
+  if (loading) return <p>Cargando tiendas...</p>;
+  if (error) return <p>Error al cargar: {error}</p>;
+  const scrapedStoresLength = stores.length - 20;
   const storesLength = Object.entries(stores).length;
 
+  const handleLoadMore = async () => {
+    try {
+      const nextOffset = offset + 50;
+      const newData = await getStores(nextOffset);
+
+      setStores([...stores, ...newData.hits]);
+
+      setOffset(nextOffset);
+    } catch (err) {
+      console.error("Error al cargar más:", err);
+    }
+  };
   return (
     <>
       <Navbar />
@@ -41,21 +72,20 @@ export function Stores() {
       <br />
       <br />
       <div className="sl__container-listing">
-        {storeArray.map((store) => (
+        {stores.map((store) => (
           <StoreModal
             key={store.store_id}
             name={store.store_name}
             id={store.store_id}
             image={store.store_image}
-            trustFact={store.trust_factor_manual}
+            trustFact={store.trust_factor}
           />
         ))}
       </div>
       <br />
       <br />
+      <button onClick={handleLoadMore}>Mostrar más tiendas</button>
       <Footer />
     </>
   );
 }
-
-export default Stores;

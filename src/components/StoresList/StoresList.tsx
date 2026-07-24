@@ -10,7 +10,7 @@ type Store = {
   store_id: string;
   store_url: string;
   store_image: string;
-  trust_factor_manual: number;
+  trust_factor: number;
   seller_type: string[];
   tags: string[];
 };
@@ -49,7 +49,7 @@ export function StoresList() {
                 id={store.store_id}
                 name={store.store_name}
                 image={store.store_image}
-                trustFact={store.trust_factor_manual}
+                trustFact={store.trust_factor}
               />
             ))}
           </div>
