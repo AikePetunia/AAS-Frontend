@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import eye from "@icons/eye.gif";
-import hot from "@icons/hot.svg";
-import shop from "@icons/shop.svg";
 
 import { SearchBar } from "../SearchBar/SearchBar";
 import "./Navbar.css";
@@ -82,7 +80,7 @@ export function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="nav-drawer"
         >
-          <img src={hot} alt="Menu" loading="lazy" className="hamburger-icon" />
+          <i className="fa-solid fa-bars hamburger-icon"></i>
         </button>
 
         {!isDrawerMode && (
@@ -102,7 +100,7 @@ export function Navbar() {
             </a>
             */}
             <Link to="/tiendas" onClick={closeMenu}>
-              <img src={shop} alt="Tiendas" loading="lazy"></img>
+              <i className="fa-solid fa-shop"></i>
               Tiendas
             </Link>
           </div>
@@ -146,7 +144,7 @@ export function Navbar() {
             </a>
             */}
             <Link to="/tiendas">
-              <img src={shop} alt="Tiendas" loading="lazy"></img>
+              <i className="fa-solid fa-shop"></i>
               Tiendas
             </Link>
           </div>

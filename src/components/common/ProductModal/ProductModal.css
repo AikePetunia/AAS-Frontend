@@ -15,7 +15,8 @@ display: flex;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-   flex: 1 1 200px; 
+flex: 1 1 280px;
+  max-width: 360px;
 }
 
 .pm__store-wrap {

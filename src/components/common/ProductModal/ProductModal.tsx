@@ -17,14 +17,13 @@ export function ProductModal({
   listing_id,
   store_id,
   trust_factor,
-  store_url,
   product_url,
   image_url,
   title_raw,
   last_price,
 }: Product) {
-  const getStoreImage = (storeName: string) => {
-    const key = `/src/assets/stores/${storeName}.webp`;
+  const getStoreImage = (store_id: string) => {
+    const key = `/src/assets/stores/${store_id}.webp`;
     return key || `/src/assets/icons/eye.gif`;
   };
 
@@ -33,8 +32,9 @@ export function ProductModal({
     if (productDiscount <= 30) return "yellow-discount-badge";
     return "red-discount-badge";
   };
+
+  const [isHovered, setIsHovered] = useState(false);
   const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
-  console.log("link amigo dale", product_url);
   return (
     <>
       <article key={listing_id} className="pm__card">
@@ -63,35 +63,32 @@ export function ProductModal({
             </p>
           </div>
         </a>
-        {/*
-          <div
-            className="pm__store-wrap"
-            onMouseEnter={() => setHoveredCardId(listing_id)}
-            onMouseLeave={() => setHoveredCardId(null)}
-          >
-
-            <div className="pm__store-info">
-              <a href="" className="pm__store-left">
-                <img
-                  src={getStoreImage(storeId)}
-                  alt={storeName}
-                  className="pm__store-icon"
-                  loading="lazy"
-                />
-                <span className="pm__store-name">{storeName}</span>
-              </a>
-              <span className="pm__trust-badge">{trustFactor}%</span>
-            </div>
-
-            {isHovered && (
-              <HoverStoreInfo
-                storeName={storeName}
-                trustFactor={trustFactor}
-                storeUrl=""
+        <div
+          className="pm__store-wrap"
+          onMouseEnter={() => setHoveredCardId(listing_id)}
+          onMouseLeave={() => setHoveredCardId(null)}
+        >
+          <div className="pm__store-info">
+            <a href="" className="pm__store-left">
+              <img
+                src={getStoreImage(store_id)}
+                alt={store_id}
+                className="pm__store-icon"
+                loading="lazy"
               />
-            )}
+              <span className="pm__store-name">{store_id}</span>
+            </a>
+            <span className="pm__trust-badge">{trust_factor}%</span>
           </div>
-           */}
+
+          {isHovered && (
+            <HoverStoreInfo
+              storeName={store_id}
+              trustFactor={trust_factor}
+              storeUrl=""
+            />
+          )}
+        </div>
       </article>
       <br />
       <br />

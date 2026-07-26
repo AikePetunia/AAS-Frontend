@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom"
 import { StoreModal } from "./storeModal/StoreModal.tsx";
-import allProducts from "../../allProducts.json";
-import storesInfo from "../../storesDump.json";
-
+import { getStores } from "../../hooks/getStores.ts";
+import { useEffect, useState } from "react";
 import "./StoresList.css";
 
 type Store = {
@@ -16,10 +15,30 @@ type Store = {
 };
 
 export function StoresList() {
-  const { stores } = storesInfo;
-  const storeArray: Store[] = Object.values(stores).slice(0, 15);
-  const scrapedStoresLength = Object.keys(allProducts).length;
+  const [stores, setStores] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    async function loadData() {
+      try {
+        setLoading(true);
+        const data = await getStores("");
+        setStores(data.hits);
+      } catch (err) {
+        setError(err.messages);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadData();
+  }, []);
+
+  if (loading) return <p>Cargando tiendas...</p>;
+  if (error) return <p>Error al cargar: {error}</p>;
+  const scrapedStoresLength = stores.length - 20;
   const storesLength = Object.entries(stores).length;
+
 
   return (
     <>
@@ -43,11 +62,11 @@ export function StoresList() {
           <br />
           <br />
           <div className="sl__container-listing">
-            {storeArray.map((store) => (
+            {stores.map((store) => (
               <StoreModal
                 key={store.store_id}
-                id={store.store_id}
                 name={store.store_name}
+                id={store.store_id}
                 image={store.store_image}
                 trustFact={store.trust_factor}
               />

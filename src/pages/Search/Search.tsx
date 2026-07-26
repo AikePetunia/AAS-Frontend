@@ -49,7 +49,6 @@ export function Search() {
               key={product.listing_id}
               store_id={product.store_id}
               trust_factor={product.trust_factor}
-              store_url={product.store_url}
               product_url={product.product_url}
               image_url={product.image_url}
               title_raw={product.title_raw}
