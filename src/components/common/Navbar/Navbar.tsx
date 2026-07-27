@@ -7,15 +7,25 @@ import { SearchBar } from "../SearchBar/SearchBar";
 import "./Navbar.css";
 
 export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const menus = {
+    tienda: {
+      linkTo: "/tiendas",
+      icon: "fa-solid fa-shop",
+    },
+    faq: {
+      linkTo: "/faq",
+      icon: "fa-solid fa-question",
+    },
+  };
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
   const menuRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const isPhone = window.innerWidth <= 768;
   const [isFloating, setIsFloating] = useState(false);
   const isDrawerMode = isFloating || isMobile;
-  // todo: repito states aca y en searchBar tsx, pasarlos
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -85,20 +95,6 @@ export function Navbar() {
 
         {!isDrawerMode && (
           <div className="ham-categories">
-            {/* 
-            <a onClick={closeMenu}>
-              <img src={energy} alt="Lo mas buscado" loading="lazy"></img>
-              Lo mas buscado
-            </a>
-            <a onClick={closeMenu}>
-              <img src={pc} alt="Armado de pc" loading="lazy"></img>
-              Cosas de pc
-            </a>
-            <a onClick={closeMenu}>
-              <img src={hot} alt="Setup" loading="lazy"></img>
-              Setup
-            </a>
-            */}
             <Link to="/tiendas" onClick={closeMenu}>
               <i className="fa-solid fa-shop"></i>
               Tiendas
@@ -128,21 +124,6 @@ export function Navbar() {
             >
               <i className="fa-solid fa-x"></i>
             </button>
-            {/* 
-            
-            <a >
-              <img src={energy} alt="Lo mas buscado" loading="lazy"></img>
-              Lo mas buscado
-            </a>
-            <a >
-              <img src={pc} alt="Armado de pc" loading="lazy"></img>
-              Cosas de pc
-            </a>
-            <a >
-              <img src={hot} alt="Setup" loading="lazy"></img>
-              Setup
-            </a>
-            */}
             <Link to="/tiendas">
               <i className="fa-solid fa-shop fa-lg"></i>
               <span className="nav__categorie-name">Tiendas</span>

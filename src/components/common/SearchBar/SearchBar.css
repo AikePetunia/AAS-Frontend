@@ -69,11 +69,20 @@
   color: var(--color-gray-500);
 }
 
+.sb__error {
+  color: var(--color-red);
+  position: absolute;
+  font-size: 12px;
+  padding-top: 22px;
+
+}
+
 .search-icon {
   width: 18px;
   height: 18px;
   opacity: 0.6;
   transition: all 0.3s ease;
+  cursor: pointer;
   filter: brightness(0) saturate(100%) invert(100%);
 }
 

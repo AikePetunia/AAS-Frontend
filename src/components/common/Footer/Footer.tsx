@@ -20,7 +20,7 @@ export function Footer() {
             </p>
           </div>
           <div className="project-div-right">
-            <p>V0.0.1 (Alpha)</p>
+            <p>V0.0.1 </p>
             <br />
 
             <p>

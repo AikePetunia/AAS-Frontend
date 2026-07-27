@@ -10,7 +10,7 @@ export function Stats() {
         <h3> Algunos números </h3>
         <div className="s__stats-grid">
           <StatBox
-            title="Tiendas con productos"
+            title="Tiendas activas"
             number={30}
             icon="fa-solid fa-store"
             accentColor="#a3e635"

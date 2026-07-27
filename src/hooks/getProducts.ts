@@ -8,6 +8,5 @@ export async function getProducts(param: string) {
     throw new Error(`http error? ${response.status}`);
   }
   const data = await response.json();
-  console.log(data);
   return data;
 }

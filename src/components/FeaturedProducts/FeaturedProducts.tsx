@@ -1,8 +1,8 @@
-import { ProductModal } from "../common/ProductModal/ProductModal";
 import { getProducts } from "@/hooks/getProducts";
 import "./FeaturedProducts.css";
 import { useEffect, useState } from "react";
-
+import SearchBar from "../common/SearchBar/SearchBar";
+import { Loading } from "@components/common/Loading/Loading";
 export function FeaturedProducts() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,10 +24,9 @@ export function FeaturedProducts() {
     loadData();
   }, []);
 
-  if (loading) return <p>Cargando productos xasd ...</p>;
+  if (loading) return <Loading message="productos destacados" />;
   if (error) return <p>Error al cargar: {error}</p>;
 
-  console.log("products", products);
   const isPhone = window.innerWidth <= 768;
   return (
     <>
@@ -38,13 +37,16 @@ export function FeaturedProducts() {
           }
           style={{ color: "white" }}
         >
-          Productos destacados
+          Probá buscar.
         </h2>
-        <span>Que, de destacado no tiene nada. </span>
         <br />
         <br />
+        <div className="fp__test-search">
+          <SearchBar />
+        </div>
+        {/*
         <div className="pm__grid">
-          {products.slice(20, 50).map((product) => (
+          {products.map((product) => (
             <ProductModal
               key={product.listing_id}
               store_id={product.store_id}
@@ -57,6 +59,7 @@ export function FeaturedProducts() {
             />
           ))}
         </div>
+          */}
       </div>
     </>
   );

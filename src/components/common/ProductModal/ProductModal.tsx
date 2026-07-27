@@ -48,7 +48,9 @@ export function ProductModal({
           <div className="pm__body">
             <h3 className="pm__title">{title_raw}</h3>
             <p className="pm__current-price">
-              $ {last_price ? last_price.toLocaleString("es-AR") : "Ver Precio"}
+              {last_price && last_price < 99999999
+                ? "$" + last_price.toLocaleString("es-AR")
+                : "Ver Precio"}
             </p>
           </div>
         </a>

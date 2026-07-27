@@ -22,49 +22,27 @@ export function MainSection() {
         </p>
       </div>
 
-      <div className="ms__posta">
+      <div className="doted-container">
         {isPhone ? (
           <>
-        <p className="ms__posta-text">
-          En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
-          por el <span className="highlight-green">precio</span> y la{" "}
-          <span className="highlight-green">buena tienda</span>.
-        </p>
-            </>
+            <p className="ms__doted-text">
+              En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
+              por el <span className="highlight-green">precio</span> y la{" "}
+              <span className="highlight-green">buena tienda</span>.
+            </p>
+          </>
         ) : (
-        <>
-         <p className="ms__posta-text">
-          En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
-        </p>
-        <p className="ms__posta-text">
-          por el <span className="highlight-green">precio</span> y la{" "}
-          <span className="highlight-green">buena tienda</span>.
-        </p>
-        </>
+          <>
+            <p className="ms__doted-text">
+              En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
+            </p>
+            <p className="ms__doted-text">
+              por el <span className="highlight-green">precio</span> y la{" "}
+              <span className="highlight-green">buena tienda</span>.
+            </p>
+          </>
         )}
-       
       </div>
-      {/* some stass?? 
-      <div className="ms__stats">
-        <div className="ms__stat-card glass-effect">
-          <span className="ms__stat-value highlight-green">∞</span>
-          <span className="ms__stat-label">TIENDAS</span>
-        </div>
-        <div className="ms__stat-card glass-effect">
-          <span className="ms__stat-value highlight-green">∞</span>
-          <span className="ms__stat-label">TIEMPO AHORRADO</span>
-        </div>
-        <div className="ms__stat-card glass-effect">
-          <span className="ms__stat-value highlight-green">∞</span>
-          <span className="ms__stat-label">PLATA AHORRADA</span>
-        </div>
-      </div>
-      <div className="ms__scroll-hint">
-        <span className="ms__sparkle" aria-hidden="true">
-          ✦
-        </span>
-          </div>
-          */}
     </section>
   );
 }

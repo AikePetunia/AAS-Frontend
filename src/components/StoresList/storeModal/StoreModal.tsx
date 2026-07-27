@@ -33,6 +33,7 @@ export function StoreModal({ name, id, image, trustFact }: StoreModalProps) {
             <img
               src={getStoreImage(id)}
               alt={`${name}-logo`}
+              loading="lazy"
               className="sm__store-logo"
             />
           </div>

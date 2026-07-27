@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import "./SearchBar.css";
 
 export function SearchBar() {
@@ -9,17 +9,21 @@ export function SearchBar() {
     "3090...",
     "32Gb Ram...",
     "DDR5...",
+    "Hatsune Miku...",
   ];
 
   const navigate = useNavigate();
+  const [searchedProduct] = useSearchParams();
+  const q = searchedProduct.get("q") ?? "";
   const [isMenuOpen] = useState(false);
   const [isFloating] = useState(false);
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [isMobile] = useState(() => window.innerWidth <= 768);
-  const [text, setText] = useState("");
+  let [text, setText] = useState(q);
   const isDrawerMode = isFloating || isMobile;
 
   useEffect(() => {
@@ -53,22 +57,43 @@ export function SearchBar() {
 
   const handleChange = (event: any) => {
     setText(event.target.value);
+    if (errorMessage) setErrorMessage("");
   };
 
-  const searchProdcut = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
+      executeSearch();
+    }
+  };
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    executeSearch();
+  };
+
+  const executeSearch = () => {
+    text = text.trim();
+    if (text == "") {
       // querys
+      setErrorMessage("Debes de realizar una busqueda.");
+      navigate("/");
+    } else if (text.includes("*")) {
+      setErrorMessage("vivos acá no");
+    } else {
       navigate(`/search?q=${text}`);
     }
   };
 
+  // todo: adv de que no puede buscar "" o *
   return (
     <>
+      {/*  
+      ${isSearching ? "sb__is-searching" : ""}
+            `}
+             */}
       <div
         className={`sb__search-wrapper
            ${isFloating ? "floating" : ""} 
-           ${isSearching ? "sb__is-searching" : ""}
-            `}
+        `}
         onMouseLeave={() => {
           setTimeout(() => {
             setIsSearching(false);
@@ -84,20 +109,15 @@ export function SearchBar() {
             value={text}
             onChange={handleChange}
             onClick={() => setIsSearching(true)}
-            onKeyDown={searchProdcut}
+            required
+            onKeyDown={handleKeyDown}
           />
-          <i className="fa-solid fa-magnifying-glass search-icon"></i>
+          <i
+            className="fa-solid fa-magnifying-glass search-icon"
+            onClick={handleClick}
+          ></i>
         </div>
-        {isSearching ? (
-          <>
-            <div className="separator-red"></div>
-            <div className="sb__input-suggestions">
-              {messages.map((item, key) => (
-                <span key={key}>{item}</span>
-              ))}
-            </div>
-          </>
-        ) : null}
+        {errorMessage && <p className="sb__error">{errorMessage}</p>}
       </div>
     </>
   );

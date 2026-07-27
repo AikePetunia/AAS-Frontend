@@ -1,0 +1,20 @@
+.warning-container {
+  height: 100vh;
+  min-width: 100dvw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.doted-container.warning {
+  position: absolute;
+  align-items: center;
+  top: 35%;
+}
+.doted-container.warning > p {
+  font-size: 14px;
+  color: var(--color-gray-500);
+}

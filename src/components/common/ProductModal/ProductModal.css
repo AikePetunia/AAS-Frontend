@@ -1,11 +1,10 @@
-
 .pm__grid {
 display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 16px;
+  margin:3%;
 
 }
 

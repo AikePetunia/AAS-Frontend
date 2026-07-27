@@ -4,7 +4,7 @@ import { StoresStats } from "@components/Stats/storesStats/StoresStats";
 import { StoreModal } from "../components/StoresList/storeModal/StoreModal";
 import { getStores } from "../hooks/getStores";
 import { useEffect, useState } from "react";
-
+import { Loading } from "@components/common/Loading/Loading.tsx";
 type Store = {
   store_name: string;
   store_id: string;
@@ -36,7 +36,7 @@ export default function Stores() {
     loadData();
   }, []);
 
-  if (loading) return <p>Cargando tiendas...</p>;
+  if (loading) return <Loading message="tiendas" />;
   if (error) return <p>Error al cargar: {error}</p>;
 
   /*

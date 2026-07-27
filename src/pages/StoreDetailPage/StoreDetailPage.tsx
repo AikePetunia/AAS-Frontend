@@ -6,6 +6,7 @@ import Footer from "@/components/common/Footer/Footer";
 
 import { ProductModal } from "../../components/common/ProductModal/ProductModal";
 import { getStoresDetail } from "@/hooks/getStores";
+import { Loading } from "@components/common/Loading/Loading.tsx";
 
 import "./StoreDetailPage.css";
 export function StoreDetailPage() {
@@ -23,11 +24,9 @@ export function StoreDetailPage() {
       try {
         setLoading(true);
         const data = await getStoresDetail(store_id);
-        console.log(data);
         setStore(data);
       } catch (err) {
         setError(err.messages);
-        console.log("failed to fetch", err);
       } finally {
         setLoading(false);
       }
@@ -41,7 +40,7 @@ export function StoreDetailPage() {
     };
 
   // crear componente de carga.
-  if (loading) return <p>Cargando tiendas...</p>;
+  if (loading) return <Loading message="detalle de tienda" />;
   if (error) {
     return <Navigate to="/404" replace />;
   }
@@ -87,11 +86,12 @@ export function StoreDetailPage() {
           </p>
           <div className="sdp__store-tagging">
             <div className="sdp__store-types-container">
-              {store.store_role.map((item, index) => (
-                <span className="sdp__store-type" key={index}>
-                  {item} {index < store.store_role.length - 1 && ""}
-                </span>
-              ))}
+              {store.store_role ??
+                store.store_role.map((item, index) => (
+                  <span className="sdp__store-type" key={index}>
+                    {item} {index < store.store_role.length - 1 && ""}
+                  </span>
+                ))}
             </div>
             <div className="sdp__store-tags-container">
               {store.tags.map((item, index) => (

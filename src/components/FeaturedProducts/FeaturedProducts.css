@@ -1,3 +1,9 @@
 .fp__container {
     margin: 0 5%;
 }
+
+.fp__test-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+}

@@ -18,6 +18,5 @@ export async function getStoresDetail(param) {
     throw new Error(`http error? ${response.status}`);
   }
   const data = await response.json();
-  console.log(data);
   return data;
 }

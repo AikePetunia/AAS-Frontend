@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Stores from "./pages/Stores";
 import StoreDetailPage from "./pages/StoreDetailPage/StoreDetailPage";
-import NotFound404 from "./pages/NotFound/NotFound404";
+import NotFound404 from "./pages/NotFound404/NotFound404";
 import Search from "./pages/Search/Search";
 
 import "./App.css";
@@ -16,8 +16,8 @@ function App() {
           <Route path="/tiendas" element={<Stores />} />
           <Route path="/tiendas/:store_id" element={<StoreDetailPage />} />
           <Route path="/search" element={<Search />} />
-          <Route path={"/404"} element={<NotFound404 />} />
           <Route path={"/*"} element={<NotFound404 />} />
+          <Route path={"/faq"} element={<Faq />} />
         </Routes>
       </BrowserRouter>
     </>
@@ -25,3 +25,8 @@ function App() {
 }
 
 export default App;
+
+//todo: 
+
+// faq
+// popup inicio beta
