@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import eye from "@assets/icons/eye.gif";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
 
@@ -36,6 +35,11 @@ export function StoreDetailPage() {
     loadData();
   }, []);
 
+    const getStoreImage = (store_id: string) => {
+      const key = `/src/assets/stores/${store_id}.webp`;
+      return key || `/src/assets/icons/eye.gif`;
+    };
+
   // crear componente de carga.
   if (loading) return <p>Cargando tiendas...</p>;
   if (error) {
@@ -43,8 +47,6 @@ export function StoreDetailPage() {
   }
 
   const products = store.products;
-  console.log("productos de tienda sdkljnerwg", products);
-
   const getTrustBadgeClass = (trust: number) => {
     if (trust > 85) return "green-trust-badge";
     if (trust > 50) return "yellow-trust-badge";
@@ -101,9 +103,9 @@ export function StoreDetailPage() {
           </div>
         </div>
         <div className="sdp__store_image-container">
-          <a href={store.store_url}>
+          <a href={store.store_url} target="_blank">
             <img
-              src={eye}
+              src={getStoreImage(store_id)}
               alt={{ store_id } + "image"}
               className="sdp__store-image"
             />
@@ -111,18 +113,24 @@ export function StoreDetailPage() {
         </div>
       </div>
       <div className="pm__grid">
-        {products.map((product) => (
-          <ProductModal
-            key={product.listing_id}
-            store_id={product.store_id}
-            trust_factor={product.trust_factor}
-            store_url={product.store_url}
-            product_url={product.product_url}
-            image_url={product.image_url}
-            title_raw={product.title_raw}
-            last_price={product.last_price}
-          />
-        ))}
+        {products.length != 0 ? (
+          products.map((product) => (
+            <ProductModal
+              key={product.listing_id}
+              store_id={product.store_id}
+              trust_factor={product.trust_factor}
+              store_url={product.store_url}
+              product_url={product.product_url}
+              image_url={product.image_url}
+              title_raw={product.title_raw}
+              last_price={product.last_price}
+            />
+          ))
+        ) : (
+          <h3>
+            No se han extraido productos de {store.store_name} por el momento
+          </h3>
+        )}
       </div>
       <Footer />
     </>

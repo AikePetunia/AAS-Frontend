@@ -33,15 +33,18 @@ export function FeaturedProducts() {
     <>
       <div className="fp__container">
         <h2
-          className={isPhone ? "highlight-green" : "" + `sm__title-w-line`}
+          className={
+            isPhone ? "highlight-green center" : "" + `sm__title-w-line`
+          }
           style={{ color: "white" }}
         >
           Productos destacados
         </h2>
+        <span>Que, de destacado no tiene nada. </span>
         <br />
         <br />
         <div className="pm__grid">
-          {products.map((product) => (
+          {products.slice(20, 50).map((product) => (
             <ProductModal
               key={product.listing_id}
               store_id={product.store_id}

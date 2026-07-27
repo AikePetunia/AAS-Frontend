@@ -34,6 +34,7 @@
 
     --font-heading: "Poppins", sans-serif;
   --font-body: "JetBrains Mono", monospace;
+  overflow-x: hidden;
 }
 
 body {

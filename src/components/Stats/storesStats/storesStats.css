@@ -1,0 +1,13 @@
+.sl__stats-texts {
+  opacity: 0.35;
+  font-size: 0.8rem;
+  padding-top: 16px;
+  padding-left: 64px;
+}
+
+@media (max-width: 480px) {
+  .sl__stats-texts {
+    text-align: center;
+    padding-left: 0px;
+  }
+}

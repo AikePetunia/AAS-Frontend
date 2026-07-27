@@ -36,13 +36,13 @@ export function Search() {
 
   if (loading) return <p>Cargando productos xasd ...</p>;
   if (error) return <p>Error al cargar: {error}</p>;
-
+  const isMobile = window.innerWidth < 756;
   console.log("products", products);
   return (
     <>
       <Navbar />
       <div className="sr__container">
-        <Filters />
+        {isMobile ? "" : <Filters />}
         <div className="pm__grid">
           {products.map((product) => (
             <ProductModal

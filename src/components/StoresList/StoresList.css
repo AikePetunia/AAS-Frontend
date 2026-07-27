@@ -43,7 +43,7 @@
     transparent 100%
   );
   opacity: 0.8;
-}ew
+}
 
 .sm__title-w-line span {
   white-space: nowrap;
@@ -51,13 +51,6 @@
 
 .sl_hl-text {
     color: var(--color-lime-400);
-}
-
-.sl__stats-texts {
-    opacity: 0.35;
-    font-size: 0.8rem;
-    padding-top: 16px;
-    padding-left: 64px;
 }
 
 .sl__container-listing {
@@ -69,6 +62,16 @@
   justify-content: center;
 }
 
+@media (max-width: 480px) {
+.sl__container {
+  margin: 0 2%;
+}
+
+  .sl__container-listing {
+    gap: 4px;
+    margin: 0;
+  }
+}
 .sl__container-limit {
   overflow: hidden;
   max-height: 35rem;
@@ -98,6 +101,7 @@
   bottom: 32px;
   transform: translateX(-50%);
   z-index: 6;
+  width: 250px;
 }
 
 .sl__see-more-btn {

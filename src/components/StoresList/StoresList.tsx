@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { StoreModal } from "./storeModal/StoreModal.tsx";
+import { StoresStats } from "@components/Stats/storesStats/StoresStats.tsx";
 import { getStores } from "../../hooks/getStores.ts";
 import { useEffect, useState } from "react";
 import "./StoresList.css";
@@ -15,7 +16,7 @@ type Store = {
 };
 
 export function StoresList() {
-  const [stores, setStores] = useState([]);
+  const [stores, setStores] = useState<Store>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
@@ -34,11 +35,9 @@ export function StoresList() {
     loadData();
   }, []);
 
+
   if (loading) return <p>Cargando tiendas...</p>;
   if (error) return <p>Error al cargar: {error}</p>;
-  const scrapedStoresLength = stores.length - 20;
-  const storesLength = Object.entries(stores).length;
-
 
   return (
     <>
@@ -52,17 +51,11 @@ export function StoresList() {
             </span>
             en AAS
           </h2>
-          <div className="sl__stats-texts">
-            <span>
-              <i className="fa-solid fa-database"></i>
-              {scrapedStoresLength} tiendas activas
-            </span>
-            <span> • {storesLength - scrapedStoresLength} proximamente </span>
-          </div>
+          <StoresStats />
           <br />
           <br />
           <div className="sl__container-listing">
-            {stores.map((store) => (
+            {stores.slice(0, 8).map((store: Store) => (
               <StoreModal
                 key={store.store_id}
                 name={store.store_name}

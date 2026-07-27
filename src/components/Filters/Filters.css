@@ -9,6 +9,7 @@
   width: 280px; 
   font-family: "JetBrains Mono", monospace;
   color: #ededed;
+  cursor: not-allowed;
 }
 
 .filter-header {
@@ -125,4 +126,9 @@
 
 .checkbox-label {
   color: #ddd;
+}
+
+.filters-container > span {
+  text-align: center;
+  font-size: 20px;
 }

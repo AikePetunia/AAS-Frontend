@@ -170,7 +170,7 @@
   }
 
   .ms__title {
-    font-size: clamp(2.3rem, 5.5vw, 1.8rem);
+    font-size: clamp(2rem, 5.5vw, 1.8rem);
   }
 
   .ms__stats {
@@ -191,4 +191,10 @@
             margin-top: 24px;
         margin-bottom: 24px;
   }
+}
+
+.highlight-green.center {
+  text-align: center;
+  align-items: center;
+  width: 100%;
 }

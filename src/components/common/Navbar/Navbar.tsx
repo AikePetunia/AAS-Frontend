@@ -80,7 +80,7 @@ export function Navbar() {
           aria-expanded={isMenuOpen}
           aria-controls="nav-drawer"
         >
-          <i className="fa-solid fa-bars hamburger-icon"></i>
+          <i className="fa-solid fa-bars hamburger-icon fa-lg"></i>
         </button>
 
         {!isDrawerMode && (
@@ -144,8 +144,8 @@ export function Navbar() {
             </a>
             */}
             <Link to="/tiendas">
-              <i className="fa-solid fa-shop"></i>
-              Tiendas
+              <i className="fa-solid fa-shop fa-lg"></i>
+              <span className="nav__categorie-name">Tiendas</span>
             </Link>
           </div>
         </>

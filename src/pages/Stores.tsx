@@ -1,8 +1,10 @@
 import Navbar from "@/components/common/Navbar/Navbar";
-import { Footer } from "../components/common/Footer/Footer";
+import { Footer } from "@components/common/Footer/Footer";
+import { StoresStats } from "@components/Stats/storesStats/StoresStats";
 import { StoreModal } from "../components/StoresList/storeModal/StoreModal";
 import { getStores } from "../hooks/getStores";
 import { useEffect, useState } from "react";
+
 type Store = {
   store_name: string;
   store_id: string;
@@ -14,10 +16,10 @@ type Store = {
 };
 
 export default function Stores() {
-  const [stores, setStores] = useState([]);
+  const [stores, setStores] = useState<Store>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [offset, setOffset] = useState(0);
+  //  const [offset, setOffset] = useState(0);
   useEffect(() => {
     async function loadData() {
       try {
@@ -36,9 +38,8 @@ export default function Stores() {
 
   if (loading) return <p>Cargando tiendas...</p>;
   if (error) return <p>Error al cargar: {error}</p>;
-  const scrapedStoresLength = stores.length - 20;
-  const storesLength = Object.entries(stores).length;
 
+  /*
   const handleLoadMore = async () => {
     try {
       const nextOffset = offset + 50;
@@ -51,6 +52,7 @@ export default function Stores() {
       console.error("Error al cargar más:", err);
     }
   };
+  */
   return (
     <>
       <Navbar />
@@ -62,17 +64,11 @@ export default function Stores() {
         </span>
         en AAS
       </h2>
-      <div className="sl__stats-texts">
-        <span>
-          <i className="fa-solid fa-database"></i>
-          {scrapedStoresLength} tiendas activas
-        </span>
-        <span> • {storesLength - scrapedStoresLength} proximamente </span>
-      </div>
+      <StoresStats />
       <br />
       <br />
       <div className="sl__container-listing">
-        {stores.map((store) => (
+        {stores.map((store: Store) => (
           <StoreModal
             key={store.store_id}
             name={store.store_name}
@@ -84,7 +80,7 @@ export default function Stores() {
       </div>
       <br />
       <br />
-      <button onClick={handleLoadMore}>Mostrar más tiendas</button>
+      {/* <button onClick={handleLoadMore}>Mostrar más tiendas</button> */}
       <Footer />
     </>
   );

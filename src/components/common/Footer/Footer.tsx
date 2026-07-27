@@ -5,7 +5,7 @@ export function Footer() {
     <>
       <footer>
         <div className="project-information">
-          <div className="project-div" style={{ textAlign: "left"}}>
+          <div className="project-div" style={{ textAlign: "left" }}>
             <p>
               Este proyecto es de puro aprendizaje.
               <br />
@@ -13,35 +13,33 @@ export function Footer() {
             </p>
             <br />
             <p>
-              Este proyecto es open source y puede aportar{" "}
+              Este proyecto es open source y podes aportar o ver el codigo{" "}
               <a href="#">
-                aquí
-                {" "}
-                <i className="fa-brands fa-github"></i>
+                aquí <i className="fa-brands fa-github"></i>
               </a>
             </p>
           </div>
-          <div className="project-div" style={{ textAlign: "right"}}>
-            
+          <div className="project-div-right">
             <p>V0.0.1 (Alpha)</p>
             <br />
 
-        <p>
-          Esta pagina fue llevada a cabo por{" "}
-          <a href="https://aike.tech" target="_blank">
-            Aike
-              </a>
-              {" "}
-          AAS es un juego con mi mismo nombre, <br />
-          "Aike armar un setup"
+            <p>
+              Esta pagina fue llevada a cabo por{" "}
+              <a href="https://aike.tech" target="_blank">
+                Aike
+              </a>{" "}
+              AAS es un juego con mi mismo nombre, "Aike armar un setup".
+              Horrendo el nombre, pero no se me ocurre otro xD
             </p>
           </div>
         </div>
       </footer>
       <div className="warnings">
-        <a href="">Apoya el proyecto desde aca 🧉</a>
+        <a href="https://ko-fi.com/aikemilanesa">
+          Apoya el proyecto desde aca 🧉
+        </a>
       </div>
-      
+
       <br />
       <br />
     </>

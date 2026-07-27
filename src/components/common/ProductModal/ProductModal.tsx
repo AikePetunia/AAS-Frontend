@@ -27,14 +27,6 @@ export function ProductModal({
     return key || `/src/assets/icons/eye.gif`;
   };
 
-  const getDiscountBadgeClass = (productDiscount: number) => {
-    if (productDiscount <= 15) return "green-discount-badge";
-    if (productDiscount <= 30) return "yellow-discount-badge";
-    return "red-discount-badge";
-  };
-
-  const [isHovered, setIsHovered] = useState(false);
-  const [hoveredCardId, setHoveredCardId] = useState<string | null>(null);
   return (
     <>
       <article key={listing_id} className="pm__card">
@@ -45,9 +37,6 @@ export function ProductModal({
           className="pm__product-link"
         >
           <div className="pm__image-wrapper">
-            <span className={`pm__discount-badge ${getDiscountBadgeClass(50)}`}>
-              50
-            </span>
             <img
               src={image_url}
               alt={title_raw}
@@ -63,13 +52,9 @@ export function ProductModal({
             </p>
           </div>
         </a>
-        <div
-          className="pm__store-wrap"
-          onMouseEnter={() => setHoveredCardId(listing_id)}
-          onMouseLeave={() => setHoveredCardId(null)}
-        >
+        <div className="pm__store-wrap">
           <div className="pm__store-info">
-            <a href="" className="pm__store-left">
+            <a href={`/tiendas/${store_id}`} className="pm__store-left">
               <img
                 src={getStoreImage(store_id)}
                 alt={store_id}
@@ -78,16 +63,19 @@ export function ProductModal({
               />
               <span className="pm__store-name">{store_id}</span>
             </a>
-            <span className="pm__trust-badge">{trust_factor}%</span>
-          </div>
+            <div className="pm__trust-badge-container">
+              {trust_factor ? (
+                <span className="pm__trust-badge">{trust_factor}%</span>
+              ) : (
+                ""
+              )}
 
-          {isHovered && (
-            <HoverStoreInfo
-              storeName={store_id}
-              trustFactor={trust_factor}
-              storeUrl=""
-            />
-          )}
+              <span className="pm__trust-badge-text">
+                {" "}
+                % De confianza de la tienda.{" "}
+              </span>
+            </div>
+          </div>
         </div>
       </article>
       <br />

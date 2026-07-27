@@ -56,13 +56,7 @@
   margin: 0 auto;
   border: 1px solid var(--color-lime-400);
   background: linear-gradient(145deg, #232836, #181d29);
-}
-
-
-@media (max-width: 768px) {
-    .sm__store-logo {
-        width: 120px;
-    }
+  height: 140px;
 }
 .sm__name-container > span {
     display: block;
@@ -70,4 +64,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .sm__store-logo {
+        width: 136px !important;
+        height: 136px;
+    }
 }
