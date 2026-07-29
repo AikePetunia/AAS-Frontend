@@ -4,7 +4,7 @@ import Stores from "./pages/Stores";
 import StoreDetailPage from "./pages/StoreDetailPage/StoreDetailPage";
 import NotFound404 from "./pages/NotFound404/NotFound404";
 import Search from "./pages/Search/Search";
-
+import Faq from "./pages/Faq/Faq";
 import "./App.css";
 
 function App() {

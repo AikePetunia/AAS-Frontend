@@ -11,10 +11,12 @@ export function Navbar() {
   const menus = {
     tienda: {
       linkTo: "/tiendas",
+      name: "Tiendas",
       icon: "fa-solid fa-shop",
     },
     faq: {
       linkTo: "/faq",
+      name: "Faq",
       icon: "fa-solid fa-question",
     },
   };
@@ -95,10 +97,12 @@ export function Navbar() {
 
         {!isDrawerMode && (
           <div className="ham-categories">
-            <Link to="/tiendas" onClick={closeMenu}>
-              <i className="fa-solid fa-shop"></i>
-              Tiendas
-            </Link>
+            {Object.entries(menus).map(([key, menu]) => (
+              <Link key={key} to={menu.linkTo}>
+                <i className={menu.icon}></i>
+                <span className="nav__categorie-name">{menu.name}</span>
+              </Link>
+            ))}
           </div>
         )}
       </nav>
@@ -124,10 +128,12 @@ export function Navbar() {
             >
               <i className="fa-solid fa-x"></i>
             </button>
-            <Link to="/tiendas">
-              <i className="fa-solid fa-shop fa-lg"></i>
-              <span className="nav__categorie-name">Tiendas</span>
-            </Link>
+            {Object.entries(menus).map(([key, menu]) => (
+              <Link key={key} to={menu.linkTo}>
+                <i className={menu.icon}></i>
+                <span className="nav__categorie-name">{menu.name}</span>
+              </Link>
+            ))}
           </div>
         </>
       )}

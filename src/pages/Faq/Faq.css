@@ -1,0 +1,69 @@
+.faq__container {
+    display: flex;
+    justify-content: center;
+    margin: 8%;
+}
+.doted-container.faq {
+    align-items: flex-start;
+        gap: 48px;
+    display: flex;
+  flex-direction: column;
+}
+
+.green-box {
+    width: 98%;
+  padding: 12px;
+  border-radius: 16px;
+ background: linear-gradient(
+    135deg,
+    rgba(24, 24, 27, 0.4) 10%,
+    rgba(163, 230, 53, 0.4) 90%
+  );
+  border: 1px solid rgba(163, 230, 53, 0.5);
+  box-shadow: 0 10px 40px rgba(163, 230, 53, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.yellow-box {
+    width: 98%;
+  padding: 12px;
+  border-radius: 16px;
+
+   background: linear-gradient(
+    135deg,
+    rgba(24, 24, 27, 0.4) 0%,
+    rgba(217, 194, 42, 0.3) 95%,
+    rgba(250, 204, 21, 0.35) 100%
+  );
+  border: 1px solid rgba(250, 204, 21, 0.5);
+  box-shadow: 0 10px 40px rgba(250, 204, 21, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.red-box {
+    width: 98%;
+
+  padding: 12px;
+  border-radius: 16px;
+
+background: linear-gradient(
+    135deg,
+    rgba(24, 24, 27, 0.4) 0%,
+    rgba(194, 37, 37, 0.3) 95%,
+    rgba(249, 22, 22, 0.35) 100%
+  );
+  border: 1px solid rgba(249, 22, 22, 0.5);
+  box-shadow: 0 10px 40px rgba(249, 22, 22, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+
+
+#faq__question h3 {
+    margin: 0;
+}
+
+#faq__question p {
+    font-size: 14px;
+    color: white
+}
