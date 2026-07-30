@@ -19,7 +19,7 @@ export function Faq() {
     question5: {
       question: ">Soy dueñ@ de una tienda y no me gustaría estar aquí.",
       answer:
-        "AAS funciona como un buscador e indexador de ofertas. Recopilamos únicamente información de acceso público (nombres de productos, precios y stock) para ayudar a la comunidad a comparar opciones. No cobramos comisiones ni vendemos productos: redirigimos a los usuarios directamente a tu tienda oficial para que finalicen la compra en tu sitio. Si detectás algún error en los datos de tu comercio o tenés dudas sobre la integración, podés contactarnos para ajustarlo.",
+        "AAS funciona como un buscador e indexador de ofertas. Recopilamos únicamente información de acceso público (nombres de productos, precios y stock) para ayudar a la comunidad a comparar opciones, sin ningún tipo de agresividad estilo DDOS. No cobramos comisiones ni vendemos productos: redirigimos a los usuarios directamente a tu tienda oficial para que finalicen la compra en tu sitio. Si detectás algún error en los datos de tu comercio, algo que te haga ruido o tenés dudas sobre la integración, podés contactarnos para ajustarlo.",
       color: "red",
     },
     question3: {
@@ -35,16 +35,16 @@ export function Faq() {
     },
     question6: {
       question:
-        "Tengo una tienda de computación/decoracion, ¿cómo puedo sumarme?",
+        ">Tengo una tienda de computación/decoracion, ¿cómo puedo sumarme?",
       answer:
-        "Podés contactar vía discord con Aike con la URL de tu sitio. Si tu tienda cumple con los criterios de transparencia y datos públicos accesibles, la evaluamos para sumarla a las ejecuciones de indexación.",
+        "Podés contactar vía discord con Aike con la URL de tu sitio (Pronto habrá un formulario). Si tu tienda cumple con los criterios de transparencia y datos públicos accesibles, la evaluamos para sumarla a las ejecuciones de indexación.",
       color: "green",
     },
     question7: {
       question:
-        "¿Existen tiendas o productos patrocinados que aparezcan primero?",
+        ">¿Existen tiendas o productos patrocinados que aparezcan primero?",
       answer:
-        "No. La prioridad principal de AAS es la transparencia absoluta. El ordenamiento de resultados se basa estrictamente en criterios de búsqueda y precio. Cero anuncios, cero banners patrocinados. Si a futuro el proyecto no es autosustentable con donaciones es probable que se pongan anuncios, pero no tiendas patrocinadas.",
+        "No. La prioridad principal de AAS es la transparencia absoluta, AAS vive y vivirá a través de donaciones de los usuarios, sin monetización. El ordenamiento de resultados se basa estrictamente en criterios de búsqueda y precio. Cero anuncios, cero banners patrocinados. Si a futuro el proyecto no es autosustentable con donaciones es probable que se pongan anuncios, pero no tiendas patrocinadas.",
       color: "green",
     },
   };
