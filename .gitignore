@@ -26,3 +26,4 @@ armytech.json
 *.sln
 *.sw?
 notes
+.env 
