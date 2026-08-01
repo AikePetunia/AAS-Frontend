@@ -25,8 +25,3 @@ function App() {
 }
 
 export default App;
-
-//todo: 
-
-// faq
-// popup inicio beta

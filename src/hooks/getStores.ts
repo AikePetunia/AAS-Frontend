@@ -1,4 +1,3 @@
-// http://localhost:3000/stores?q=ho&offset=20.
 const API_LINK = "http://localhost:3000/";
 export async function getStores(offset = 0) {
   const response = await fetch(API_LINK + `stores?q=&offset=${offset}`);
@@ -11,7 +10,7 @@ export async function getStores(offset = 0) {
   return data;
 }
 
-export async function getStoresDetail(param) {
+export async function getStoresDetail(param: string) {
   const response = await fetch(API_LINK + `stores/${param}`);
 
   if (!response.ok) {

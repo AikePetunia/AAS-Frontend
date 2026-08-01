@@ -1,7 +1,7 @@
 import eye from "@assets/icons/eye.gif";
 import "./Warning.css";
 import { useState } from "react";
-export function Warning({ message = "" }: { message?: string }) {
+export function Warning() {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <>
