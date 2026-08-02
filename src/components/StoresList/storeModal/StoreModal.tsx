@@ -3,22 +3,23 @@ import { Link } from "react-router-dom";
 
 interface StoreModalProps {
   name: string;
-  image: string;
+  store_image_url: string;
   id: string;
   trustFact: number;
 }
 
-export function StoreModal({ name, id, image, trustFact }: StoreModalProps) {
-  const getStoreImage = (id: string) => {
-    const key = `/src/assets/stores/${id}.webp`;
-    return key || `/src/assets/icons/eye.gif`;
-  };
-
+export function StoreModal({
+  name,
+  id,
+  store_image_url,
+  trustFact,
+}: StoreModalProps) {
   const getTrustBadgeClass = (trust: number) => {
     if (trust > 85) return "green-trust-badge";
     if (trust > 50) return "yellow-trust-badge";
     return "red-trust-badge";
   };
+  console.log("store_imageurl", store_image_url);
 
   return (
     <>
@@ -31,7 +32,7 @@ export function StoreModal({ name, id, image, trustFact }: StoreModalProps) {
               {trustFact}%
             </span>
             <img
-              src={getStoreImage(id)}
+              src={store_image_url}
               alt={`${name}-logo`}
               loading="lazy"
               className="sm__store-logo"

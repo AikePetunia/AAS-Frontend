@@ -9,7 +9,7 @@ type Store = {
   store_name: string;
   store_id: string;
   store_url: string;
-  store_image: string;
+  store_image_url: string;
   trust_factor: number;
   seller_type: string[];
   tags: string[];
@@ -60,7 +60,7 @@ export function StoresList() {
                 key={store.store_id}
                 name={store.store_name}
                 id={store.store_id}
-                image={store.store_image}
+                store_image_url={store.store_image_url}
                 trustFact={store.trust_factor}
               />
             ))}

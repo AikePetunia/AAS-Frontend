@@ -11,6 +11,7 @@ interface Product {
   image_url: string;
   title_raw: string;
   last_price: number;
+  store_image_url: string;
 }
 
 export function ProductModal({
@@ -21,12 +22,8 @@ export function ProductModal({
   image_url,
   title_raw,
   last_price,
+  store_image_url,
 }: Product) {
-  const getStoreImage = (store_id: string) => {
-    const key = `/src/assets/stores/${store_id}.webp`;
-    return key || `/src/assets/icons/eye.gif`;
-  };
-
   return (
     <>
       <article key={listing_id} className="pm__card">
@@ -58,7 +55,7 @@ export function ProductModal({
           <div className="pm__store-info">
             <a href={`/tiendas/${store_id}`} className="pm__store-left">
               <img
-                src={getStoreImage(store_id)}
+                src={store_image_url}
                 alt={store_id}
                 className="pm__store-icon"
                 loading="lazy"

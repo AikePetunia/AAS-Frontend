@@ -53,6 +53,7 @@ export function Search() {
                 image_url={product.image_url}
                 title_raw={product.title_raw}
                 last_price={product.last_price}
+                store_image_url={product.store_image_url}
               />
             ))
           ) : (

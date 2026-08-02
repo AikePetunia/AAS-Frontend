@@ -24,6 +24,7 @@ export function StoreDetailPage() {
       try {
         setLoading(true);
         const data = await getStoresDetail(store_id);
+        console.log("data", data);
         setStore(data);
       } catch (err) {
         setError(err.messages);
@@ -33,11 +34,6 @@ export function StoreDetailPage() {
     }
     loadData();
   }, []);
-
-    const getStoreImage = (store_id: string) => {
-      const key = `/src/assets/stores/${store_id}.webp`;
-      return key || `/src/assets/icons/eye.gif`;
-    };
 
   // crear componente de carga.
   if (loading) return <Loading message="detalle de tienda" />;
@@ -52,6 +48,7 @@ export function StoreDetailPage() {
     return "red-trust-badge";
   };
 
+  console.log("product", products);
   return (
     <>
       <Navbar />
@@ -102,10 +99,10 @@ export function StoreDetailPage() {
             </div>
           </div>
         </div>
-        <div className="sdp__store_image-container">
+        <div className="sdp__store_image_url-container">
           <a href={store.store_url} target="_blank">
             <img
-              src={getStoreImage(store_id)}
+              src={store.store_image_url}
               alt={{ store_id } + "image"}
               className="sdp__store-image"
             />
@@ -124,6 +121,7 @@ export function StoreDetailPage() {
               image_url={product.image_url}
               title_raw={product.title_raw}
               last_price={product.last_price}
+              store_image_url={product.store_image_url}
             />
           ))
         ) : (
