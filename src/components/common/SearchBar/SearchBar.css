@@ -103,4 +103,8 @@
     flex: 1;
     min-width: 130px;
   }
+
+  .main-navbar.floating {
+    width: min(80%, 980px);
+  }
 }

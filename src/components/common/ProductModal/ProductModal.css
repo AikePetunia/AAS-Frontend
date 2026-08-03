@@ -5,7 +5,7 @@ display: flex;
   gap: 16px;
   justify-content: center;
   margin:3%;
-
+width: fit-content;
 }
 
 .pm__card {
@@ -42,8 +42,8 @@ flex: 1 1 280px;
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #fde047 0%, #facc15 100%);
   overflow: hidden;
+  opacity: 1;
 }
 
 .pm__image {

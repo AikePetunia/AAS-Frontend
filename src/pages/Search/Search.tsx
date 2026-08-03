@@ -6,23 +6,34 @@ import { getProducts } from "@/hooks/getProducts";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { NotFound } from "@components/common//NotFound/NotFound";
-import "./Search.css";
 import { Loading } from "@components/common/Loading/Loading.tsx";
-export function Search() {
+import "./Search.css";
+import NotFound404 from "../NotFound404/NotFound404";
 
-  const [searchParams] = useSearchParams();
+export function Search() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const searchedProduct = searchParams.get("q");
+  const sortBy = searchParams.get("sort");
+  const minPrice = searchParams.get("minPrice");
+  const maxPrice = searchParams.get("maxPrice");
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showMobileFilter, setShowMobileFilter] = useState(false);
+  const filters = [];
+
+  if (sortBy) filters.push(`sort=${sortBy}`);
+  if (minPrice) filters.push(`minPrice=${minPrice}`);
+  if (maxPrice) filters.push(`maxPrice=${maxPrice}`);
+
   useEffect(() => {
     if (!searchedProduct) return;
 
     async function loadData() {
       try {
         setLoading(true);
-        const data = await getProducts(searchedProduct);
+        const data = await getProducts(searchedProduct, filters);
         setProducts(data.hits);
       } catch (err) {
         setError(err.message);
@@ -32,16 +43,36 @@ export function Search() {
     }
 
     loadData();
-  }, [searchedProduct]);
+  }, [searchedProduct, sortBy, minPrice, maxPrice]);
 
-  if (loading) return <Loading message="productos" />;
-  if (error) return <p>Error al cargar: {error}</p>;
-  const isMobile = window.innerWidth < 756;
+  if (loading) return <Loading message="cargando productos..." />;
+  if (error) return <NotFound404 />;
+
+  const isPhone = window.innerWidth >= 758;
+
   return (
     <>
       <Navbar />
+      {!isPhone ? (
+        <>
+          <button
+            onClick={() => setShowMobileFilter(!showMobileFilter)}
+            className="sr__filter-mobile"
+          >
+            <i className="fa-solid fa-sliders"></i> Filtros
+          </button>
+
+          <div className="sr__filter-mobile-container">
+            {showMobileFilter ? <Filters /> : ""}
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+
       <div className="sr__container">
-        {isMobile ? "" : <Filters />}
+        {!isPhone ? "" : <Filters />}
+
         <div className="pm__grid">
           {products.length != 0 ? (
             products.map((product) => (

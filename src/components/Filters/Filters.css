@@ -9,7 +9,7 @@
   width: 280px; 
   font-family: "JetBrains Mono", monospace;
   color: #ededed;
-  cursor: not-allowed;
+  height: fit-content;
 }
 
 .filter-header {
@@ -132,3 +132,26 @@
   text-align: center;
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .filters-container {
+    width: 100%;
+  }
+}
+
+.filter_clean-btn {
+  background-color: var(--color-zinc-900);
+
+}
+
+.filter_clean-btn.inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.filter_clean-btn.active {
+  opacity: 1;
+  border: white 1px solid;
+}
+

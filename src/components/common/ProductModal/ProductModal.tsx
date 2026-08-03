@@ -1,7 +1,5 @@
 import "./ProductModal.css";
-import { useState } from "react";
-import { HoverStoreInfo } from "./HoverStoreInfo/HoverStoreInfo";
-
+import eyeError from "@assets/icons/eyeError.gif";
 interface Product {
   listing_id: string;
   store_id: string;
@@ -35,7 +33,7 @@ export function ProductModal({
         >
           <div className="pm__image-wrapper">
             <img
-              src={image_url}
+              src={image_url ?? eyeError}
               alt={title_raw}
               className="pm__image"
               loading="lazy"

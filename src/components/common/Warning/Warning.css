@@ -18,3 +18,10 @@
   font-size: 14px;
   color: var(--color-gray-500);
 }
+
+
+@media (max-width: 758px) {
+    .doted-container.warning {
+      top:15%;
+    }
+}

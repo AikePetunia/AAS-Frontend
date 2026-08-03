@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700&family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-lime-400: #a3e635;
   --color-lime-500: #84cc16;
@@ -116,7 +122,16 @@ button {
     box-shadow 180ms ease,
     filter 180ms ease;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
 
 .btn-primary {
   background: linear-gradient(135deg, #95f65e 0%, #70d638 100%);
