@@ -4,7 +4,7 @@ display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  margin:3%;
+  margin: 3% 0 3% 0;
 width: fit-content;
 }
 
@@ -229,8 +229,6 @@ flex: 1 1 280px;
   opacity: 1;
 }
 
-
-
 @media (max-width: 768px) {
   .pm__grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -238,12 +236,19 @@ flex: 1 1 280px;
     padding: 12px;
   }
 
+  .pm__card {
+    flex: 1 1 250px;
+  }
   .pm__body {
     padding: 12px;
   }
 
   .pm__current-price {
     font-size: 1.2rem;
+  }
+
+  .pm__image-wrapper {
+    height: 160px;
   }
 }
 

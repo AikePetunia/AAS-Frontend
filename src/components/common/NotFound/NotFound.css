@@ -1,4 +1,5 @@
 .doted-container.notfound {
-  width: 26rem;
+  width: 100%;
   align-items: center;
+  justify-content: center;
 }

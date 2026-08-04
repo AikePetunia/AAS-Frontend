@@ -35,6 +35,8 @@ export function Filters() {
       }
     });
 
+    // Otros filtros = otro set de resultados, se vuelve a la primera pagina.
+    next.delete("page");
     setSearchParams(next);
     setIsOpen(false);
   };
@@ -44,6 +46,7 @@ export function Filters() {
     Object.keys(draftFilters).forEach((key) => {
       next.delete(key);
     });
+    next.delete("page");
     setSearchParams(next);
     setDraftFilters({ sort: "", minPrice: "", maxPrice: "" });
   };
