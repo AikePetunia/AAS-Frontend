@@ -49,7 +49,7 @@ export function StoresList() {
               {" "}
               paginan{" "}
             </span>
-            en AAS
+            en ARmar
           </h2>
           <StoresStats />
           <br />

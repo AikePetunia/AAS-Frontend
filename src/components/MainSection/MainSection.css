@@ -20,6 +20,14 @@
   }
 }
 
+.ms__changing-span {
+  font-weight: 400;
+  border-bottom: var(--color-yellow) 1px solid;
+    text-shadow:
+    0 0 6px rgba(248, 255, 60, 0.1),
+    0 0 14px rgba(224, 230, 53, 0.25),
+    0 0 28px rgba(204, 198, 22, 0.45);
+}
 .ms__title {
   margin: 0;
   font-size: clamp(1.6rem, 3.8vw, 2.8rem);
@@ -188,8 +196,7 @@
 
   .doted-container {
     padding: 16px 14px;
-            margin-top: 24px;
-        margin-bottom: 24px;
+    margin: 24px;
   }
 }
 

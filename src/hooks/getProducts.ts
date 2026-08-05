@@ -1,6 +1,4 @@
-// http://localhost:3000/stores?q=ho&offset=20.
-const API_LINK = "http://localhost:3000/";
-
+const API_LINK = import.meta.env.VITE_API_URL;
 export async function getProducts(
   param: string,
   filter: string[],

@@ -22,7 +22,7 @@ export function Stats() {
             accentColor="#06b6d4"
           />
           <StatBox
-            title="Informacion de tiendas"
+            title="Info. de tiendas"
             number={64}
             icon="fa-solid fa-tag"
             accentColor="#f43f5e"

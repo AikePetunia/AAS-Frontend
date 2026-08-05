@@ -15,9 +15,18 @@ export function StoreDetailPage() {
   const navigate = useNavigate();
   const { store_id } = useParams();
 
-  const [store, setStore] = useState([]);
+  const [store, setStore] = useState<any>({
+    products: [],
+    tags: [],
+    store_role: [],
+    store_name: "",
+    store_id: "",
+    store_url: "",
+    trust_factor: 0,
+    store_image_url: "",
+  });
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadData() {
@@ -27,7 +36,9 @@ export function StoreDetailPage() {
         console.log("data", data);
         setStore(data);
       } catch (err) {
-        setError(err.messages);
+        setError(
+          err instanceof Error ? err.message : "Error al cargar la tienda",
+        );
       } finally {
         setLoading(false);
       }
@@ -38,17 +49,20 @@ export function StoreDetailPage() {
   // crear componente de carga.
   if (loading) return <Loading message="detalle de tienda" />;
   if (error) {
-    return <Navigate to="/404" replace />;
+    navigate("/404", { replace: true });
+    return null;
   }
 
   const products = store.products;
+  const storeImage = store.store_image_url;
+
   const getTrustBadgeClass = (trust: number) => {
     if (trust > 85) return "green-trust-badge";
     if (trust > 50) return "yellow-trust-badge";
     return "red-trust-badge";
   };
 
-  console.log("product", products);
+
   return (
     <>
       <Navbar />
@@ -83,12 +97,11 @@ export function StoreDetailPage() {
           </p>
           <div className="sdp__store-tagging">
             <div className="sdp__store-types-container">
-              {store.store_role ??
-                store.store_role.map((item, index) => (
-                  <span className="sdp__store-type" key={index}>
-                    {item} {index < store.store_role.length - 1 && ""}
-                  </span>
-                ))}
+              {store.store_role.map((item, index) => (
+                <span className="sdp__store-type" key={index}>
+                  {item} {index < store.store_role.length - 1 && ""}
+                </span>
+              ))}
             </div>
             <div className="sdp__store-tags-container">
               {store.tags.map((item, index) => (
@@ -109,7 +122,7 @@ export function StoreDetailPage() {
           </a>
         </div>
       </div>
-      <div className="pm__grid">
+      <div className="pm__grid-stored">
         {products.length != 0 ? (
           products.map((product) => (
             <ProductModal
@@ -121,7 +134,7 @@ export function StoreDetailPage() {
               image_url={product.image_url}
               title_raw={product.title_raw}
               last_price={product.last_price}
-              store_image_url={product.store_image_url}
+              store_image_url={storeImage}
             />
           ))
         ) : (

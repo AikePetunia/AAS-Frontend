@@ -5,9 +5,9 @@ import "./Faq.css";
 export function Faq() {
   const questions = {
     question1: {
-      question: ">¿Qué es AAS?",
+      question: ">¿Qué es ARmar?",
       answer:
-        "AAS es un proyecto open-source diseñado para trackear, comparar y encontrar los mejores precios de componentes, periféricos y mobiliario de setup en tiendas argentinas. Los datos mostrados en la página son datos públicos que se encuentran gracias al scraping.",
+        "ARmar es un proyecto open-source diseñado para trackear, comparar y encontrar los mejores precios de componentes, periféricos y mobiliario de setup en tiendas argentinas. Los datos mostrados en la página son datos públicos que se encuentran gracias al scraping.",
       color: "green",
     },
     question2: {
@@ -19,17 +19,18 @@ export function Faq() {
     question5: {
       question: ">Soy dueñ@ de una tienda y no me gustaría estar aquí.",
       answer:
-        "AAS funciona como un buscador e indexador de ofertas. Recopilamos únicamente información de acceso público (nombres de productos, precios y stock) para ayudar a la comunidad a comparar opciones, sin ningún tipo de agresividad estilo DDOS. No cobramos comisiones ni vendemos productos: redirigimos a los usuarios directamente a tu tienda oficial para que finalicen la compra en tu sitio. Si detectás algún error en los datos de tu comercio, algo que te haga ruido o tenés dudas sobre la integración, podés contactarnos para ajustarlo.",
+        "ARmar funciona como un buscador e indexador de ofertas. Recopilamos únicamente información de acceso público (nombres de productos, precios y stock) para ayudar a la comunidad a comparar opciones, sin ningún tipo de agresividad estilo DDOS. No cobramos comisiones ni vendemos productos: redirigimos a los usuarios directamente a tu tienda oficial para que finalicen la compra en tu sitio. Si detectás algún error en los datos de tu comercio, algo que te haga ruido o tenés dudas sobre la integración, podés contactarnos para ajustarlo.",
       color: "red",
     },
     question3: {
       question: ">Ayer encontré un producto y hoy desapareció, ¿Por qué?",
       answer:
-        "El motor de datos que usa AAS tiene horarios para extraer nueva información y siempre extraerá productos que existen. Existe la posibilidad que no se haya encontrado un producto y no se muestre mas, por lo tanto se insiste en que también corroboren por su cuenta si realmente dejo de haber stock.",
+        "El motor de datos que usa ARmar tiene horarios para extraer nueva información y siempre extraerá productos que existen. Existe la posibilidad que no se haya encontrado un producto y no se muestre mas, por lo tanto se insiste en que también corroboren por su cuenta si realmente dejo de haber stock.",
       color: "red",
     },
     question4: {
-      question: ">¿AAS se hace cargo de los envios? ¿AAS vende los productos?",
+      question:
+        ">¿ARmar se hace cargo de los envios? ¿ARmar vende los productos?",
       answer: "No.",
       color: "red",
     },
@@ -44,7 +45,7 @@ export function Faq() {
       question:
         ">¿Existen tiendas o productos patrocinados que aparezcan primero?",
       answer:
-        "No. La prioridad principal de AAS es la transparencia absoluta, AAS vive y vivirá a través de donaciones de los usuarios, sin monetización. El ordenamiento de resultados se basa estrictamente en criterios de búsqueda y precio. Cero anuncios, cero banners patrocinados. Si a futuro el proyecto no es autosustentable con donaciones es probable que se pongan anuncios, pero no tiendas patrocinadas.",
+        "No. La prioridad principal de ARmar es la transparencia absoluta, ARmar vive y vivirá a través de donaciones de los usuarios, sin monetización. El ordenamiento de resultados se basa estrictamente en criterios de búsqueda y precio. Cero anuncios, cero banners patrocinados. Si a futuro el proyecto no es autosustentable con donaciones es probable que se pongan anuncios, pero no tiendas patrocinadas.",
       color: "green",
     },
   };

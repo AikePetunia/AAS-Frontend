@@ -13,7 +13,7 @@ export function NotFound404() {
       <div className="nf__page">
         <div className="nf__container">
           <h1>Algo no salió bien ):</h1>
-          <img src={eye} alt="eye-aas" />
+          <img src={eye} alt="eye-ARmar" />
           <div className="nf__actions">
             <Link to="/" className="nf__link-button btn">
               <button className="nf__button nf__button--primary">

@@ -27,3 +27,4 @@ armytech.json
 *.sw?
 notes
 .env 
+.agents

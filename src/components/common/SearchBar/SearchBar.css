@@ -100,11 +100,17 @@
   .sb__search-wrapper {
     order: 2;
     width: auto;
-    flex: 1;
-    min-width: 130px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 6px;
+  }
+
+  .sb__search-input {
+    font-size: 16px;
   }
 
   .main-navbar.floating {
     width: min(80%, 980px);
+    align-content: center;
   }
 }

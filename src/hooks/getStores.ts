@@ -1,4 +1,5 @@
-const API_LINK = "http://localhost:3000/";
+const API_LINK = import.meta.env.VITE_API_URL;
+
 export async function getStores(offset = 0) {
   const response = await fetch(API_LINK + `stores?q=&offset=${offset}`);
 

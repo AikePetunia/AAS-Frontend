@@ -19,7 +19,6 @@ export function StoreModal({
     if (trust > 50) return "yellow-trust-badge";
     return "red-trust-badge";
   };
-  console.log("store_imageurl", store_image_url);
 
   return (
     <>

@@ -1,6 +1,6 @@
 .sr__container {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     margin: 2% 2% 0% 2%;
     gap: 32px
 }
@@ -11,6 +11,10 @@
 }
 @media (max-width: 768px) {
 
+    .sr__container {
+        justify-content: center;
+        margin: 0%;
+    }
     .sr__filter-mobile-container {
         display: flex;
         justify-content: center;

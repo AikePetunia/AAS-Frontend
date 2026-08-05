@@ -15,13 +15,17 @@ export function Warning() {
               <br />
               El proyecto avanza lentamente pues:
               <br />
-              1. Es de aprendizaje y no se usa IA en etapas iniciales.{" "}
+              1. Es un proyecto de aprendizaje y no se usa IA agenticas en
+              etapas iniciales.{" "}
               {/*  Una cuestión de aprender fundamentos de las implementaciones que hago*/}
               <br />
-              2. Se que es una herramienta. En este caso, se usó de consultor.
+              2. Se que es una herramienta. En este caso, se usó de consultor.{" "}
+              <br />
+              Se puede observar un .agents en .gitignore, solo tiene un prompt
+              de tech lead
               <br />
               3. En etapas futuras, cuando ya tenga algo realmente armado, se
-              usará como tal.
+              usará como la ia.
               <br />
               Para entender más el por que, invito a que lean este articulo que
               escribí:
@@ -30,8 +34,8 @@ export function Warning() {
                 {" "}
                 La diversión de programar
               </a>
-              <br /> Cualquier error o sugerencia que tengas puedes hablarme a
-              mi!
+              <br /> Cualquier error, sugerencia o simplemente que tengas puedes
+              hablarme a mi!
               <br />
               Discord: venus.s.s
             </p>

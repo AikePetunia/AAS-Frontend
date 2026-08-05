@@ -12,7 +12,7 @@
 .doted-container.warning {
   position: absolute;
   align-items: center;
-  top: 35%;
+  top: 30%;
 }
 .doted-container.warning > p {
   font-size: 14px;

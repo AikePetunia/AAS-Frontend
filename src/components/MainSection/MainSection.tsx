@@ -1,7 +1,39 @@
 import "./MainSection.css";
-
+import { useState, useEffect } from "react";
 export function MainSection() {
-  
+  const messages = [
+    "componentes",
+    "decorativos",
+    "keycaps",
+    "integraciones",
+    "mobiliario",
+  ];
+
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [subIndex, setSubIndex] = useState(0);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (isDeleting && subIndex === 0) {
+      setIsDeleting(false);
+      setIndex((prev) => (prev + 1) % messages.length);
+      return;
+    }
+
+    if (!isDeleting && subIndex === messages[index].length) {
+      const timeout = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timeout);
+    }
+
+    const timeout = setTimeout(
+      () => {
+        setSubIndex((prev) => prev + (isDeleting ? -1 : 1));
+      },
+      isDeleting ? 150 : 300,
+    );
+    return () => clearTimeout(timeout);
+  }, [subIndex, isDeleting, index, messages]);
+
   const isPhone = window.innerWidth <= 768;
 
   return (
@@ -9,8 +41,11 @@ export function MainSection() {
       <div className="ms__hero">
         <h1 className="ms__title">
           Que la parte <span className="highlight-green">aburrida</span> de
-          buscar componentes,{" "}
-          <span className="highlight-gray">página por página,</span>
+          buscar{" "}
+          <span className="ms__changing-span">
+            {messages[index].substring(0, subIndex)}
+          </span>
+          , <span className="highlight-gray">página por página,</span>
           <br />
           deje de ser <span className="highlight-red">agotador</span>
         </h1>
@@ -26,7 +61,7 @@ export function MainSection() {
         {isPhone ? (
           <>
             <p className="ms__doted-text">
-              En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
+              En <strong>ARmar</strong>, salís de acá cuando tomás una decisión,
               por el <span className="highlight-green">precio</span> y la{" "}
               <span className="highlight-green">buena tienda</span>.
             </p>
@@ -34,7 +69,7 @@ export function MainSection() {
         ) : (
           <>
             <p className="ms__doted-text">
-              En <strong>AAS</strong>, salís de acá cuando tomás una decisión,
+              En <strong>ARmar</strong>, salís de acá cuando tomás una decisión,
             </p>
             <p className="ms__doted-text">
               por el <span className="highlight-green">precio</span> y la{" "}

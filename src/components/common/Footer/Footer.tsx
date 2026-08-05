@@ -24,18 +24,16 @@ export function Footer() {
             <br />
 
             <p>
-              Esta pagina fue llevada a cabo por{" "}
+              humanly made by{" "}
               <a href="https://aike.tech" target="_blank">
                 Aike
               </a>{" "}
-              AAS es un juego con mi mismo nombre, "Aike armar un setup".
-              Horrendo el nombre, pero no se me ocurre otro xD
             </p>
           </div>
         </div>
       </footer>
       <div className="warnings">
-        <a href="https://ko-fi.com/aikemilanesa">
+        <a href="https://github.com/AikePetunia/AAS-Frontend#contribuciones-y-apoyo">
           Apoya el proyecto desde aca 🧉
         </a>
       </div>

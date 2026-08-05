@@ -53,6 +53,9 @@ export default function Stores() {
     }
   };
   */
+  
+  console.log("tiendas", stores);
+
   return (
     <>
       <Navbar />
@@ -62,7 +65,7 @@ export default function Stores() {
           {" "}
           paginan{" "}
         </span>
-        en AAS
+        en ARmar
       </h2>
       <StoresStats />
       <br />

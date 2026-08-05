@@ -76,7 +76,7 @@ export function Navbar() {
             {!isPhone && (
               <>
                 <h1 style={{ opacity: isFloating ? 0.5 : 1 }}> | </h1>
-                <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>AAS</h1>
+                <h1 style={{ opacity: isFloating ? 0.5 : 1 }}>ARmar</h1>
               </>
             )}
           </div>
