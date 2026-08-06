@@ -11,7 +11,8 @@ export function Warning() {
             <img width="110" src={eye} alt="ojito" />
             <h4>¿hola? ¿como has llegado aquí?</h4>
             <p>
-              Esta página simplemente está en un desarrollo *muy* maduro.
+              Esta página simplemente está en un desarrollo *muy* maduro, el
+              acceso en sí es limitado.
               <br />
               El proyecto avanza lentamente pues:
               <br />
