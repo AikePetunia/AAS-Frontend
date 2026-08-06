@@ -1,30 +1,42 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
-
 import { ProductModal } from "../../components/common/ProductModal/ProductModal";
 import { getStoresDetail } from "@/hooks/getStores";
 import { Loading } from "@components/common/Loading/Loading.tsx";
-
 import "./StoreDetailPage.css";
+
+type Product = {
+  listing_id: string;
+  store_id: string;
+  trust_factor: number;
+  store_url: string;
+  product_url: string;
+  image_url: string;
+  title_raw: string;
+  last_price: number;
+  store_image_url: string;
+};
+
+type Store = {
+  store_id: string;
+  store_name: string;
+  store_url: string;
+  store_image_url: string;
+  trust_factor: number;
+  seller_role: string[];
+  tags: string[];
+  products: Product[];
+};
+
 export function StoreDetailPage() {
   // obtiene el store_id de los parametros d la ruta
   // si o si tiene que conicidir store_id de useParams con store_id de Routes
   const navigate = useNavigate();
   const { store_id } = useParams();
 
-  const [store, setStore] = useState<any>({
-    products: [],
-    tags: [],
-    store_role: [],
-    store_name: "",
-    store_id: "",
-    store_url: "",
-    trust_factor: 0,
-    store_image_url: "",
-  });
+  const [store, setStore] = useState<Store | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,7 +44,7 @@ export function StoreDetailPage() {
     async function loadData() {
       try {
         setLoading(true);
-        const data = await getStoresDetail(store_id);
+        const data = await getStoresDetail(store_id as string);
         console.log("data", data);
         setStore(data);
       } catch (err) {
@@ -44,11 +56,11 @@ export function StoreDetailPage() {
       }
     }
     loadData();
-  }, []);
+  }, [store_id]);
 
   // crear componente de carga.
   if (loading) return <Loading message="detalle de tienda" />;
-  if (error) {
+  if (error || !store) {
     navigate("/404", { replace: true });
     return null;
   }
@@ -78,35 +90,39 @@ export function StoreDetailPage() {
 
           <div>
             <h1 className="sdp__store-name highlight-green">
-              {store.store_name}
+              {store?.store_name}
             </h1>{" "}
-            <span className="sdp__store-id">#{store.store_id}</span>
+            <span className="sdp__store-id">#{store?.store_id}</span>
           </div>
           <br />
-          <a className="sdp__store-link" href={store.store_url} target="_blank">
-            URL: {store.store_url}
+          <a
+            className="sdp__store-link"
+            href={store?.store_url}
+            target="_blank"
+          >
+            URL: {store?.store_url}
           </a>
           <p className="sdp__store-trust">
             Confianza de pagina:{" "}
             <span
-              className={`trust-badge ${getTrustBadgeClass(store.trust_factor)}`}
+              className={`trust-badge ${getTrustBadgeClass(store?.trust_factor)}`}
             >
               {" "}
-              {store.trust_factor}%
+              {store?.trust_factor}%
             </span>
           </p>
           <div className="sdp__store-tagging">
             <div className="sdp__store-types-container">
-              {store.store_role.map((item, index) => (
+              {store?.seller_role.map((item: string, index: number) => (
                 <span className="sdp__store-type" key={index}>
-                  {item} {index < store.store_role.length - 1 && ""}
+                  {item} {index < store?.seller_role.length - 1 && ""}
                 </span>
               ))}
             </div>
             <div className="sdp__store-tags-container">
-              {store.tags.map((item, index) => (
+              {store?.tags.map((item: string, index: number) => (
                 <span className="sdp__store-tags" key={index}>
-                  {item} {index < store.tags.length - 1 && " "}
+                  {item} {index < store?.tags.length - 1 && " "}
                 </span>
               ))}
             </div>
@@ -116,7 +132,7 @@ export function StoreDetailPage() {
           <a href={store.store_url} target="_blank">
             <img
               src={store.store_image_url}
-              alt={{ store_id } + "image"}
+              alt={`${store.store_id} image`}
               className="sdp__store-image"
             />
           </a>
@@ -127,6 +143,7 @@ export function StoreDetailPage() {
           products.map((product) => (
             <ProductModal
               key={product.listing_id}
+              listing_id={product.listing_id}
               store_id={product.store_id}
               trust_factor={product.trust_factor}
               store_url={product.store_url}

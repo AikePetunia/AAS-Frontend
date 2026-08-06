@@ -16,7 +16,7 @@ type Store = {
 };
 
 export default function Stores() {
-  const [stores, setStores] = useState<Store>([]);
+  const [stores, setStores] = useState<Store[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   //  const [offset, setOffset] = useState(0);
@@ -24,9 +24,9 @@ export default function Stores() {
     async function loadData() {
       try {
         setLoading(true);
-        const data = await getStores("");
+        const data = await getStores();
         setStores(data.hits);
-      } catch (err) {
+      } catch (err: any) {
         setError(err.messages);
       } finally {
         setLoading(false);

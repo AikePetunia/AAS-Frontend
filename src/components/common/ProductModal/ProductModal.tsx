@@ -1,5 +1,6 @@
 import "./ProductModal.css";
 import eyeError from "@assets/icons/eyeError.gif";
+
 interface Product {
   listing_id: string;
   store_id: string;

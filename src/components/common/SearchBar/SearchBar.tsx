@@ -20,7 +20,7 @@ export function SearchBar() {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+  // const [isSearching, setIsSearching] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [isMobile] = useState(() => window.innerWidth <= 768);
   let [text, setText] = useState(q);
@@ -66,7 +66,7 @@ export function SearchBar() {
     }
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (/* event: React.MouseEvent<HTMLButtonElement> */) => {
     executeSearch();
   };
 
@@ -86,18 +86,16 @@ export function SearchBar() {
   // todo: adv de que no puede buscar "" o *
   return (
     <>
-      {/*  
-      ${isSearching ? "sb__is-searching" : ""}
-            `}
-             */}
       <div
         className={`sb__search-wrapper
            ${isFloating ? "floating" : ""} 
         `}
         onMouseLeave={() => {
-          setTimeout(() => {
+          {
+            /*} setTimeout(() => {
             setIsSearching(false);
-          }, 750);
+          }, 750); */
+          }
         }}
       >
         <div className="sb__input-container">
@@ -108,7 +106,6 @@ export function SearchBar() {
             className="sb__search-input"
             value={text}
             onChange={handleChange}
-            onClick={() => setIsSearching(true)}
             required
             onKeyDown={handleKeyDown}
           />
@@ -124,3 +121,4 @@ export function SearchBar() {
 }
 
 export default SearchBar;
+              /* onClick={() => setIsSearching(true)} */

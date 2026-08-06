@@ -5,27 +5,28 @@ import { getStores } from "../../hooks/getStores.ts";
 import { useEffect, useState } from "react";
 import "./StoresList.css";
 import { Loading } from "@components/common/Loading/Loading.tsx";
+
 type Store = {
-  store_name: string;
   store_id: string;
+  store_name: string;
   store_url: string;
   store_image_url: string;
   trust_factor: number;
   seller_type: string[];
-  tags: string[];
 };
 
 export function StoresList() {
-  const [stores, setStores] = useState<Store>([]);
+  const [stores, setStores] = useState<Store[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     async function loadData() {
       try {
         setLoading(true);
-        const data = await getStores("");
+        const data = await getStores();
         setStores(data.hits);
-      } catch (err) {
+      } catch (err: any) {
         setError(err.messages);
       } finally {
         setLoading(false);
@@ -34,7 +35,6 @@ export function StoresList() {
 
     loadData();
   }, []);
-
 
   if (loading) return <Loading message="tiendas" />;
   if (error) return <p>Error al cargar: {error}</p>;

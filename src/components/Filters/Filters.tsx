@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export function Filters() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   const [draftFilters, setDraftFilters] = useState({
     sort: searchParams.get("sort") ?? "",
@@ -38,7 +38,7 @@ export function Filters() {
     // Otros filtros = otro set de resultados, se vuelve a la primera pagina.
     next.delete("page");
     setSearchParams(next);
-    setIsOpen(false);
+    // setIsOpen(false);
   };
 
   const cleanFilters = () => {

@@ -1,4 +1,5 @@
 const API_LINK = import.meta.env.VITE_API_URL;
+
 export async function getProducts(
   param: string,
   filter: string[],

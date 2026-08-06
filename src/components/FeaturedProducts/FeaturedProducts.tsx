@@ -1,9 +1,11 @@
+/*
 import { getProducts } from "@/hooks/getProducts";
 import "./FeaturedProducts.css";
 import { useEffect, useState } from "react";
 import SearchBar from "../common/SearchBar/SearchBar";
 import { Loading } from "@components/common/Loading/Loading";
 export function FeaturedProducts() {
+  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,6 +29,8 @@ export function FeaturedProducts() {
   if (loading) return <Loading message="productos destacados" />;
   if (error) return <p>Error al cargar: {error}</p>;
 
+  */
+/*
   const isPhone = window.innerWidth <= 768;
   return (
     <>
@@ -59,10 +63,13 @@ export function FeaturedProducts() {
             />
           ))}
         </div>
-          */}
+          
       </div>
     </>
   );
+ 
 }
 
+
 export default FeaturedProducts;
+*/

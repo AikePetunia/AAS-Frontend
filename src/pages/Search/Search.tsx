@@ -10,6 +10,18 @@ import { Loading } from "@components/common/Loading/Loading.tsx";
 import NotFound404 from "../NotFound404/NotFound404";
 import "./Search.css";
 
+type Products = {
+  listing_id: string;
+  store_id: string;
+  store_url: string;
+  trust_factor: number;
+  product_url: string;
+  image_url: string;
+  title_raw: string;
+  last_price: number;
+  store_image_url: string;
+};
+
 const LIMIT = 20;
 
 function buildPageList(current: number, total: number): (number | "...")[] {
@@ -36,7 +48,7 @@ export function Search() {
   const minPrice = searchParams.get("minPrice");
   const maxPrice = searchParams.get("maxPrice");
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Products[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showMobileFilter, setShowMobileFilter] = useState(false);
@@ -162,7 +174,9 @@ export function Search() {
                 products.map((product) => (
                   <ProductModal
                     key={product.listing_id}
+                    listing_id={product.listing_id}
                     store_id={product.store_id}
+                    store_url={product.store_url}
                     trust_factor={product.trust_factor}
                     product_url={product.product_url}
                     image_url={product.image_url}
