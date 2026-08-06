@@ -4,23 +4,13 @@ import { ProductModal } from "@components/common/ProductModal/ProductModal";
 import { Filters } from "@components/Filters/Filters";
 import { getProducts } from "@/hooks/getProducts";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { NotFound } from "@components/common//NotFound/NotFound";
 import { Loading } from "@components/common/Loading/Loading.tsx";
 import NotFound404 from "../NotFound404/NotFound404";
+// @ts-ignore
+import type { Products } from "@types/products";
 import "./Search.css";
-
-type Products = {
-  listing_id: string;
-  store_id: string;
-  store_url: string;
-  trust_factor: number;
-  product_url: string;
-  image_url: string;
-  title_raw: string;
-  last_price: number;
-  store_image_url: string;
-};
 
 const LIMIT = 20;
 
@@ -42,6 +32,7 @@ function buildPageList(current: number, total: number): (number | "...")[] {
 }
 
 export function Search() {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const searchedProduct = searchParams.get("q");
   const sortBy = searchParams.get("sort");
@@ -91,8 +82,10 @@ export function Search() {
 
   useEffect(() => {
     const query = searchedProduct;
-    if (!query) return;
-
+    if (!query || query === "") {
+      navigate("/");
+      return;
+    } 
     const filters: string[] = [];
     if (sortBy) filters.push(`sort=${sortBy}`);
     if (minPrice) filters.push(`minPrice=${minPrice}`);
@@ -117,7 +110,7 @@ export function Search() {
     };
 
     loadData();
-
+    setLoading(false);
     return () => {
       cancelled = true;
     };
@@ -136,11 +129,12 @@ export function Search() {
   if (loading) return <Loading message="productos..." />;
   if (error) return <NotFound404 />;
 
-  const isPhone = window.innerWidth >= 758;
   const pageList = buildPageList(page, totalPages);
 
   // si no hay products, no hay filtros.  Muestra "No h"
   // si no hay products, los filtros tienen una posicion distinta.
+  const isPhone = window.innerWidth <= 758;
+
   return (
     <>
       <Navbar />
@@ -150,7 +144,7 @@ export function Search() {
         </div>
       ) : (
         <>
-          {!isPhone ? (
+          {isPhone ? (
             <>
               <button
                 onClick={() => setShowMobileFilter(!showMobileFilter)}
@@ -167,7 +161,7 @@ export function Search() {
             ""
           )}
           <div className="sr__container">
-            {!isPhone ? "" : <Filters />}
+            {isPhone ? "" : <Filters />}
 
             <div className="pm__grid">
               {products.length != 0 ? (

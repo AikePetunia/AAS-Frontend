@@ -5,15 +5,8 @@ import { getStores } from "../../hooks/getStores.ts";
 import { useEffect, useState } from "react";
 import "./StoresList.css";
 import { Loading } from "@components/common/Loading/Loading.tsx";
-
-type Store = {
-  store_id: string;
-  store_name: string;
-  store_url: string;
-  store_image_url: string;
-  trust_factor: number;
-  seller_type: string[];
-};
+// @ts-ignore
+import type { Store } from "@types/stores.ts";
 
 export function StoresList() {
   const [stores, setStores] = useState<Store[]>([]);
@@ -27,7 +20,7 @@ export function StoresList() {
         const data = await getStores();
         setStores(data.hits);
       } catch (err: any) {
-        setError(err.messages);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -47,7 +40,7 @@ export function StoresList() {
             Tiendas que
             <span className="highlight-green" style={{ margin: "0px 8px" }}>
               {" "}
-              paginan{" "}
+              encontrás{" "}
             </span>
             en ARmar
           </h2>

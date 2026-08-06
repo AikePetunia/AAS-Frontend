@@ -6,18 +6,7 @@ import { ProductModal } from "../../components/common/ProductModal/ProductModal"
 import { getStoresDetail } from "@/hooks/getStores";
 import { Loading } from "@components/common/Loading/Loading.tsx";
 import "./StoreDetailPage.css";
-
-type Product = {
-  listing_id: string;
-  store_id: string;
-  trust_factor: number;
-  store_url: string;
-  product_url: string;
-  image_url: string;
-  title_raw: string;
-  last_price: number;
-  store_image_url: string;
-};
+import type { Products } from "@/types/products";
 
 type Store = {
   store_id: string;
@@ -27,7 +16,7 @@ type Store = {
   trust_factor: number;
   seller_role: string[];
   tags: string[];
-  products: Product[];
+  products: Products[];
 };
 
 export function StoreDetailPage() {
@@ -103,7 +92,7 @@ export function StoreDetailPage() {
             URL: {store?.store_url}
           </a>
           <p className="sdp__store-trust">
-            Confianza de pagina:{" "}
+            Confianza de página:{" "}
             <span
               className={`trust-badge ${getTrustBadgeClass(store?.trust_factor)}`}
             >
@@ -113,11 +102,13 @@ export function StoreDetailPage() {
           </p>
           <div className="sdp__store-tagging">
             <div className="sdp__store-types-container">
-              {store?.seller_role.map((item: string, index: number) => (
-                <span className="sdp__store-type" key={index}>
-                  {item} {index < store?.seller_role.length - 1 && ""}
-                </span>
-              ))}
+              {store.seller_role
+                ? store?.seller_role.map((item: string, index: number) => (
+                    <span className="sdp__store-type" key={index}>
+                      {item} {index < store?.seller_role.length - 1 && ""}
+                    </span>
+                  ))
+                : ""}
             </div>
             <div className="sdp__store-tags-container">
               {store?.tags.map((item: string, index: number) => (

@@ -29,7 +29,7 @@ export function NotFound404() {
           </div>
           <footer className="nf__footer">
             <h3>¿crees que es un error?</h3>
-            <a href="">Reportalo aqui (FALTA LINK)</a>
+            <a href="https://discord.gg/6zfKgxE3Fr">Reportalo en discord! z3</a>
           </footer>
         </div>
       </div>

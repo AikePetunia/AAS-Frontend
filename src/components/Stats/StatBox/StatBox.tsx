@@ -6,6 +6,7 @@ type StatBoxProps = {
   icon?: string;
   accentColor?: string;
 };
+
 export function StatBox({ title, number, icon = "fa-solid fa-store", accentColor = "#a3e635" }: StatBoxProps) {
     return (
       <>

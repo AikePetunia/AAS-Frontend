@@ -72,18 +72,15 @@ export function SearchBar() {
 
   const executeSearch = () => {
     text = text.trim();
-    if (text == "") {
+    if (text == "" || text.includes("*")) {
       // querys
-      setErrorMessage("Debes de realizar una busqueda.");
+      setErrorMessage("Debes realizar una búsqueda.");
       navigate("/");
-    } else if (text.includes("*")) {
-      setErrorMessage("vivos acá no");
     } else {
       navigate(`/search?q=${text}`);
     }
   };
 
-  // todo: adv de que no puede buscar "" o *
   return (
     <>
       <div

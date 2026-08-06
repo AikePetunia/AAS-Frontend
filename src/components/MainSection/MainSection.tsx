@@ -50,26 +50,27 @@ export function MainSection() {
           deje de ser <span className="highlight-red">agotador</span>
         </h1>
       </div>
-      <div className="ms__extra-features">
+
+      {/*  <div className="ms__extra-features">
         <p>
           <br />y que la compu no es lo único que importa, por que el donde
           jugas, también importa
         </p>
       </div>
-
+*/}
       <div className="doted-container">
         {isPhone ? (
           <>
             <p className="ms__doted-text">
-              En <strong>ARmar</strong>, salís de acá cuando tomás una decisión,
-              por el <span className="highlight-green">precio</span> y la{" "}
+              En <strong>ARmar</strong>, salís tomando la decision por el{" "}
+              <span className="highlight-green">precio</span> y la{" "}
               <span className="highlight-green">buena tienda</span>.
             </p>
           </>
         ) : (
           <>
             <p className="ms__doted-text">
-              En <strong>ARmar</strong>, salís de acá cuando tomás una decisión,
+              En <strong>ARmar</strong>, salís tomando la decision
             </p>
             <p className="ms__doted-text">
               por el <span className="highlight-green">precio</span> y la{" "}

@@ -1,8 +1,7 @@
 const API_LINK = import.meta.env.VITE_API_URL;
 
 // no hay buscador de tiendas, probablemente no haya.
-export async function getStores(/* offset = 0 */) {
-  // &offset=${offset}
+export async function getStores() {
   const response = await fetch(API_LINK + `stores?q=`);
 
   if (!response.ok) {
