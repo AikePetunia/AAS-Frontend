@@ -46,8 +46,6 @@ export default function Stores() {
     }
   };
   */
-  
-  console.log("tiendas", stores);
 
   return (
     <>

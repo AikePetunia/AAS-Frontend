@@ -14,7 +14,7 @@ type Store = {
   store_url: string;
   store_image_url: string;
   trust_factor: number;
-  seller_role: string[];
+  store_role: string[];
   tags: string[];
   products: Products[];
 };
@@ -34,9 +34,9 @@ export function StoreDetailPage() {
       try {
         setLoading(true);
         const data = await getStoresDetail(store_id as string);
-        console.log("data", data);
         setStore(data);
       } catch (err) {
+        console.log("err", err);
         setError(
           err instanceof Error ? err.message : "Error al cargar la tienda",
         );
@@ -102,10 +102,10 @@ export function StoreDetailPage() {
           </p>
           <div className="sdp__store-tagging">
             <div className="sdp__store-types-container">
-              {store.seller_role
-                ? store?.seller_role.map((item: string, index: number) => (
+              {store.store_role
+                ? store?.store_role.map((item: string, index: number) => (
                     <span className="sdp__store-type" key={index}>
-                      {item} {index < store?.seller_role.length - 1 && ""}
+                      {item} {index < store?.store_role.length - 1 && ""}
                     </span>
                   ))
                 : ""}
