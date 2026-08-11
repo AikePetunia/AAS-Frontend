@@ -35,6 +35,10 @@ export function ProductModal({
           <div className="pm__image-wrapper">
             <img
               src={image_url ?? eyeError}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = eyeError;
+              }}
               alt={title_raw}
               className="pm__image"
               loading="lazy"

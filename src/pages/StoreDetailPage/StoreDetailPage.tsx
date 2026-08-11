@@ -139,11 +139,7 @@ export function StoreDetailPage() {
               trust_factor={product.trust_factor}
               store_url={product.store_url}
               product_url={product.product_url}
-              image_url={
-                product.has_image
-                  ? product.image_url
-                  : "https://armar.dev/assets/eyeError-gai22A95.gif"
-              }
+              image_url={product.image_url}
               title_raw={product.title_raw}
               last_price={product.last_price}
               store_image_url={storeImage}

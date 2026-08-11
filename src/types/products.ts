@@ -7,6 +7,5 @@ export type Products = {
   image_url: string;
   title_raw: string;
   last_price: number;
-  has_image: boolean;
   store_image_url: string;
 };
