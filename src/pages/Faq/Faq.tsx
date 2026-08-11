@@ -19,7 +19,7 @@ export function Faq() {
     question5: {
       question: ">Soy dueñ@ de una tienda y no me gustaría estar aquí.",
       answer:
-        "ARmar funciona como un buscador e indexador de ofertas. Recopilamos únicamente información de acceso público (nombres de productos, precios y stock) para ayudar a la comunidad a comparar opciones, sin ningún tipo de agresividad estilo DDOS. No cobramos comisiones ni vendemos productos: redirigimos a los usuarios directamente a tu tienda oficial para que finalicen la compra en tu sitio. Si detectás algún error en los datos de tu comercio, algo que te haga ruido o tenés dudas sobre la integración, podés contactarnos para ajustarlo.",
+        "ARmar funciona como un buscador e indexador de ofertas. Recopilamos únicamente información de acceso público (nombres de productos, precios y stock) para ayudar a la comunidad a comparar opciones, sin ningún tipo de agresividad estilo DDOS. No cobramos comisiones ni vendemos productos: redirigimos a los usuarios directamente a tu tienda oficial para que finalicen la compra en tu sitio. Si detectás algún error en los datos de tu comercio, algo que te haga ruido o tenés dudas sobre la integración, podés contactarnos para ajustarlo u otros.",
       color: "red",
     },
     question3: {
