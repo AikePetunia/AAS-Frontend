@@ -1,5 +1,8 @@
-const API_LINK = import.meta.env.VITE_API_URL;
-
+const ENVIROMENT = import.meta.env.VITE_ENVIROMENT;
+const API_LINK =
+  ENVIROMENT === "dev"
+    ? "http://localhost:3000/"
+    : import.meta.env.VITE_API_URL;
 // no hay buscador de tiendas, probablemente no haya.
 export async function getStores() {
   const response = await fetch(API_LINK + `stores?q=`);

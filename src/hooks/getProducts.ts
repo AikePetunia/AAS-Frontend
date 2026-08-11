@@ -1,4 +1,8 @@
-const API_LINK = import.meta.env.VITE_API_URL;
+const ENVIROMENT = import.meta.env.VITE_ENVIROMENT;
+const API_LINK =
+  ENVIROMENT === "dev"
+    ? "http://localhost:3000/"
+    : import.meta.env.VITE_API_URL;
 
 export async function getProducts(
   param: string,
