@@ -17,6 +17,7 @@ El proyecto tiene mucho futuro y features pensadas como:
 - [ ] Poner en favoritos productos
 - [ ] Reputación real de tiendas manejadas por usuarios 
 - [ ] Visualización 3D de productos
+- [ ] Servicios y otras recomendaciones
 
 - **Arquitectura:** Frontend y Backend completamente desacoplados. 
   - 🔗 [Repositorio del Backend](https://github.com/AikePetunia/ARmar-Backend)

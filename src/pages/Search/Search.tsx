@@ -139,7 +139,10 @@ export function Search() {
       <Navbar />
       {products.length === 0 ? (
         <div className="sr__container error">
-          <NotFound />
+          <NotFound
+            message="No se encontraron productos ):"
+            query={searchedProduct ?? ""}
+          />
         </div>
       ) : (
         <>
@@ -180,7 +183,10 @@ export function Search() {
                 ))
               ) : (
                 <div className="sr__container error">
-                  <NotFound />
+                  <NotFound
+                    message="No se encontraron productos ):"
+                    query={searchedProduct ?? ""}
+                  />
                 </div>
               )}
             </div>

@@ -3,3 +3,113 @@
   align-items: center;
   justify-content: center;
 }
+
+.notfound__recommendations {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.notfound__recommendations-title {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-gray-400);
+  letter-spacing: 0.02em;
+}
+
+.notfound__sites {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.notfound__site-card {
+  --site-accent: #a3e635;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: var(--color-gray-100);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.notfound__site-card i {
+  padding: 0;
+  font-size: 1.05rem;
+  color: var(--site-accent);
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--site-accent) 60%, transparent));
+}
+
+.notfound__site-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--site-accent);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--site-accent) 20%, transparent);
+}
+
+.notfound__site-card:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .notfound__sites {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notfound__tax-callout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(158, 227, 146, 0.08);
+  border: 1px solid rgba(153, 233, 173, 0.3);
+  text-decoration: none;
+  color: var(--color-gray-200);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.3;
+
+}
+
+.notfound__tax-callout i:first-child {
+  padding: 0;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--color-gray-100);
+}
+
+.notfound__tax-callout i:last-child {
+  padding: 0;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  color: var(--color-gray-400);
+  margin-left: auto;
+}
+
+.notfound__tax-callout strong {
+  color: var(--color-gray-100);
+}
+
+.notfound__tax-callout:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-gray-100);
+  background: rgba(158, 227, 146, 0.16);
+}
+
+.notfound__tax-callout:active {
+  transform: translateY(0) scale(0.98);
+}

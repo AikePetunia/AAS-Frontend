@@ -32,21 +32,6 @@ export default function Stores() {
   if (loading) return <Loading message="tiendas" type="" />;
   if (error) return <p>Error al cargar: {error}</p>;
 
-  /*
-  const handleLoadMore = async () => {
-    try {
-      const nextOffset = offset + 50;
-      const newData = await getStores(nextOffset);
-
-      setStores([...stores, ...newData.hits]);
-
-      setOffset(nextOffset);
-    } catch (err) {
-      console.error("Error al cargar más:", err);
-    }
-  };
-  */
-
   return (
     <>
       <Navbar />
