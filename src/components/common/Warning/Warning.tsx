@@ -11,7 +11,7 @@ export function Warning() {
             <img width="110" src={eye} alt="ojito" />
             <h4>¿hola? ¿como has llegado aquí?</h4>
             <p>
-              Esta página simplemente está en un desarrollo *muy* maduro, el
+              Esta página simplemente está en un desarrollo *muy* maduro. El
               acceso en sí es limitado.
               <br />
               El proyecto avanza lentamente pues:
@@ -35,10 +35,8 @@ export function Warning() {
                 {" "}
                 La diversión de programar
               </a>
-              <br /> Cualquier error, sugerencia o simplemente que tengas puedes
-              hablarme a mi!
-              <br />
-              Discord: venus.s.s
+              <br /> Cualquier error, sugerencia o simplemente que tengas ganas
+              de hablarme, te dejo mi Discord: venus.s.s
             </p>
             <button onClick={() => setIsVisible(false)}>Entiendo</button>
           </div>

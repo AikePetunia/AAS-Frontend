@@ -4,9 +4,9 @@ export function StoresStats() {
     <div className="sl__stats-texts">
       <span>
         <i className="fa-solid fa-database"></i>
-        30+ tiendas activas
+        50+ tiendas activas
       </span>
-      <span> • 20+ proximamente </span>
+      <span> • 15+ proximamente </span>
     </div>
   );
 }

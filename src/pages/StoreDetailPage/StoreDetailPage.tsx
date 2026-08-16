@@ -7,6 +7,7 @@ import { getStoresDetail } from "@/hooks/getStores";
 import { Loading } from "@components/common/Loading/Loading.tsx";
 import "./StoreDetailPage.css";
 import type { Products } from "@/types/products";
+import ScrollToTop from "@/hooks/ScrollToTop";
 
 type Store = {
   store_id: string;
@@ -20,6 +21,7 @@ type Store = {
 };
 
 export function StoreDetailPage() {
+  ScrollToTop();
   // obtiene el store_id de los parametros d la ruta
   // si o si tiene que conicidir store_id de useParams con store_id de Routes
   const navigate = useNavigate();
@@ -48,7 +50,7 @@ export function StoreDetailPage() {
   }, [store_id]);
 
   // crear componente de carga.
-  if (loading) return <Loading message="detalle de tienda" />;
+  if (loading) return <Loading message="detalle de tienda" type="" />;
   if (error || !store) {
     navigate("/404", { replace: true });
     return null;

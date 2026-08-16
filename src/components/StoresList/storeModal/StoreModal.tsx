@@ -1,6 +1,6 @@
 import "./StoreModal.css";
 import { Link } from "react-router-dom";
-
+import eyeError from "@assets/icons/eyeError.gif";
 interface StoreModalProps {
   name: string;
   store_image_url: string;
@@ -32,6 +32,9 @@ export function StoreModal({
             </span>
             <img
               src={store_image_url}
+              onError={(e) => {
+                e.currentTarget.src = eyeError;
+              }}
               alt={`${name}-logo`}
               loading="lazy"
               className="sm__store-logo"

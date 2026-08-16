@@ -110,7 +110,6 @@ export function Search() {
     };
 
     loadData();
-    setLoading(false);
     return () => {
       cancelled = true;
     };
@@ -126,7 +125,7 @@ export function Search() {
     setSearchParams(next, { replace: true });
   }, [page, totalPages, totalHits]);
 
-  if (loading) return <Loading message="productos..." />;
+  if (loading) return <Loading message="productos..." type="" />;
   if (error) return <NotFound404 />;
 
   const pageList = buildPageList(page, totalPages);
