@@ -29,7 +29,7 @@ export default function Stores() {
     loadData();
   }, []);
 
-  if (loading) return <Loading message="tiendas" />;
+  if (loading) return <Loading message="tiendas" type="" />;
   if (error) return <p>Error al cargar: {error}</p>;
 
   /*
