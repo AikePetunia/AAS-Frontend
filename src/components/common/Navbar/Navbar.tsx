@@ -1,30 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
 import eye from "@icons/eye.gif";
-
 import { SearchBar } from "../SearchBar/SearchBar";
 import "./Navbar.css";
 
+// todo marcar en que seccion se está
+ const menus = {
+   tienda: {
+     linkTo: "/tiendas",
+     name: "Tiendas",
+     icon: "fa-solid fa-shop",
+   },
+   faq: {
+     linkTo: "/faq",
+     name: "Faq",
+     icon: "fa-solid fa-question",
+   },
+ };
 export function Navbar() {
-
-  const menus = {
-    tienda: {
-      linkTo: "/tiendas",
-      name: "Tiendas",
-      icon: "fa-solid fa-shop",
-    },
-    faq: {
-      linkTo: "/faq",
-      name: "Faq",
-      icon: "fa-solid fa-question",
-    },
-  };
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
   const menuRef = useRef<HTMLDivElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
   const isPhone = window.innerWidth <= 768;
   const [isFloating, setIsFloating] = useState(false);
   const isDrawerMode = isFloating || isMobile;
@@ -110,12 +106,6 @@ export function Navbar() {
       {isDrawerMode && (
         <>
           <div
-            ref={overlayRef}
-            className={`menu-overlay ${isMenuOpen ? "active" : ""}`}
-            onClick={closeMenu}
-          ></div>
-
-          <div
             id="nav-drawer"
             ref={menuRef}
             className={`ham-categories drawer ${isMenuOpen ? "active" : ""}`}
@@ -125,6 +115,7 @@ export function Navbar() {
               className="drawer-close-btn"
               aria-label="Cerrar menu"
               onClick={closeMenu}
+              onKeyDown={closeMenu}
             >
               <i className="fa-solid fa-x"></i>
             </button>

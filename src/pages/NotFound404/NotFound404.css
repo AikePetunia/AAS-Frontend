@@ -1,5 +1,5 @@
 .nf__page {
-  min-height: calc(100vh - 120px);
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;

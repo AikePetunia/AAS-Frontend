@@ -1,36 +1,20 @@
 import { Link } from "react-router-dom"
 import { StoreModal } from "./storeModal/StoreModal.tsx";
 import { StoresStats } from "@components/Stats/storesStats/StoresStats.tsx";
-import { getStores } from "../../hooks/getStores.ts";
-import { useEffect, useState } from "react";
 import "./StoresList.css";
 import { Loading } from "@components/common/Loading/Loading.tsx";
+import { APIError } from "@components/common/APIError/APIError.tsx";
 // @ts-ignore
 import type { Store } from "@types/stores.ts";
+import { useStores } from "@/hooks/useStores.ts";
 
 export function StoresList() {
-  const [stores, setStores] = useState<Store[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data, isLoading, error } = useStores();
+  if (isLoading) return <Loading message="tiendas" type="storelist" />;
+  if (error) return <APIError />;
 
-  useEffect(() => {
-    async function loadData() {
-      try {
-        setLoading(true);
-        const data = await getStores();
-        setStores(data.hits);
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadData();
-  }, []);
-
-  if (loading) return <Loading message="tiendas" type="storelist" />;
-  if (error) return <p>Error al cargar: {error}</p>;
+  const stores = data.hits;
+  // anda cuando se recibe fetch de sotres
 
   return (
     <>

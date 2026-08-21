@@ -1,6 +1,7 @@
 import eye from "@assets/icons/eye.gif";
 import "./NotFound.css";
 import impuestito from "@assets/icons/impuestito.ico";
+
 interface RecommendedSite {
   name: string;
   icon: string;
@@ -81,7 +82,7 @@ export function NotFound({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={impuestito} width={25} />
+              <img src={impuestito} alt="impuestito" width={25} />
               <span>
                 ¿Querés comprar afuera? mirá sus guías de importación o calculá
                 los impuestos de importación con <strong>Impuestito</strong>

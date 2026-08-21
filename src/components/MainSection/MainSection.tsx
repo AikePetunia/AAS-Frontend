@@ -1,14 +1,15 @@
 import "./MainSection.css";
 import { useState, useEffect } from "react";
-export function MainSection() {
   const messages = [
     "componentes",
     "decorativos",
     "keycaps",
+    "gameroom",
     "integraciones",
     "mobiliario",
   ];
 
+export function MainSection() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [subIndex, setSubIndex] = useState(0);
   const [index, setIndex] = useState(0);
@@ -32,7 +33,7 @@ export function MainSection() {
       isDeleting ? 150 : 300,
     );
     return () => clearTimeout(timeout);
-  }, [subIndex, isDeleting, index, messages]);
+  }, [subIndex, isDeleting, index]);
 
   const isPhone = window.innerWidth <= 768;
 

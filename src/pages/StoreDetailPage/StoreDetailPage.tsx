@@ -8,7 +8,7 @@ import { Loading } from "@components/common/Loading/Loading.tsx";
 import "./StoreDetailPage.css";
 import type { Products } from "@/types/products";
 import ScrollToTop from "@/hooks/ScrollToTop";
-
+import { NotFound404 } from "@pages/NotFound404/NotFound404";
 type Store = {
   store_id: string;
   store_name: string;
@@ -20,6 +20,12 @@ type Store = {
   products: Products[];
 };
 
+  const getTrustBadgeClass = (trust: number) => {
+    if (trust > 85) return "green-trust-badge";
+    if (trust > 50) return "yellow-trust-badge";
+    return "red-trust-badge";
+  };
+  
 export function StoreDetailPage() {
   ScrollToTop();
   // obtiene el store_id de los parametros d la ruta
@@ -43,7 +49,7 @@ export function StoreDetailPage() {
           err instanceof Error ? err.message : "Error al cargar la tienda",
         );
       } finally {
-        setLoading(false);
+         setLoading(false);
       }
     }
     loadData();
@@ -52,18 +58,13 @@ export function StoreDetailPage() {
   // crear componente de carga.
   if (loading) return <Loading message="detalle de tienda" type="" />;
   if (error || !store) {
-    navigate("/404", { replace: true });
-    return null;
+    return <NotFound404 />;
   }
 
   const products = store.products;
   const storeImage = store.store_image_url;
 
-  const getTrustBadgeClass = (trust: number) => {
-    if (trust > 85) return "green-trust-badge";
-    if (trust > 50) return "yellow-trust-badge";
-    return "red-trust-badge";
-  };
+
 
 
   return (
@@ -125,7 +126,7 @@ export function StoreDetailPage() {
           <a href={store.store_url} target="_blank">
             <img
               src={store.store_image_url}
-              alt={`${store.store_id} image`}
+              alt={`${store.store_id}`}
               className="sdp__store-image"
             />
           </a>

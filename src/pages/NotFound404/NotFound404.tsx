@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import eye from "@assets/icons/eye.gif";
-import { Footer } from "@components/common/Footer/Footer";
 import "./NotFound404.css";
 
 // como se detecta de donde es el error? hice un 404.. pero debería de ser generico.
@@ -33,7 +32,6 @@ export function NotFound404() {
           </footer>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

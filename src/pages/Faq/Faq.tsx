@@ -1,8 +1,8 @@
 import { Footer } from "@components/common/Footer/Footer";
 import { Navbar } from "@components/common/Navbar/Navbar";
 import "./Faq.css";
+import ScrollToTop from "@hooks/ScrollToTop";
 
-export function Faq() {
   const questions = {
     question1: {
       question: ">¿Qué es ARmar?",
@@ -49,6 +49,10 @@ export function Faq() {
       color: "green",
     },
   };
+
+export function Faq() {
+  ScrollToTop;
+
   return (
     <>
       <Navbar />

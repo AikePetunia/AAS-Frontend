@@ -2,36 +2,18 @@ import Navbar from "@/components/common/Navbar/Navbar";
 import { Footer } from "@components/common/Footer/Footer";
 import { StoresStats } from "@components/Stats/storesStats/StoresStats";
 import { StoreModal } from "../components/StoresList/storeModal/StoreModal";
-import { getStores } from "../hooks/getStores";
-import { useEffect, useState } from "react";
 import { Loading } from "@components/common/Loading/Loading.tsx";
 // @ts-ignore
 import type { Store } from "@types/stores";
-
+import APIError from "@/components/common/APIError/APIError";
+import { useStores } from "@/hooks/useStores";
 export default function Stores() {
-  const [stores, setStores] = useState<Store[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  //  const [offset, setOffset] = useState(0);
-  useEffect(() => {
-    async function loadData() {
-      try {
-        setLoading(true);
-        const data = await getStores();
-        setStores(data.hits);
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
+  const { data, isLoading, error } = useStores();
 
-    loadData();
-  }, []);
+  if (isLoading) return <Loading message="tiendas" type="" />;
+  if (error) return <APIError />;
 
-  if (loading) return <Loading message="tiendas" type="" />;
-  if (error) return <p>Error al cargar: {error}</p>;
-
+  const stores = data.hits;
   return (
     <>
       <Navbar />

@@ -66,8 +66,11 @@ export function Filters() {
         preico alto
         */}
         <div className="filter-group">
-          <label className="filter-title">Ordenar por</label>
+          <label htmlFor="sort" className="filter-title">
+            Ordenar por
+          </label>
           <select
+            aria-label="Ordenar por"
             value={draftFilters.sort}
             onChange={(e) => handleChange("sort", e.target.value)}
             className="generic-select"
@@ -80,7 +83,9 @@ export function Filters() {
         </div>
 
         <div className="filter-group">
-          <label className="filter-title">Precio</label>
+          <label htmlFor="sort" className="filter-title">
+            Precio
+          </label>
           <div className="price-inputs">
             <input
               type="number"

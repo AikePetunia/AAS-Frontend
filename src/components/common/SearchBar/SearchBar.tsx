@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import "./SearchBar.css";
 
-export function SearchBar() {
   const messages = [
     "Ryzen 5 7600x...",
     "Quest 2 VR...",
@@ -11,7 +10,7 @@ export function SearchBar() {
     "DDR5...",
     "Hatsune Miku...",
   ];
-
+export function SearchBar() {
   const navigate = useNavigate();
   const [searchedProduct] = useSearchParams();
   const q = searchedProduct.get("q") ?? "";
@@ -53,7 +52,7 @@ export function SearchBar() {
       isDeleting ? 30 : 100,
     );
     return () => clearTimeout(timeout);
-  }, [subIndex, isDeleting, index, messages]);
+  }, [subIndex, isDeleting, index]);
 
   const handleChange = (event: any) => {
     setText(event.target.value);
@@ -106,10 +105,13 @@ export function SearchBar() {
             required
             onKeyDown={handleKeyDown}
           />
-          <i
-            className="fa-solid fa-magnifying-glass search-icon"
+
+          <button
             onClick={handleClick}
-          ></i>
+            style={{ padding: "0px", background: "transparent" }}
+          >
+            <i className="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
         </div>
         {errorMessage && <p className="sb__error">{errorMessage}</p>}
       </div>

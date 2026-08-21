@@ -7,18 +7,18 @@ interface StoreModalProps {
   id: string;
   trustFact: number;
 }
-
+  const getTrustBadgeClass = (trust: number) => {
+    if (trust > 85) return "green-trust-badge";
+    if (trust > 50) return "yellow-trust-badge";
+    return "red-trust-badge";
+  };
 export function StoreModal({
   name,
   id,
   store_image_url,
   trustFact,
 }: StoreModalProps) {
-  const getTrustBadgeClass = (trust: number) => {
-    if (trust > 85) return "green-trust-badge";
-    if (trust > 50) return "yellow-trust-badge";
-    return "red-trust-badge";
-  };
+
 
   return (
     <>
