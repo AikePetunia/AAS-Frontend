@@ -28,8 +28,13 @@ export function Warning() {
               3. En etapas futuras, cuando ya tenga algo realmente armado, se
               usará como la ia.
               <br />
-              Para entender más el por que, invito a que lean este articulo que
-              escribí:
+              <strong style={{ fontSize: "16px", color: "white" }}>
+                4. Los productos pueden estar desactualizados, pues no se
+                actualizan los datos 24/7 de momento.
+              </strong>
+              <br />
+              Para entender más el por que no uso IA, invito a que lean este
+              articulo que escribí:
               <br />
               <a href="https://aike.tech/blog/project/joyofcoding">
                 {" "}

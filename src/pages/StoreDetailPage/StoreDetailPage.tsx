@@ -25,7 +25,7 @@ type Store = {
     if (trust > 50) return "yellow-trust-badge";
     return "red-trust-badge";
   };
-  
+
 export function StoreDetailPage() {
   ScrollToTop();
   // obtiene el store_id de los parametros d la ruta
@@ -66,7 +66,7 @@ export function StoreDetailPage() {
 
 
 
-
+  console.log("prodcuts", products);
   return (
     <>
       <Navbar />
