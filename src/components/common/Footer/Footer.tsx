@@ -14,7 +14,7 @@ export function Footer() {
             <br />
             <p>
               Este proyecto es open source y podes aportar o ver el codigo{" "}
-              <a href="#">
+              <a href="https://github.com/AikePetunia/ARmar-Frontend">
                 aquí <i className="fa-brands fa-github"></i>
               </a>
             </p>
