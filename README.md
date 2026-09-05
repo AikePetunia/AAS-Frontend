@@ -27,8 +27,8 @@ El proyecto tiene mucho futuro y features pensadas como:
 * **Transparencia Absoluta:** El mejor precio y la confianza real tienen prioridad. Cero anuncios, cero posts patrocinados. 
 * **Open Source & Comunidad:** El código es abierto. Cualquier Pull Request, mejora de rendimiento o crítica constructiva es bienvenida para mejorar.
 
-Podés ver el como se pensó la arquitectura del backend (superficialmente) desde acá:
-https://excalidraw.com/#json=JarbxLFhH4YzyCK9IYybR,KXsfPkmWHcrQT04ktMQmMw
+Podés ver el como se pensó la arquitectura del backend (superficialmente) desde acá (NO DISPONIBLE):
+
 
 ## Contribuciones y Apoyo
 
