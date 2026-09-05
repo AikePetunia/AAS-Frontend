@@ -64,9 +64,6 @@ export function StoreDetailPage() {
   const products = store.products;
   const storeImage = store.store_image_url;
 
-
-
-  console.log("prodcuts", products);
   return (
     <>
       <Navbar />
